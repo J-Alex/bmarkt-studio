@@ -1,0 +1,92 @@
+<div class="row">
+    <div class="row-content row-content_medium row-content_column row-content-center_vertical">
+        <h2 class="text-center">PORTFOLIO</h2>
+	
+		<div id="filters" class="button-group flex flex--row flex--center__horizontal">  
+          <a herf="" class="isotope is-checked" data-filter="*">Todos</a>
+          <a herf="" class="isotope" data-filter=".web">web</a>
+          <a herf="" class="isotope" data-filter=".system">system</a>
+          <a herf="" class="isotope" data-filter=".design">design</a>
+          <a herf="" class="isotope" data-filter=".mobile">branding</a>
+          <!--<a herf="" class="isotope" data-filter=".photograpy">fotografía</a>-->
+        </div>
+        <br>
+        <div class="grid">
+			<figure class="element-item design">
+			  <img class="lin" src="res/img/Captura.jpg" alt="img-porfolio">
+			  <figcaption class="element-info">
+			  	<h4>Work title</h4>
+			  	<span>
+			  		Web Design, front-end, UI/UX
+			  	</span>
+			    <!--<a class="portfolio-btn flex flex-center" href="">ver</a>-->
+			  </figcaption>
+			</figure>
+			<figure class="element-item web">
+			  <img class="lin" src="res/img/Captura.jpg" alt="img-porfolio">
+			  <figcaption class="element-info">
+			  	<h4>Holas</h4>
+			  <!--  <a class="portfolio-btn flex flex-center" href="">ver</a>-->
+			  </figcaption>
+			</figure>
+			<figure class="element-item design">
+			  <img class="lin" src="res/img/Captura.jpg" alt="img-porfolio">
+			  <figcaption class="element-info">
+			  	<h4>Holas</h4>
+			  <!--  <a class="portfolio-btn flex flex-center" href="">ver</a>-->
+			  </figcaption>
+			</figure>
+			<figure class="element-item mobile">
+			  <img class="lin" src="res/img/Captura.jpg" alt="img-porfolio">
+			  <figcaption class="element-info">
+			  	<h4>Holas</h4>
+			  <!--  <a class="portfolio-btn flex flex-center" href="">ver</a>-->
+			  </figcaption>
+			</figure>
+			<figure class="element-item system">
+			  <img class="lin" src="res/img/Captura.jpg" alt="img-porfolio">
+			  <figcaption class="element-info">
+			  	<h4>Holas</h4>
+			  <!--  <a class="portfolio-btn flex flex-center" href="">ver</a>-->
+			  </figcaption>
+			</figure>
+			<figure class="element-item photograpy">
+			  <img class="lin" src="res/img/Captura.jpg" alt="img-porfolio">
+			  <figcaption class="element-info">
+			  	<h4>Holas</h4>
+			  <!--  <a class="portfolio-btn flex flex-center" href="">ver</a>-->
+			  </figcaption>
+			</figure>
+	    </div>
+    </div>
+</div>
+
+<div id="modal-container" class="modal-container">
+    <div class="modal-flex-wrapper flex-center">
+		<div class="moda-contento">
+			<span class="close">X</span>
+		</div>
+    </div>
+</div>
+
+
+<script src="res/js/isotope.pkgd.min.js"></script>
+<script src="res/js/isotope.js"></script>	
+
+<script>
+	$('.grid').isotope({
+	  // options
+	  itemSelector: '.element-item',
+	  layoutMode: 'fitRows'
+	});
+</script>
+
+<script>
+	$('.element-info').click(function(){
+		$('#modal-container').fadeIn();
+		//console.log($(this).index())
+	});
+	$('.close').click(function(){
+		$('#modal-container').fadeOut();
+	});
+</script>

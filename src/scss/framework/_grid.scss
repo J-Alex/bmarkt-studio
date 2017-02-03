@@ -1,0 +1,66 @@
+/***************************************\
+                Grid
+\***************************************/
+
+
+//CONTAINER
+//ROW
+//COL
+
+//ROW
+.row {
+    display: flex;
+    //flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.row-full-screen {
+    height: 100vh;
+    max-height: 100vh;
+    min-height: 100vh;
+}
+//ROW CONTENT CONTAINER
+.row-content {
+    display: flex;
+}
+
+.row-content_fullwidht {
+    width: 100%;    
+}
+
+.row-content_medium {
+    width: 80%;
+    min-width: 320px;
+}
+
+.row-content_column {
+    flex-direction: column;
+}
+
+
+.row-elements_between {
+    justify-content: space-between;
+}
+
+.row-content-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.row-content-center_vertical {
+    align-items: center;    
+}
+
+.row-content-center_horizontal {
+    justify-content: center;
+}
+
+//CONTAINER ELEMENT
+.element-center_vertical {
+    align-self: center;
+}
+
+.view-container {
+    padding-top: 91px;
+}

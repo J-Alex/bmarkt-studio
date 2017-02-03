@@ -1,0 +1,46 @@
+.wedo {
+	@extend %display-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.wedo-fig {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.wedo-fig_img, .wedo-fig_cap, .wedo-fig_cap a {
+    width: 100%;
+    height: 100%;
+}
+
+.wedo-fig_img {
+    position: absolute;
+    transition: 6s ease all;
+}
+
+.wedo-fig_cap {
+    position: relative;
+    top: 0;
+    left: 0;
+    font-size: 1.5em;
+    background-color: rgba(250,250,250,1);
+    transition: 1s ease all;
+    a {
+	@extend %display-flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.wedo-fig:hover {
+    .wedo-fig_cap {background-color: rgba(250,250,250,.3);}
+    .wedo-fig_img {transform: scale(1.3);}
+}

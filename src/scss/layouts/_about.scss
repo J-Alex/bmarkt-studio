@@ -1,0 +1,35 @@
+.banner {
+	margin-top: -91px;
+	img {
+		width: 40%;
+		height: auto;
+	}
+	h1 {
+		width: 50%;
+	}
+}
+
+
+.about {
+	margin: 7rem 0;
+}
+.logo-red-ball {
+	width: 15px;
+	height: 15px;
+	background-color: $accent-color;
+	border-radius: 50%;
+	//box-shadow: 0px 0px 4px rgba(0,0,0,0.5);
+}
+
+hr {
+	border: 0;
+	border-top: 1px solid $divider-color;
+    width: 100px;
+}
+
+.info-text {
+	width: 80%;
+	font-size: 1.8em;
+	line-height: 1.4;
+	color: $primary-text-color;
+}

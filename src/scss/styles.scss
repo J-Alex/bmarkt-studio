@@ -1,0 +1,25 @@
+/***************************************\
+            FRAMEWORK PARTIALS
+\***************************************/
+@import 'framework/_normalize.scss';
+@import 'framework/_styleguide.scss';
+@import 'framework/_typography.scss';
+@import 'framework/_reset.scss';
+@import 'framework/_phantasm.scss';
+@import 'framework/_grid.scss';
+@import 'framework/_flex.scss';
+@import 'framework/_components.scss';
+@import 'framework/_forms.scss';
+
+
+/***************************************\
+            LAYOUTS PARTIALS
+\***************************************/
+@import 'layouts/_header.scss';
+@import 'layouts/_about.scss';
+@import 'layouts/_wedo.scss';
+@import 'layouts/_services.scss';
+@import 'layouts/_portfolio.scss';
+@import 'layouts/_contact.scss';
+@import 'layouts/_footer.scss';
+@import 'layouts/_modal-project.scss';

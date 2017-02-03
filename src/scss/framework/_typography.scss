@@ -1,0 +1,17 @@
+/***************************************\
+        Font-Face & Text-Format
+\***************************************/
+
+
+@font-face {
+	font-family: 'arialr';
+	src: url('../fonts/Arial Rounded Bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'arialn';
+	src: url('../fonts/Arial Rounded.ttf') format('truetype');
+}
+
+.text-center {
+    text-align: center;
+}

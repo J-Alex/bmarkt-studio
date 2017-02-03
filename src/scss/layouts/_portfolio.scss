@@ -1,0 +1,53 @@
+a.isotope {
+	font-family: 'arialn';
+	color: gray;
+	padding: .7rem;
+	cursor: pointer;
+}
+
+a.isotope:hover {
+	text-decoration: underline;
+}
+
+a.is-checked, a.is-checked:hover{
+	background-color: $accent-color;
+	color: $primary-color-text;
+	border-radius: 15px;
+}
+
+.grid {
+    width: 100%;
+}
+
+.element-item {
+	width: 30%;
+	height: 220px;
+	margin: 5px;
+	padding: 0;	
+}
+
+.element-item > img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+/*.element-info {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}*/
+
+.element-info {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background-color: rgba(200,200,200,.9);
+	//color: #fff;
+}
+.element-info h4 {
+	margin: 0;
+}

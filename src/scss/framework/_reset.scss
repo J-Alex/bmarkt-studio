@@ -1,0 +1,32 @@
+body {
+	color: #333;
+	background-color: #fafafa;
+	font: {
+		family: 'arialn';
+		//size: 16px;
+	}
+	
+}
+
+/*ui-view .row {
+	padding-top: 91px;
+}*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'arialr';
+    color: #333;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+
+figure {
+	margin: 0;
+}
+
+a, a:visited {
+	text-decoration: none;
+	color: #777;
+}
+
+a:hover {
+	color: #333;
+}

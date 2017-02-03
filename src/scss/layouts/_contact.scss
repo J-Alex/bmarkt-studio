@@ -1,0 +1,27 @@
+.contact {
+    padding-top: 3rem;
+    padding-bottom: 7rem;
+}
+
+.contact-form {
+    width: 65%;
+    padding: 1rem 2rem;
+    
+    .form-input {
+        border: 1px solid #ccc;
+        border-radius: 6px;
+    }
+}
+
+
+.form-button {
+	background-color: $primary-color;
+	color: $primary-color-text;
+	border: 1px solid $primary-color-dark;
+	//box-shadow: 0 0 5px rgba(0,0,0,.65);
+}
+
+.form-button:hover {
+	background-color: $primary-color-dark;
+	//box-shadow: 0 0 10px rgba(0,0,0,.65);
+}

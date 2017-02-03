@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en" data-ng-app="bmarkt">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="favicon.ico">
+    <title>Bmarkt Studio | Graphic Design, Web Development, Digital Marketing & Architecture</title>
+    <meta name="description" content="Studio graphic, development, marketing & architecture">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/res/css/styles.min.css">
+	<script src="https://use.fontawesome.com/28b518dfdc.js"></script>
+</head>
+<body>
+    <header class="header row">
+        <div class="row-content row-content_medium row-elements_between row-content-center_vertical">
+            <a href="/">
+                <img class="logo" src="res/img/logoFull.png" alt="logo"></img>
+            </a>
+            
+            <nav class="navbar flex">
+                <a class="link" ui-sref="/" ui-sref-active="active">Home</a>
+                <a class="link" ui-sref="services" ui-sref-active="active">Services</a>
+                <a class="link" ui-sref="portfolio" ui-sref-active="active">Portfolio</a>
+                <a class="link" ui-sref="contact" ui-sref-active="active">Contact</a>
+                <i class="fa fa-globe nav-link" aria-hidden="true"></i>
+            </nav>
+        </div>
+    </header>
+    <main class="view-container">
+        <ui-view></ui-view>
+    </main>
+    <footer class="footer row row-content_column  row-content-center_vertical">
+        <span class="map-toggler_open"> <i class="fa fa-map" aria-hidden="true"></i> </span>
+        <span class="map-toggler_close" style="display: none"> <i class="fa fa-map" aria-hidden="true"></i> </span>
+        <!--<iframe class="map-container" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1943.0098487863559!2d-86.35615807616966!3d13.097938140533177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2s!4v1485984097398" frameborder="0" allowfullscreen></iframe>-->
+        <iframe class="map-container" src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d1296.8042740418107!2d-86.35661010025788!3d13.097823473313829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d13.0980063!2d-86.356329!5e0!3m2!1sen!2s!4v1485989122647" allowfullscreen></iframe>
+        <div class="footer-container row-content">
+            <!--<div class="map-container"></div>-->
+            
+            <div class="footer-content">
+                <div class="logo-icon">
+                    <img src="res/img/logo.png" alt="">
+                </div>
+                <div class="footer-nav">
+                    <span>
+                        <a ui-sref="/">Home</a>
+                    </span>
+                    <span>
+                        <a ui-sref="services">Services</a>
+                    </span>
+                    <span>
+                        <a ui-sref="portfolio">Portfolio</a>
+                    </span>
+                    <span>
+                        <a ui-sref="contact">Contact</a>
+                    </span>    
+                </div>
+                <div class="contact-info">
+                    <span><i class="fa fa-globe" aria-hidden="true"></i> bmarkt@studio.com</span>
+                    <span><i class="fa fa-globe" aria-hidden="true"></i> (+505) 5808 2679</span>
+                    <span><i class="fa fa-globe" aria-hidden="true"></i> Supermercado la colonia 5 1/2 cuadras norte</span>
+                    <span><i class="fa fa-globe" aria-hidden="true"></i> Estelí - Nicaragua</span>    
+                </div>
+                <div class="social">
+                    <a href="/" class="social-icon"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+                    <a href="/" class="social-icon"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+                    <a href="/" class="social-icon"><i class="fa fa-instagram fa-2x " aria-hidden="true"></i></a>
+                    <a href="/" class="social-icon"><i class="fa fa-linkedin fa-2x " aria-hidden="true"></i></a>
+                    <a href="/" class="social-icon"><i class="fa fa-behance fa-2x " aria-hidden="true"></i></a>
+                    <a href="/" class="social-icon"><i class="fa fa-github fa-2x " aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="trademark text-center row  row-content row-content_medium">
+            Bmarkt Studio | All Right Reserved © 2017
+        </div>
+    </footer>
+    
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+	<script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<!--<script src="https://npmcdn.com/isotope-layout@3.0/dist/isotope.pkgd.min.js"></script>-->
+	<!--<script src="res/js/isotope.pkgd.min.js"></script>-->
+	<!--<script src="res/js/isotope.js"></script>	-->
+	<script src="res/js/scripts.min.js"></script>
+	
+	<script>
+	    $('.map-toggler_open').click(function(){
+	        $('.footer-container').fadeOut();
+	        $(this).fadeOut();
+	        $('.map-toggler_close').fadeIn();//.css('display', 'block');
+	    });
+	    
+	    $('.map-toggler_close').click(function(){
+	        $('.footer-container').fadeIn();
+	        $(this).fadeOut();
+	        $('.map-toggler_open').fadeIn();//.css('display', 'block');
+	    });
+	</script>
+</body>
+</html>

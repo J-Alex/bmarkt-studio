@@ -1,0 +1,20 @@
+%display-flex {
+    display: flex;
+}
+
+%flex-around {
+    justify-content: space-around;
+}
+
+%flex-between {
+    justify-content: space-between;
+}
+
+%flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+%full-width {
+    width: 100%;
+}

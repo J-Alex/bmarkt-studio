@@ -1,0 +1,26 @@
+.modal-container {
+	position: fixed;
+	display: none;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+	height: 100vh;
+	background-color: #fafafa;
+	/*opacity: .5;*/
+}
+
+.modal-flex-wrapper {
+	@extend %display-flex;
+    width: 100%;
+    height: 100%;
+}
+.moda-contento {
+	width: 75%;
+	height: 80%;
+	//margin: 0 auto;
+	//margin-top: 10rem;
+	background-color: #fff;
+	border-radius: 7px;
+	box-shadow: 0 0 10px rgba(0,0,0,.5);
+}
