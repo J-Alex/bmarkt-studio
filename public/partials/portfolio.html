@@ -1,5 +1,19 @@
+
+<script>
+	$('.element-info').click(function(){
+		$('#modal-container').fadeIn();
+		//console.log($(this).index())
+	});
+	$('.close').click(function(){
+		$('#modal-container').fadeOut();
+	});
+	var elementItem = $('.element-item');
+	var altoAncho = elementItem.width();
+	elementItem.height(altoAncho);
+
+</script>
 <div class="row">
-    <div class="row-content row-content_medium row-content_column row-content-center_vertical">
+    <div class="portfolio row-content row-content_medium row-content_column row-content-center_vertical">
         <h2 class="text-center">PORTFOLIO</h2>
 	
 		<div id="filters" class="button-group flex flex--row flex--center__horizontal">  
@@ -57,6 +71,26 @@
 			  <!--  <a class="portfolio-btn flex flex-center" href="">ver</a>-->
 			  </figcaption>
 			</figure>
+			<figure class="element-item design">
+			  <img class="lin" src="res/img/Captura.jpg" alt="img-porfolio">
+			  <figcaption class="element-info">
+			  	<h4>Work title</h4>
+			  	<span>
+			  		Web Design, front-end, UI/UX
+			  	</span>
+			    <!--<a class="portfolio-btn flex flex-center" href="">ver</a>-->
+			  </figcaption>
+			</figure>
+			<figure class="element-item design">
+			  <img class="lin" src="res/img/Captura.jpg" alt="img-porfolio">
+			  <figcaption class="element-info">
+			  	<h4>Work title</h4>
+			  	<span>
+			  		Web Design, front-end, UI/UX
+			  	</span>
+			    <!--<a class="portfolio-btn flex flex-center" href="">ver</a>-->
+			  </figcaption>
+			</figure>
 	    </div>
     </div>
 </div>
@@ -64,7 +98,20 @@
 <div id="modal-container" class="modal-container">
     <div class="modal-flex-wrapper flex-center">
 		<div class="moda-contento">
-			<span class="close">X</span>
+			<div class="work-img"></div>
+			<div class="work-detail">
+				<div class="work-detail-container">
+					<span class="close"> X </span>
+					<h3>TITLE</h3>
+					<div>
+						<a href="">UI/UX</a>
+						<a href="">SEO/SEM</a>
+						<a href="">Responsive</a>
+						<a href="">Mobile</a>
+					</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo quaerat distinctio ipsam, itaque laboriosam iure voluptate minus neque ea, quia officia nobis harum, voluptas ut qui quisquam, vitae esse sequi.</p>
+				</div>
+			</div>
 		</div>
     </div>
 </div>
@@ -78,15 +125,5 @@
 	  // options
 	  itemSelector: '.element-item',
 	  layoutMode: 'fitRows'
-	});
-</script>
-
-<script>
-	$('.element-info').click(function(){
-		$('#modal-container').fadeIn();
-		//console.log($(this).index())
-	});
-	$('.close').click(function(){
-		$('#modal-container').fadeOut();
 	});
 </script>

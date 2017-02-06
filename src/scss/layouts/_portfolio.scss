@@ -1,3 +1,8 @@
+.portfolio {
+	padding-top: 3rem;
+	padding-bottom: 7rem;
+}
+
 a.isotope {
 	font-family: 'arialn';
 	color: gray;
@@ -20,9 +25,9 @@ a.is-checked, a.is-checked:hover{
 }
 
 .element-item {
-	width: 30%;
-	height: 220px;
-	margin: 5px;
+	width: 24%;
+	//height: 220px;
+	margin: 1px;
 	padding: 0;	
 }
 
@@ -45,9 +50,18 @@ a.is-checked, a.is-checked:hover{
 	top: 0;
 	left: 0;
 	height: 100%;
-	background-color: rgba(200,200,200,.9);
-	//color: #fff;
+	color: white;
+	background-color: rgba(0,0,0,.5);
+	opacity: 0;
+	transition: 1s ease all;
+	@extend %flex;
+	@extend %flex-center;
+	@extend %flex-column;
+}
+.element-item:hover .element-info {
+	opacity: 1;
 }
 .element-info h4 {
 	margin: 0;
+	color: $white;
 }

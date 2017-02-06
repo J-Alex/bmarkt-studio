@@ -1,0 +1,79 @@
+.service-banner {
+    height: 400px;
+    margin-top: -91px;
+    background: {
+        image: url('../img/cuadro.jpg');
+        attachment: fixed;
+        repeat: no-repeat;
+        size: 100% 100%; 
+    }
+    @extend %flex;
+    @extend %flex-end;
+}
+h2.service-title{
+    color: #fafafa;
+    width: 80%;
+    margin: 0 auto;
+}
+.service-container {
+    overflow: hidden;
+    padding: 7rem 0;
+}
+
+.img-service, .description-service {
+    width: 50%;
+}
+
+.description-service {
+	@extend %display-flex;
+    flex-direction: column;
+    //justify-content: center;
+    align-items: center;
+}
+/*.services .service-container:nth-child(odd) .description-service {
+    padding-left: 4rem;
+}
+
+.services .service-container:nth-child(even) .description-service {
+    padding-left: 6rem;
+}*/
+/***********************************************************************/
+.services .service-container:nth-child(odd) .img-service {
+    position: relative;
+    top: 0;
+    left: -100px;
+    transition: 1s ease all;
+}
+
+.services .service-container:nth-child(even) .img-service {
+    position: relative;
+    top: 0;
+    right: -100px;
+    transition: 1s ease all;
+}
+
+.services .service-container:nth-child(odd):hover .img-service {
+    left: -20px;
+}
+.services .service-container:nth-child(even):hover .img-service {
+    right: -20px;
+}
+/**********************************************************************/
+.description-service h3, .description-service p {
+    //margin: 0 auto;
+    width: 80%;
+}
+
+.title-service {
+    font-size: 2.2em;
+    //padding-bottom: 4px;
+    //border-bottom: 1px solid #111;
+    font-weight: normal;
+    margin-top: 3.5rem;
+}
+.description-service p {
+    text-align: justify;
+    line-height: 1.8;
+    margin-top: 2rem;
+    font-size: 1.1em;
+}

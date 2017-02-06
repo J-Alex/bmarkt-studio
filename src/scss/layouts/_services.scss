@@ -1,62 +1,37 @@
-.service-container {
-    overflow: hidden;
-    padding: 7rem 0;
+.service-wrapper {
+	margin-top: -91px;
+}
+.service {
+	width: 100%;
+	height: 110vh;
+	background: {
+		repeat: no-repeat;
+		attachment: fixed;
+		size: 100% 100%;
+	}
 }
 
-.img-service, .description-service {
-    width: 50%;
+.service-wrapper .service:nth-child(1) {
+	background-image: url('../img/cuadro.jpg');
+}
+.service-wrapper .service:nth-child(2) {
+	background-image: url('../img/cuadro0.png');
+}
+.service-wrapper .service:nth-child(3) {
+	background-image: url('../img/cuadro1.jpg');
+}
+.service-wrapper .service:nth-child(4) {
+	background-image: url('../img/cuadro2.jpg');
 }
 
-.description-service {
-	@extend %display-flex;
-    flex-direction: column;
-    //justify-content: center;
-    align-items: center;
-}
-/*.services .service-container:nth-child(odd) .description-service {
-    padding-left: 4rem;
-}
-
-.services .service-container:nth-child(even) .description-service {
-    padding-left: 6rem;
-}*/
-/***********************************************************************/
-.services .service-container:nth-child(odd) .img-service {
-    position: relative;
-    top: 0;
-    left: -100px;
-    transition: 1s ease all;
-}
-
-.services .service-container:nth-child(even) .img-service {
-    position: relative;
-    top: 0;
-    right: -100px;
-    transition: 1s ease all;
-}
-
-.services .service-container:nth-child(odd):hover .img-service {
-    left: -20px;
-}
-.services .service-container:nth-child(even):hover .img-service {
-    right: -20px;
-}
-/**********************************************************************/
-.description-service h3, .description-service p {
-    //margin: 0 auto;
-    width: 80%;
-}
-
-.title-service {
-    font-size: 2.2em;
-    //padding-bottom: 4px;
-    //border-bottom: 1px solid #111;
-    font-weight: normal;
-    margin-top: 3.5rem;
-}
-.description-service p {
-    text-align: justify;
-    line-height: 1.8;
-    margin-top: 2rem;
-    font-size: 1.1em;
+.services-container {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(50,50,50,.5);
+	@extend %flex;
+	@extend %flex-center;
+	h3 {
+		//position: fixed;
+		color: $white;
+	}
 }

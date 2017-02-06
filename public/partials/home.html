@@ -1,11 +1,26 @@
 
 
+
+
 <div class="banner row row-full-screen">
+    <div class="homepage-hero-module">
+    <div class="video-container">
+        <div class="filter"></div>
+        <video autoplay loop class="fillWidth">
+            <!-- <source src="PATH_TO_MP4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.-->
+            <source src="res/video/spacious.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+        </video>
+        <div class="poster hidden">
+            <img src="PATH_TO_JPEG" alt="">
+        </div>
+    </div>
+</div>
     <div class="row-content row-content_medium row-elements_between flex-center">
         <img src="res/img/logo.png" alt="logo">
         <h1>MAKE...<br> <span class="typing"></span></h1>
     </div>
 </div>
+
 <div class="row">
     <div class="about row-content row-content_medium row-content_column row-content-center_vertical">
         
@@ -21,30 +36,81 @@
 </div>
 
 <div class="wedo">
-    <figure class="wedo-fig">
+    <div class="service-description">
+        <div class="service-description-container">
+            <h3>Graphic Design</h3>
+            <p class="paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Itaque dolores illum ab laudantium ipsam, quia non,
+                aspernatur exercitationem pariatur labore odit quidem
+                officia eius expedita deserunt, beatae culpa sapiente
+                perferendis.
+            </p>
+        </div>
+    </div>
+    <figure class="wedo-fig ribon-left">
         <img class="wedo-fig_img" src="res/img/Captura.jpg" alt="Design">
         <figcaption class="wedo-fig_cap">
-            <a href="" ui-sref="services({'#': 'design'})">Design</a>
+            <a href="" ui-sref="service({'#': 'design'})">Design</a>
         </figcaption>
     </figure>
-    <figure class="wedo-fig">
+
+    <figure class="wedo-fig ribon-right">
         <img class="wedo-fig_img" src="res/img/Captura.jpg" alt="Development">
         <figcaption class="wedo-fig_cap">
-            <a href="" ui-sref="services({'#': 'development'})">Development</a>
+            <a href="" ui-sref="service({'#': 'development'})">Development</a>
         </figcaption>
     </figure>
-    <figure class="wedo-fig">
+    <div class="service-description">
+        <div class="service-description-container">
+            <h3 class="text-right">Web Development</h3>
+            <p class="paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Itaque dolores illum ab laudantium ipsam, quia non,
+                aspernatur exercitationem pariatur labore odit quidem
+                officia eius expedita deserunt, beatae culpa sapiente
+                perferendis.
+            </p>
+        </div>
+    </div>
+
+    <div class="service-description">
+        <div class="service-description-container">
+            <h3>Digital Marketing</h3>
+            <p class="paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Itaque dolores illum ab laudantium ipsam, quia non,
+                aspernatur exercitationem pariatur labore odit quidem
+                officia eius expedita deserunt, beatae culpa sapiente
+                perferendis.
+            </p>
+        </div>
+    </div>
+    <figure class="wedo-fig ribon-left">
         <img class="wedo-fig_img" src="res/img/Captura.jpg" alt="Marketing">
         <figcaption class="wedo-fig_cap">
-            <a href="" ui-sref="services({'#': 'marketing'})">Marketing</a>
+            <a href="" ui-sref="service({'#': 'marketing'})">Marketing</a>
         </figcaption>
     </figure>
-    <figure class="wedo-fig">
+
+    <figure class="wedo-fig ribon-right">
         <img class="wedo-fig_img" src="res/img/Captura.jpg" alt="Architecture">
         <figcaption class="wedo-fig_cap">
-            <a href="#architecture" ui-sref="services({'#': 'architecture'})">Architecture</a>
+            <a href="#architecture" ui-sref="service({'#': 'architecture'})">Architecture</a>
         </figcaption>
     </figure>
+    <div class="service-description">
+        <div class="service-description-container">
+            <h3 class="text-right">Architecture</h3>
+            <p class="paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Itaque dolores illum ab laudantium ipsam, quia non,
+                aspernatur exercitationem pariatur labore odit quidem
+                officia eius expedita deserunt, beatae culpa sapiente
+                perferendis.
+            </p>
+        </div>
+    </div>
 </div>
  
 <script src="res/js/typed.min.js"></script>
@@ -67,3 +133,68 @@
         <!--    </div>-->
         <!--</div>-->
         
+<script>
+    //jQuery is required to run this code
+$( document ).ready(function() {
+
+    scaleVideoContainer();
+
+    initBannerVideoSize('.video-container .poster img');
+    initBannerVideoSize('.video-container .filter');
+    initBannerVideoSize('.video-container video');
+
+    $(window).on('resize', function() {
+        scaleVideoContainer();
+        scaleBannerVideoSize('.video-container .poster img');
+        scaleBannerVideoSize('.video-container .filter');
+        scaleBannerVideoSize('.video-container video');
+    });
+
+});
+
+function scaleVideoContainer() {
+
+    var height = $(window).height() + 5;
+    var unitHeight = parseInt(height) + 'px';
+    $('.homepage-hero-module').css('height',unitHeight);
+
+}
+
+function initBannerVideoSize(element){
+
+    $(element).each(function(){
+        $(this).data('height', $(this).height());
+        $(this).data('width', $(this).width());
+    });
+
+    scaleBannerVideoSize(element);
+
+}
+
+function scaleBannerVideoSize(element){
+
+    var windowWidth = $(window).width(),
+    windowHeight = $(window).height() + 5,
+    videoWidth,
+    videoHeight;
+
+    console.log(windowHeight);
+
+    $(element).each(function(){
+        var videoAspectRatio = $(this).data('height')/$(this).data('width');
+
+        $(this).width(windowWidth);
+
+        if(windowWidth < 1000){
+            videoHeight = windowHeight;
+            videoWidth = videoHeight / videoAspectRatio;
+            $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
+
+            $(this).width(videoWidth).height(videoHeight);
+        }
+
+        $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
+
+    });
+}
+</script>

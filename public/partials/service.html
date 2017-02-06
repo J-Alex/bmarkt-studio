@@ -1,0 +1,61 @@
+<!--<div style="height: 30vh;"></div>-->
+
+<div id="parallax-banner" class="service-banner">
+	<h2 class="service-title">Web Development</h2>
+</div>
+<div class="services row row-content_column">
+	<figure id="design" class="service-container row-content">
+		<img class="img-service" src="res/img/Captura.jpg" alt="">
+		<figcaption class="description-service">
+			<h3 class="title-service">Design</h3>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, reprehenderit, officia, enim nesciunt unde debitis ut odit adipisci amet labore maiores sit temporibus aperiam facere soluta. Nulla veritatis suscipit fuga. </p>
+		</figcaption>
+	</figure>
+	<figure id="development" class="service-container row-content">
+		<figcaption class="description-service">
+			<h3 class="title-service">Development</h3>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, reprehenderit, officia, enim nesciunt unde debitis ut odit adipisci amet labore maiores sit temporibus aperiam facere soluta. Nulla veritatis suscipit fuga. </p>
+		</figcaption>
+		<img class="img-service" src="res/img/Captura.jpg" alt="">
+	</figure>
+	<figure id="marketing" class="service-container row-content">
+		<img class="img-service" src="res/img/Captura.jpg" alt="">
+		<figcaption class="description-service">
+			<h3 class="title-service">Marketing</h3>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, reprehenderit, officia, enim nesciunt unde debitis ut odit adipisci amet labore maiores sit temporibus aperiam facere soluta. Nulla veritatis suscipit fuga. </p>
+		</figcaption>
+	</figure>
+	<figure id="architecture" class="service-container row-content">
+		<figcaption class="description-service">
+			<h3 class="title-service">Architecture</h3>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, reprehenderit, officia, enim nesciunt unde debitis ut odit adipisci amet labore maiores sit temporibus aperiam facere soluta. Nulla veritatis suscipit fuga. </p>
+		</figcaption>
+		<img class="img-service" src="../res/img/Captura.jpg" alt="">
+	</figure>
+</div>
+
+<script>
+(function(){
+
+	/*var initial = -400;
+	$('#parallax-banner').css({"background-position-y": initial+"px"});
+	$(window).scroll(function()	{
+		initial -= $(this).scrollTop(); 
+		console.log(initial);
+		$('#parallax-banner').css({"background-position-y": st+"px"});
+		//banner($(this).scrollTop());
+	});*/
+})();
+	
+
+	function banner(st) {
+		
+		
+
+	}
+
+	$(window).scroll(function()	{
+		$('#parallax-banner').css({"background-position-y": "-"+$(this).scrollTop()*2+"px"});
+		//banner($(this).scrollTop());
+	});
+</script>
