@@ -51,7 +51,7 @@
         };
         
         //$locationProvider.hashPrefix('');
-        $locationProvider.html5Mode(true).hashPrefix('!');
+        //$locationProvider.html5Mode(true).hashPrefix('');
         
         
         //$stateProvider.state('/');
