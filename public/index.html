@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en" data-ng-app="bmarkt">
 <head>
+    <base href="/">
     <meta charset="UTF-8">
     <link rel="icon" href="favicon.ico">
     <title>Bmarkt Studio | Graphic Design, Web Development, Digital Marketing & Architecture</title>
@@ -102,6 +103,14 @@
 	        $(this).fadeOut();
 	        $('.map-toggler_open').fadeIn();//.css('display', 'block');
 	    });
+        //console.log();
+        $(window).scroll(function() {
+            if( $(window).scrollTop() >= $('.header').height()){
+                $('.header').css('background-color', '#fafafa');
+            } else {
+                $('.header').css('background-color', 'transparent');                
+            }
+        });
 	</script>
 </body>
 </html>
