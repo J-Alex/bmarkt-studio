@@ -63,7 +63,7 @@
         $stateProvider.state(componente);
         
         $stateProvider.state(state404);
-        //$urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/');
     }
 
     function componentResolve(ComponentService) {
