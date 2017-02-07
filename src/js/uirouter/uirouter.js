@@ -50,7 +50,7 @@
           templateUrl: 'partials/404.html'
         };
         
-        //$locationProvider.hashPrefix('');
+        $locationProvider.hashPrefix('');
         //$locationProvider.html5Mode(true).hashPrefix('');
         
         
