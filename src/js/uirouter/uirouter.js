@@ -50,8 +50,8 @@
           templateUrl: 'partials/404.html'
         };
         
-        $locationProvider.hashPrefix('');
-        $locationProvider.html5Mode(true);
+        //$locationProvider.hashPrefix('');
+        $locationProvider.html5Mode(true).hashPrefix('!');
         
         
         //$stateProvider.state('/');
@@ -63,7 +63,7 @@
         $stateProvider.state(componente);
         
         $stateProvider.state(state404);
-        $urlRouterProvider.otherwise('/');
+        //$urlRouterProvider.otherwise('/');
     }
 
     function componentResolve(ComponentService) {
