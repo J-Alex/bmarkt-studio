@@ -16,28 +16,28 @@
             templateUrl: 'partials/home.html'
         };
         var servicesState = {
-            name: 'services',
+            name: '/services',
             url: '/services',
             templateUrl: 'partials/services.html'
         };
         var serviceState = {
-            name: 'service',
+            name: '/service',
             url: '/service',
             templateUrl: 'partials/service.html'
         };
         var portfolioState = {
-            name: 'portfolio',
+            name: '/portfolio',
             url: '/portfolio',
             templateUrl: 'partials/portfolio.html',
             controller: 'portfolioCtrl'
         };
         var contactState = {
-            name: 'contact',
+            name: '/contact',
             url: '/contact',
             templateUrl: 'partials/contact.html'
         };
         var componente = {
-            name: "componente",
+            name: "/componente",
             url: '/componente',
             component: 'componente',
             resolve: {
