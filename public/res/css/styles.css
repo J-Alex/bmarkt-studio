@@ -622,6 +622,43 @@ a:hover {
   display: none;
   width: 100px; }
 
+.menu-wrapper {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  display: none;
+  align-items: center;
+  justify-content: center; }
+
+.hamburger:before, .hamburger:after {
+  content: "";
+  position: relative;
+  left: 0; }
+
+.hamburger, .hamburger:before, .hamburger:after {
+  display: block;
+  width: 30px;
+  height: 0;
+  border-top: 1px solid black;
+  transition: .4s ease all; }
+
+.hamburger:before {
+  bottom: -8px; }
+
+.hamburger:after {
+  top: -10px; }
+
+.togle {
+  border-top-color: transparent; }
+
+.togle:before {
+  bottom: 0;
+  transform: rotate(50deg); }
+
+.togle:after {
+  top: 0;
+  transform: rotate(-50deg); }
+
 a.active {
   color: #333; }
 
@@ -691,23 +728,34 @@ a.active {
     border-radius: 50%;
 }*/
 @media screen and (max-width: 420px) {
+  .header .header-container {
+    width: 90%;
+    padding-top: 0;
+    align-items: center; }
+
   .logo {
     display: none; }
 
   .logo-mobile {
-    display: block; }
+    display: block;
+    z-index: 99; }
 
-  .menu-mobile {
-    display: block; }
+  .menu-wrapper {
+    display: flex;
+    z-index: 99; }
 
   .navbar {
     position: fixed;
     top: 0;
-    right: -100vw;
+    left: 100vw;
     width: 100vw;
     height: 100vh;
     background-color: #FF5252;
-    z-index: 99x; } }
+    z-index: 98;
+    transition: .5s ease all; }
+
+  .navbar-mobile {
+    left: 0; } }
 .homepage-hero-module {
   border-right: none;
   border-left: none;
@@ -834,7 +882,7 @@ hr {
   width: 0;
   height: 0;
   border: 20px solid #fafafa;
-  z-index: 99;
+  z-index: 97;
   border-bottom-color: transparent;
   border-top-color: transparent;
   border-right-color: transparent; }
@@ -1074,6 +1122,13 @@ a.is-checked, a.is-checked:hover {
 .trademark {
   color: #fff; }
 
+@media screen and (max-width: 420px) {
+  .footer-container {
+    height: auto; }
+
+  .footer-content {
+    flex-direction: column;
+    flex-wrap: nowrap; } }
 .modal-container {
   position: fixed;
   display: none;

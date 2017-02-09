@@ -18,7 +18,9 @@
                 <img class="logo" src="res/img/logoFull.png" alt="logo"></img>
                 <img class="logo-mobile" src="res/img/logo.png" alt="logo"></img>
             </a>
-            
+            <div class="menu-wrapper">
+              <div class="hamburger"></div>
+            </div>
             <nav class="navbar">
                 <a class="link" ui-sref="/" ui-sref-active="active">Home</a>
                 <a class="link" ui-sref="services" ui-sref-active="active">Services</a>
@@ -104,19 +106,15 @@
 	        $(this).fadeOut();
 	        $('.map-toggler_open').fadeIn();//.css('display', 'block');
 	    });
-        //console.log();
-        $(window).scroll(function() {
-            if( $(window).scrollTop() >= $('.banner').height()){
-                $('.header').css('background-color', '#fafafa');
-            } else {
-                $('.header').css('background-color', 'transparent');                
-            }
+
+        /*$('.header-container').click(function(){
+            
+        });*/
+        $('.menu-wrapper').click(function() {  
+            $('.hamburger').toggleClass("togle");
+            $('.navbar').toggleClass("navbar-mobile");
         });
-        $('.header-container').click(function(){
-            $('.navbar').animate({
-                left: "0"
-            },500);
-        });
+
 	</script>
 </body>
 </html>

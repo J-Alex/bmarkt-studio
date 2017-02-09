@@ -184,6 +184,13 @@ function scaleBannerVideoSize(element){
       loop: true
     });
   });
+$(window).scroll(function() {
+    if( $(window).scrollTop() >= $('.banner').height()){
+        $('.header').css('background-color', '#fafafa');
+    } else {
+        $('.header').css('background-color', 'transparent');                
+    }
+});
 </script>        
     	
         

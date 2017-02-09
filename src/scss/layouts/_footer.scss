@@ -69,3 +69,13 @@
 	//position: relative;
 	//margin-top: 70vh;
 }
+
+@media screen and (max-width: 420px) {
+	.footer-container {
+		height: auto;
+	}
+	.footer-content {
+		flex-direction: column;
+		flex-wrap: nowrap;
+	}
+}
