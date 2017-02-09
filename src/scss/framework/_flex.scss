@@ -18,12 +18,21 @@
 %flex-center_vertical {
     align-items: center;
 }
+
+%flex-between {
+    justify-content: space-between;
+}
+
 %flex-column {
 	flex-flow: column;
 }
+
 %flex-end {
 	align-items: flex-end;
 }
+
+
+
 .flex {
 	display: flex;
 }

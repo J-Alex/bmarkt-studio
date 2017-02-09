@@ -8,7 +8,7 @@
 
     function componenteCtrl(ComponentService) {
         console.log("componenteCtrl");
-        console.log(ComponentService.$$state.value);
+        //console.log(ComponentService.$$state.value);
         /*var arreglo = [];
         arreglo = ComponentService;
         console.log(arreglo.$$state.value);*/

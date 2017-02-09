@@ -35,27 +35,12 @@
 </div>
 
 <script>
-(function(){
-
-	/*var initial = -400;
-	$('#parallax-banner').css({"background-position-y": initial+"px"});
-	$(window).scroll(function()	{
-		initial -= $(this).scrollTop(); 
-		console.log(initial);
-		$('#parallax-banner').css({"background-position-y": st+"px"});
-		//banner($(this).scrollTop());
-	});*/
-})();
-	
-
-	function banner(st) {
-		
-		
-
-	}
-
 	$(window).scroll(function()	{
 		$('#parallax-banner').css({"background-position-y": "-"+$(this).scrollTop()*2+"px"});
-		//banner($(this).scrollTop());
+		if( $(window).scrollTop() >= $('#parallax-banner').height()){
+            $('.header').css('background-color', '#fafafa');
+        } else {
+            $('.header').css('background-color', 'transparent');                
+        }
 	});
 </script>

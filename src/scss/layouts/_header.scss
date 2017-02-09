@@ -1,18 +1,35 @@
 /***************************************\
                 Header
 \***************************************/
+
 .header {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 99;
+    width: 100%;
     //background-color: #fafafa;
-    .row-content {
+    #{&}-container {
+        width: 80%;
         padding-top: 15px;
+        @extend %flex;
+        @extend %flex-between;
     }
+
+    @extend %flex;
+    @extend %flex-center_horizontal;
 }
+
 .logo {
     width: 170px;
+}
+.logo-mobile {
+    display: none;
+    width: 100px;
+}
+.navbar {
+   @extend %flex;
+   @extend %flex-center_vertical;
 }
 
 a.active {
@@ -33,6 +50,37 @@ a.active {
     display: block;
     width: 0;
     height: 0;
+    background-color: #333;
+    margin: 0 auto;
+    margin-top: 3px;
+    border-bottom: 1px solid #333;
+    transition: .5s ease all;
+}
+
+.link:hover:after {
+    width: 100%;
+    /*width: 5px;
+    height: 5px;
+    background-color: $accent-color;
+    border-radius: 50%;*/
+}
+
+.active:after {
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: $accent-color;
+    border-radius: 50%;    
+    border-bottom: 0;
+}
+.active:hover:after {
+    width: 5px;
+} 
+/*.link:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
     margin-top: 3px;
     border-bottom: 2px solid #333;
     transition: .5s ease all;
@@ -48,5 +96,35 @@ a.active {
     height: 0;
     margin-top: 3px;
     border-bottom: 2px solid #333;
-}
+}*/
+/*.active:before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: $accent-color;
+    border-radius: 50%;
+}*/
+@media screen and (max-width: 420px) {
+    .logo {
+        display: none;
+    }
 
+    .logo-mobile {
+        display: block;
+    }
+    .menu-mobile {
+        display: block;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: -100vw;
+        //display: none;
+        width: 100vw;
+        height: 100vh;
+        background-color: $accent-color;
+        z-index: 99x;
+    }
+}

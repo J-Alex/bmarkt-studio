@@ -12,18 +12,19 @@
 	<!--<script src="https://use.fontawesome.com/28b518dfdc.js"></script>-->
 </head>
 <body>
-    <header class="header row">
-        <div class="row-content row-content_medium row-elements_between row-content-center_vertical">
+    <header class="header">
+        <div class="header-container">
             <a href="/">
                 <img class="logo" src="res/img/logoFull.png" alt="logo"></img>
+                <img class="logo-mobile" src="res/img/logo.png" alt="logo"></img>
             </a>
             
-            <nav class="navbar flex">
+            <nav class="navbar">
                 <a class="link" ui-sref="/" ui-sref-active="active">Home</a>
-                <a class="link" ui-sref="/services" ui-sref-active="active">Services</a>
-                <a class="link" ui-sref="/portfolio" ui-sref-active="active">Portfolio</a>
-                <a class="link" ui-sref="/contact" ui-sref-active="active">Contact</a>
-                <a class="link" ui-sref="/componente" ui-sref-active="active">Component</a>
+                <a class="link" ui-sref="services" ui-sref-active="active">Services</a>
+                <a class="link" ui-sref="portfolio" ui-sref-active="active">Portfolio</a>
+                <a class="link" ui-sref="contact" ui-sref-active="active">Contact</a>
+                <a class="link" ui-sref="componente" ui-sref-active="active">Component</a>
                 <!--<i class="fa fa-globe nav-link" aria-hidden="true"></i> -->
             </nav>
         </div>
@@ -82,10 +83,10 @@
 	
     <!--<script src="res/js/jquery.min.js"></script>
     <script src="res/js/angular.js"></script>
-    <script src="res/js/angular-ui-router.js"></script>-->
+    <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-	<script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>    
+    <script src="res/js/angular-ui-router.js"></script>
 	<!--<script src="https://npmcdn.com/isotope-layout@3.0/dist/isotope.pkgd.min.js"></script>-->
 	<!--<script src="res/js/isotope.pkgd.min.js"></script>-->
 	<!--<script src="res/js/isotope.js"></script>	-->
@@ -105,11 +106,16 @@
 	    });
         //console.log();
         $(window).scroll(function() {
-            if( $(window).scrollTop() >= $('.header').height()){
+            if( $(window).scrollTop() >= $('.banner').height()){
                 $('.header').css('background-color', '#fafafa');
             } else {
                 $('.header').css('background-color', 'transparent');                
             }
+        });
+        $('.header-container').click(function(){
+            $('.navbar').animate({
+                left: "0"
+            },500);
         });
 	</script>
 </body>
