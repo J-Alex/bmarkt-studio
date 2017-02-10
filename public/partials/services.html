@@ -1,27 +1,54 @@
 <div class="service-wrapper">
 	<div class="service">
 		<a ui-sref="service" class="services-container">
-			<h3>SERVICE0</h3>
+			<h3>DESIGN</h3>
 		</a>
 	</div>
 	<div class="service">
 		<a ui-sref="service" class="services-container">
-			<h3>SERVICE1</h3>
+			<h3>DEVELOPMENT</h3>
 		</a>
 	</div>
 	<div class="hello service">
 		<a ui-sref="service" class="services-container">
-			<h3>SERVICE2</h3>
+			<h3>MARKETING</h3>
 		</a>
 	</div>
 	<div class="service">
 		<a ui-sref="service" class="services-container">
-			<h3>SERVICE3</h3>
+			<h3>ARCHITECTURE</h3>
 		</a>
 	</div>
 </div>
+<!--<style>
+	.header {
+		background-color: rgba(250, 250, 250, .8)
+	}
+</style>-->
+<!--
 
-<!-- <script>
+<script src="res/js/jquery.nicescroll.min.js"></script>
+<script>
+$(document).ready(function() { 
+	$vph = $('.hello').height();
+	scroll($vph);
+});
+function scroll ($vph) {
+    $("html").niceScroll({
+    	smoothscroll: true,
+    	mousescrollstep: 100,
+    	scrollspeed: 400,
+    	touchbehavior:true,
+    	cursorcolor:"#FF00FF",
+    	cursoropacitymax:0.6,
+    	cursorwidth:24,
+    	usetransition:true,
+    	hwacceleration:true,
+    	autohidemode:"hidden"
+    });
+}
+</script>
+ <script>
 	var alto = $(window).height();
 	console.log($(window));
 	$(window).scroll(function(){

@@ -147,7 +147,7 @@ a.active {
 @media screen and (max-width: 420px) {
     .header .header-container {
         width: 90%;
-        padding-top: 0;
+        //padding-top: 0;
         align-items: center;
     }
 
@@ -157,6 +157,7 @@ a.active {
 
     .logo-mobile {
         display: block;
+        width: 50px;
         z-index: 99;
     }
     .menu-wrapper {

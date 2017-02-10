@@ -25,10 +25,11 @@ h2.service-title{
 }
 
 .description-service {
-	@extend %display-flex;
     flex-direction: column;
+	@extend %flex;
+    @extend %flex-center;
     //justify-content: center;
-    align-items: center;
+    //align-items: center;
 }
 /*.services .service-container:nth-child(odd) .description-service {
     padding-left: 4rem;
@@ -69,7 +70,7 @@ h2.service-title{
     //padding-bottom: 4px;
     //border-bottom: 1px solid #111;
     font-weight: normal;
-    margin-top: 3.5rem;
+    //margin-top: 3.5rem;
 }
 .description-service p {
     text-align: justify;

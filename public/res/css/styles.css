@@ -471,13 +471,13 @@ a, a:visited {
 a:hover {
   color: #333; }
 
-.wedo, .wedo-fig_cap a, .description-service, .footer-content, .footer-content div, .modal-flex-wrapper {
+.wedo, .wedo-fig_cap a, .footer-content, .footer-content div, .modal-flex-wrapper {
   display: flex; }
 
 .header .header-container, .footer-content {
   justify-content: space-between; }
 
-.service-description, .services-container, .element-info, .footer-content div {
+.service-description, .services-container, .description-service, .element-info, .footer-content div {
   justify-content: center;
   align-items: center; }
 
@@ -529,10 +529,10 @@ a:hover {
 .view-container {
   padding-top: 91px; }
 
-.header .header-container, .header, .navbar, .service-description, .services-container, .service-banner, .element-info, .moda-contento {
+.header .header-container, .header, .navbar, .service-description, .services-container, .service-banner, .description-service, .element-info, .moda-contento {
   display: flex; }
 
-.service-description, .services-container, .element-info, .footer-content div {
+.service-description, .services-container, .description-service, .element-info, .footer-content div {
   justify-content: center;
   align-items: center; }
 
@@ -730,7 +730,6 @@ a.active {
 @media screen and (max-width: 420px) {
   .header .header-container {
     width: 90%;
-    padding-top: 0;
     align-items: center; }
 
   .logo {
@@ -738,6 +737,7 @@ a.active {
 
   .logo-mobile {
     display: block;
+    width: 50px;
     z-index: 99; }
 
   .menu-wrapper {
@@ -901,21 +901,27 @@ hr {
 .service {
   width: 100%;
   height: 110vh;
+  font-size: 2em;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%; }
+  .service h3 {
+    border: 2px solid white;
+    border-left: 0;
+    border-right: 0;
+    padding: .5em; }
 
 .service-wrapper .service:nth-child(1) {
-  background-image: url("../img/cuadro.jpg"); }
+  background-image: url("../img/wide/design.jpg"); }
 
 .service-wrapper .service:nth-child(2) {
-  background-image: url("../img/cuadro0.png"); }
+  background-image: url("../img/wide/development.jpg"); }
 
 .service-wrapper .service:nth-child(3) {
-  background-image: url("../img/cuadro1.jpg"); }
+  background-image: url("../img/wide/marketing.jpg"); }
 
 .service-wrapper .service:nth-child(4) {
-  background-image: url("../img/cuadro2.jpg"); }
+  background-image: url("../img/wide/architect.jpg"); }
 
 .services-container {
   width: 100%;
@@ -945,8 +951,7 @@ h2.service-title {
   width: 50%; }
 
 .description-service {
-  flex-direction: column;
-  align-items: center; }
+  flex-direction: column; }
 
 /*.services .service-container:nth-child(odd) .description-service {
     padding-left: 4rem;
@@ -980,8 +985,7 @@ h2.service-title {
 
 .title-service {
   font-size: 2.2em;
-  font-weight: normal;
-  margin-top: 3.5rem; }
+  font-weight: normal; }
 
 .description-service p {
   text-align: justify;

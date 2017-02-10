@@ -6,7 +6,9 @@
         .config(uiRouting);
     
     uiRouting.$inject = ['$stateProvider', '$locationProvider', '$urlRouterProvider'];
-    componentResolve.$inject = ['ComponentService'];    
+    
+    //componentResolve.$inject = ['ComponentService'];
+    serviceResolve.$inject = ['serviceService', '$transition$'];    
     
     function uiRouting($stateProvider, $locationProvider,  $urlRouterProvider) {
         
@@ -22,8 +24,11 @@
         };
         var serviceState = {
             name: 'service',
-            url: '/service',
-            templateUrl: 'partials/service.html'
+            url: '/service/{service}',
+            component: 'serviceComponent',
+            resolve: {
+                service: serviceResolve
+            }
         };
         var portfolioState = {
             name: 'portfolio',
@@ -36,14 +41,14 @@
             url: '/contact',
             templateUrl: 'partials/contact.html'
         };
-        var componente = {
+        /*var componente = {
             name: "componente",
             url: '/component',
             component: 'componente',
             resolve: {
                 componente: componentResolve
             }
-        };
+        };*/
         var state404 = {
           name: 'state404',
           url: '/state-404',
@@ -60,15 +65,14 @@
         $stateProvider.state(serviceState);
         $stateProvider.state(portfolioState);
         $stateProvider.state(contactState);
-        $stateProvider.state(componente);
+        //$stateProvider.state(componente);
         
         $stateProvider.state(state404);
         $urlRouterProvider.otherwise('/');
     }
 
-    function componentResolve(ComponentService) {
-        var componente = ComponentService;
-        //console.log("componente");
-        return componente;
+    function serviceResolve(serviceService, $transition$){
+        return serviceService.getService($transition$.params().service);
+        
     }
 })();
