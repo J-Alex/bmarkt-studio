@@ -13,15 +13,15 @@ $mail->CharSet = 'UTF-8';
 $body = 'This is the message';
 
 $mail->IsSMTP();
-$mail->Host       = 'smtp.gmail.com';
+$mail->Host       = 'smtp.bmarkt.studio';
 
 $mail->SMTPSecure = 'tls';
 $mail->Port       = 587;
 $mail->SMTPDebug  = 1;
 $mail->SMTPAuth   = true;
 
-$mail->Username   = 'brjosue73@gmail.com';
-$mail->Password   = 'braKar7393';
+$mail->Username   = 'contacto@bmarkt.studio';
+$mail->Password   = 'bmarkt162216';
 
 $mail->SetFrom('brjosue73@gmail.com', 'asdasd');
 $mail->AddReplyTo('brjosue73@gmail.com','no-reply');
