@@ -11,5 +11,11 @@ $to = "brjosue73@gmail.com";
  $message = "My message";
  $from = "webp@gmail.com";
  $headers = "From:" . $from;
- mail($to,$subject,$message,$headers);
+ if (mail($to,$subject,$message,$headers)) {
+	 echo "si";
+ }
+ else {
+	 echo "no";
+ }
+
 ?>
