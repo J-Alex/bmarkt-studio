@@ -7,30 +7,29 @@
 	$message = @trim(stripslashes($objDatos->msj));
 /************************************************************/
 require 'class.phpmailer.php';
-$mail = new PHPMailer;
+$mail=new PHPMailer();
+$mail->CharSet = 'UTF-8';
 
-//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+$body = 'This is the message';
 
-$mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp1.example.com;smtp2.example.com';  // Specify main and backup SMTP servers
-$mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'brjosue73@gmail.com';                 // SMTP username
-$mail->Password = 'secret';                           // SMTP password
-$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 587;                                    // TCP port to connect to
+$mail->IsSMTP();
+$mail->Host       = 'smtp.gmail.com';
 
-$mail->setFrom('from@example.com', 'Mailer');
-$mail->addAddress('brjosue73@gmail.com', 'Joe User');     // Add a recipient
-$mail->addAddress('brjosue73@gmail.com');               // Name is optional
-$mail->addReplyTo('brjosue73@gmail.com', 'Information');
-$mail->addCC('cc@example.com');
-$mail->addBCC('bcc@example.com');
+$mail->SMTPSecure = 'tls';
+$mail->Port       = 587;
+$mail->SMTPDebug  = 1;
+$mail->SMTPAuth   = true;
 
-$mail->isHTML(true);                                  // Set email format to HTML
+$mail->Username   = 'brjosue73@gmail.com';
+$mail->Password   = 'braKar7393';
 
-$mail->Subject = 'Here is the subject';
-$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+$mail->SetFrom('mbrjosue73@gmail.com', 'asdasd');
+$mail->AddReplyTo('brjosue73@gmail.com','no-reply');
+$mail->Subject    = 'subject';
+$mail->MsgHTML($body);
+
+$mail->AddAddress('brjosue73@gmail.com', 'title1');
+$mail->AddAddress('brjosue73@gmail.com', 'title2'); /* ... */
 
 if(!$mail->send()) {
 		echo 'Message could not be sent.';
