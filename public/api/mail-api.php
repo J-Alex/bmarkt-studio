@@ -23,13 +23,12 @@ $mail->SMTPAuth   = true;
 $mail->Username   = 'bmarkt.studio@gmail.com';
 $mail->Password   = 'bmarkt162216';
 
-$mail->SetFrom('bmarkt.studio@gmail.com', 'asdasd');
+$mail->SetFrom($email, $name);
 $mail->AddReplyTo('bmarkt.studio@gmail.com','no-reply');
-$mail->Subject    = 'subject';
+$mail->Subject    = 'Contacto desde sitio web';
 $mail->MsgHTML($body);
 
-$mail->AddAddress('bmarkt.studio@gmail.com', 'title1');
-$mail->AddAddress('bmarkt.studio@gmail.com', 'title2'); /* ... */
+$mail->AddAddress('brjosue73@gmail.com', 'title1');
 
 if(!$mail->send()) {
 		echo 'Message could not be sent.';
