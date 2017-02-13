@@ -1,29 +1,6 @@
 <?php
 require_once('class.phpmailer.php');
 
-class Users {
-
-    private $dbh;
-
-    public function __construct() {
-        //creamos una instancia del php document object y la conexion con la base de datos
-        $this->dbh = new PDO("mysql:host=servidor;dbname=basededatos", "usuario", "password");
-    }
-
-    private function set_names() {
-        return $this->dbh->query("SET NAMES 'utf8'");
-    }
-
-    //FUNCION PARA REGISTRAR USUARIOS CODIFICANDO EL PASSWORD
-    public function registroUsuarios($nombre,$email,$password) {
-        self::set_names();
-		$passCodificado =  hash('sha256',$password);
-		$sql = $this->dbh->prepare("INSERT INTO usuarios VALUES (null, ?, ?, ?);");
-
-		$sql ->bindParam(1,$nombre);
-        $sql ->bindParam(2, $passCodificado);
-		$sql ->bindParam(3,$email);
-		$sql ->execute();
 
         //creamos una instancía de la clase phpmailer
         $mail = new PHPMailer();
@@ -50,13 +27,7 @@ class Users {
         $Altbody  .=  "Tu password $password<br><br> ";-----|--> El cuerpo del mensaje
         $Altbody  .= " Bienvenido <br><br> ";-|/
         $mail->AltBody = $Altbody;
-
-        $mail->AddAttachment("archivos/nombrearchivo.extension");*//si queremos envíar archivos
-
         //envíamos el email al usuario
         $mail->Send();
-        header("Location:redirigimos donde queramos");
-    }
-}
 
 ?>
