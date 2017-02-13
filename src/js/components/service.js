@@ -3,10 +3,9 @@
 	
 	angular
 		.module('bmarkt')
-		.component('serviceComponent',{
+		.component('serviceComponent', {
 			bindings: { service: '<' },
 			controller: 'serviceCtrl',
 			templateUrl: 'partials/service.html'
-	});
-
+		});
 })();

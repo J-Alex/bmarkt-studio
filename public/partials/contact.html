@@ -1,25 +1,25 @@
 
 <div class="row">
-    <div class="contact row-content row-content_medium row-content-center_horizontal">
+    <div  class="contact row-content row-content_medium row-content-center_horizontal">
         <form class="contact-form material-component">
 			<h3 class="form-title text-center">contact us</h3>
 			<div class="form-group">
-				<input type="text" class="form-input" placeholder="name">
+				<input type="text" class="form-input" placeholder="name" data-ng-model="$ctrl.mailObj.name">
 				<!--<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>-->
 			</div>
 			<div class="form-group">
-				<input type="text" class="form-input" placeholder="e-mail">
+				<input type="text" class="form-input" placeholder="e-mail" data-ng-model="$ctrl.mailObj.email">
 				<!--<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span>-->
 			</div>
 			<div class="form-group">
-				<input type="text" class="form-input" placeholder="phone">
+				<input type="text" class="form-input" placeholder="phone" data-ng-model="$ctrl.mailObj.phone">
 				<!--<span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span></span>-->
 			</div>
 			<div class="form-group">
-				<textarea class="form-input" placeholder="message"></textarea>
+				<textarea class="form-input" placeholder="message" data-ng-model="$ctrl.mailObj.msj"></textarea>
 			</div>
 			<div class="form-group flex flex-center_horizontal">
-				<button class="btn btn-default form-button">send</button>
+				<button class="btn btn-default form-button" data-ng-click="$ctrl.sendMail()">send</button>
 			</div>
 		</form>
     </div>

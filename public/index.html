@@ -14,7 +14,7 @@
 <body>
     <header class="header">
         <div class="header-container">
-            <a href="/">
+            <a class="logo-link" href="/">
                 <img class="logo" src="res/img/logoFull.png" alt="logo"></img>
                 <img class="logo-mobile" src="res/img/escudo.png" alt="logo"></img>
             </a>
@@ -33,7 +33,7 @@
     </header>
 
     <main class="view-container">
-        <ui-view></ui-view>
+        <ui-view autoscroll="true"></ui-view>
     </main>
     
     <footer class="footer row row-content_column  row-content-center_vertical">
@@ -95,10 +95,25 @@
 	<script src="res/js/scripts.min.js"></script>
 	
 	<script>
+        var width = $(window).width();
+        if (width <= 420) {
+            $('.navbar').addClass('responsiveMenu');
+        }
+        $(window).on('resize', function() {
+            var width = $(window).width();
+            //console.log(width);
+            if (width <= 420) {
+                $('.navbar').addClass('responsiveMenu');
+            } else {
+                $('.navbar').removeClass('responsiveMenu');                
+            }
+            //console.log(width);
+        });
 	    $('.map-toggler_open').click(function(){
 	        $('.footer-container').fadeOut();
 	        $(this).fadeOut();
 	        $('.map-toggler_close').fadeIn();//.css('display', 'block');
+
 	    });
 	    
 	    $('.map-toggler_close').click(function(){
@@ -111,13 +126,24 @@
             
         });*/
         $('.menu-wrapper').click(function() {  
+            /*event.preventDefault();
+            event.stopImmediatePropagation();
+            event.stopPropagation();*/
             $('.hamburger').toggleClass("togle");
             $('.navbar').toggleClass("navbar-mobile");
+            $(this).toggleClass("menu-wrapper_white");
+            $('.view-container').toggleClass("blur");
+            $('footer').toggleClass("blur");
+            $('header').toggleClass("bg-transparent");
         });
-        $('.link').click(function() {
+        $('.responsiveMenu .link').click(function() {
             $('.hamburger').toggleClass("togle");
-            $('.navbar').toggleClass("navbar-mobile");            
-        })
+            $('.navbar').toggleClass("navbar-mobile");
+            $('.menu-wrapper').toggleClass("menu-wrapper_white");
+            $('.view-container').toggleClass("blur");
+            $('footer').toggleClass("blur");
+            $('header').toggleClass("bg-transparent");
+        });
 
 	</script>
 </body>

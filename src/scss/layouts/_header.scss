@@ -9,6 +9,7 @@
     z-index: 99;
     width: 100%;
     //background-color: #fafafa;
+    transition: .6s ease all;
     #{&}-container {
         width: 80%;
         padding-top: 15px;
@@ -23,49 +24,6 @@
 .logo {
     width: 170px;
 }
-//START MOBILE
-.logo-mobile {
-    display: none;
-    width: 100px;
-}
-.menu-wrapper {
-  width: 50px;
-  height: 50px;
-  border: 1px solid black;
-  display: none;
-  align-items: center;
-  justify-content: center;
-}
-.hamburger:before,.hamburger:after {
-  content: "";
-  position: relative;
-  left: 0;
-}
-.hamburger, .hamburger:before,.hamburger:after {
-  display: block;
-  width: 30px;
-  height: 0;
-  border-top: 1px solid black;
-  transition: .4s ease all;
-}
-.hamburger:before {
-  bottom: -8px;
-}
-.hamburger:after {
-  top: -10px;
-}
-.togle {
-  border-top-color: transparent;
-}
-.togle:before {
-  bottom: 0;
-  transform: rotate(50deg);
-}
-.togle:after {
-  top: 0;
-  transform: rotate(-50deg);
-}
-//END MOBILE
 .navbar {
    @extend %flex;
    @extend %flex-center_vertical;
@@ -115,6 +73,56 @@ a.active {
 .active:hover:after {
     width: 5px;
 } 
+//START MOBILE
+.logo-mobile {
+    display: none;
+    width: 50px;
+    z-index: 99;
+}
+.menu-wrapper {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  display: none;
+  transition: .4s ease all;
+  @extend %flex-center; 
+}
+.menu-wrapper_white {
+  border-color: $white;
+}
+
+.hamburger:before,.hamburger:after {
+  content: "";
+  position: relative;
+  left: 0;
+}
+.hamburger, .hamburger:before,.hamburger:after {
+  display: block;
+  width: 30px;
+  height: 0;
+  border-top: 1px solid black;
+  transition: .4s ease all;
+}
+.hamburger:before {
+  bottom: -8px;
+}
+.hamburger:after {
+  top: -10px;
+}
+.togle {
+  border-top-color: transparent;
+}
+.togle:before {
+  bottom: 0;
+  transform: rotate(50deg);
+  border-top-color: $white;
+}
+.togle:after {
+  top: 0;
+  transform: rotate(-50deg);
+  border-top-color: $white;
+}
+//END MOBILE
 /*.link:after {
     content: "";
     display: block;
@@ -154,27 +162,32 @@ a.active {
     .logo {
         display: none;
     }
-
+    .menu-wrapper, .logo-link {
+      z-index: 99;
+    }
     .logo-mobile {
         display: block;
-        width: 50px;
-        z-index: 99;
     }
     .menu-wrapper {
         display: flex;
-        z-index: 99;
     }
 
     .navbar {
         position: fixed;
         top: 0;
         left: 100vw;
-        //display: none;
         width: 100vw;
         height: 100vh;
-        background-color: $accent-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgba(88,99,141,.9);
         z-index: 98;
         transition: .5s ease all;
+        .link {
+          color: $white-gray;
+          font-size: 1.5em;
+          margin: .5rem;        }
     }
 
     .navbar-mobile {

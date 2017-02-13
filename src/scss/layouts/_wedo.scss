@@ -41,7 +41,7 @@
     top: 0;
     left: 0;
     font-size: 1.5em;
-    background-color: rgba(250,250,250,1);
+    background-color: rgba(250,250,250,0);
     transition: 1s ease all;
     a {
 	@extend %display-flex;

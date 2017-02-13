@@ -113,19 +113,19 @@ function scaleBannerVideoSize(element){
     <figure class="wedo-fig ribon-left">
         <img class="wedo-fig_img" src="res/img/Captura.jpg" alt="Design">
         <figcaption class="wedo-fig_cap">
-            <a href="" ui-sref="service({service: 'design'})">Design</a>
+            <a href="" ui-sref="service({service: 'design'})"></a>
         </figcaption>
     </figure>
 
     <figure class="wedo-fig ribon-right">
         <img class="wedo-fig_img" src="res/img/Captura.jpg" alt="Development">
         <figcaption class="wedo-fig_cap">
-            <a href="" ui-sref="service({service: 'development'})">Development</a>
+            <a href="" ui-sref="service({service: 'development'})"></a>
         </figcaption>
     </figure>
     <div class="service-description">
         <div class="service-description-container">
-            <h3 class="text-right">Web Development</h3>
+            <h3 class="text-right">Development</h3>
             <p class="paragraph">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Itaque dolores illum ab laudantium ipsam, quia non,
@@ -138,7 +138,7 @@ function scaleBannerVideoSize(element){
 
     <div class="service-description">
         <div class="service-description-container">
-            <h3>Digital Marketing</h3>
+            <h3>Marketing</h3>
             <p class="paragraph">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Itaque dolores illum ab laudantium ipsam, quia non,
@@ -151,14 +151,14 @@ function scaleBannerVideoSize(element){
     <figure class="wedo-fig ribon-left">
         <img class="wedo-fig_img" src="res/img/Captura.jpg" alt="Marketing">
         <figcaption class="wedo-fig_cap">
-            <a href="" ui-sref="service({service: 'marketing'})">Marketing</a>
+            <a href="" ui-sref="service({service: 'marketing'})"></a>
         </figcaption>
     </figure>
 
     <figure class="wedo-fig ribon-right">
         <img class="wedo-fig_img" src="res/img/Captura.jpg" alt="Architecture">
         <figcaption class="wedo-fig_cap">
-            <a href="" ui-sref="service({service: 'architecture'})">Architecture</a>
+            <a href="" ui-sref="service({service: 'architecture'})"></a>
         </figcaption>s
     </figure>
     <div class="service-description">
@@ -177,18 +177,18 @@ function scaleBannerVideoSize(element){
  
 <script src="res/js/typed.min.js"></script>
 <script>
-  $(function(){
-    $(".typing").typed({
-      strings: ["things happen", "success funniests", "consectetuer adipiscing elit", "consectetuer adipiscing elit", "consectetuer adipiscing elit"],
-      typeSpeed: 15,
-      loop: true
+    $(function(){
+        $(".typing").typed({
+          strings: ["things happen", "success funniests", "consectetuer adipiscing elit", "consectetuer adipiscing elit", "consectetuer adipiscing elit"],
+          typeSpeed: 15,
+          loop: true
+        });
     });
-  });
-$(window).scroll(function() {
-    if( $(window).scrollTop() >= $('.banner').height()){
-        $('.header').css('background-color', '#fafafa');
-    } else {
-        $('.header').css('background-color', 'transparent');                
-    }
-});
+    $(window).scroll(function() {
+        if( $(window).scrollTop() >= $('.banner').height()){
+            $('.header').css('background-color', '#fafafa');
+        } else {
+            $('.header').css('background-color', 'transparent');                
+        }
+    });
 </script>

@@ -39,7 +39,7 @@
         var contactState = {
             name: 'contact',
             url: '/contact',
-            templateUrl: 'partials/contact.html'
+            component: 'contactComponent'
         };
         /*var componente = {
             name: "componente",
