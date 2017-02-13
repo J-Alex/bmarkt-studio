@@ -17,9 +17,9 @@
 	$mensaje .= "\nEnviado desde: bmarkt.studio - contact api";
 
 	if (@mail($email_to,$asunto,$mensaje,$cabeceras)) {
-		echo $mensaje;//"Enviado!";		
+		echo  "Enviado!";		
 	} else {
-		echo $mensaje;//"NOT SENT D: !!";
+		echo "NOT SENT D: !!";
 	}
 	
 
