@@ -40,7 +40,12 @@ $cabeceras .= 'Cc: birthdayarchive@example.com' . "\r\n";
 $cabeceras .= 'Bcc: birthdaycheck@example.com' . "\r\n";
 
 // Enviarlo
-mail($para, $título, $mensaje, $cabeceras);
+if(mail($para, $título, $mensaje, $cabeceras)){
+	echo "si";
+}
+else {
+	echo "no";
+}
 
 
 
@@ -50,29 +55,30 @@ mail($para, $título, $mensaje, $cabeceras);
 
 
 
-	$objDatos = json_decode(file_get_contents("php://input"));
 
-	$name = @trim(stripslashes($objDatos->name));
-	$email = @trim(stripslashes($objDatos->email));
-	$phone = @trim(stripslashes($objDatos->phone));
-	$message = @trim(stripslashes($objDatos->msj));
-
-    $email_to = 'jalex.wd@gmail.com';
-    $asunto = "Desde: bmarkt.studio";
-
-    $mensaje  = $message;
-	$mensaje .= "\n\n-------------------------------------------";
-	$mensaje .= "\nDe: ".$name;
-	$mensaje .= "\nTel: ".$phone;
-	$mensaje .= "\nE-mail: <".$email.">";
-	$mensaje .= "\nEnviado desde: bmarkt.studio - contact api";
-
-	//try {
-		if (@mail($email_to,$asunto,$mensaje,$cabeceras)) {
-			echo  "Enviado!";
-		} else {
-			echo  "No Sent D:!!";
-		}
+	// $objDatos = json_decode(file_get_contents("php://input"));
+	//
+	// $name = @trim(stripslashes($objDatos->name));
+	// $email = @trim(stripslashes($objDatos->email));
+	// $phone = @trim(stripslashes($objDatos->phone));
+	// $message = @trim(stripslashes($objDatos->msj));
+	//
+  //   $email_to = 'jalex.wd@gmail.com';
+  //   $asunto = "Desde: bmarkt.studio";
+	//
+  //   $mensaje  = $message;
+	// $mensaje .= "\n\n-------------------------------------------";
+	// $mensaje .= "\nDe: ".$name;
+	// $mensaje .= "\nTel: ".$phone;
+	// $mensaje .= "\nE-mail: <".$email.">";
+	// $mensaje .= "\nEnviado desde: bmarkt.studio - contact api";
+	//
+	// //try {
+	// 	if (@mail($email_to,$asunto,$mensaje,$cabeceras)) {
+	// 		echo  "Enviado!";
+	// 	} else {
+	// 		echo  "No Sent D:!!";
+	// 	}
 	//} catch (Exception $e) {
   	//	echo 'Message: ' .$e->getMessage();
 	//}
