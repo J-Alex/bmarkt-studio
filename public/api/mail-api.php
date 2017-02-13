@@ -1,33 +1,33 @@
 <?php
-require_once('class.phpmailer.php');
+require 'PHPMailerAutoload.php';
+$mail = new PHPMailer;
 
+//$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
-        //creamos una instancía de la clase phpmailer
-        $mail = new PHPMailer();
-				$email= 'brjosue73@gmail.com';
-        $mail->IsHTML(true); // si es html o txt
-        $mail->CharSet = 'UTF-8';
-        $mail->IsSMTP();
-        $mail->Host = "smtp.gmail.com";//smpt de nuestro correo
-        $mail->SMTPAuth = true; //por si necesita auentificación
-        $mail->Username = "brjosue73@gmail.com";
-        $mail->Password = "pass del correo";
-        $mail->From = "tu correo de nuevo";
-        $mail->FromName = "Nombre a quién va dirigido";
-        $mail->Subject = "El asunto del mensaje";
-        $mail->AddAddress($email);//el email al que vá
-        $body  = "Tu email $email<br><br>";--|\
-        $body.=  "Tu password <br><br> ";-----|--> El cuerpo del mensaje
-        $body.= " Bienvenido<br><br> ";-|/
+$mail->isSMTP();                                      // Set mailer to use SMTP
+$mail->Host = 'smtp1.example.com;smtp2.example.com';  // Specify main and backup SMTP servers
+$mail->SMTPAuth = true;                               // Enable SMTP authentication
+$mail->Username = 'brjosue73@gmail.com';                 // SMTP username
+$mail->Password = 'secret';                           // SMTP password
+$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+$mail->Port = 587;                                    // TCP port to connect to
 
-        $mail->Body = $body;//cogemos el cuerpo completo
+$mail->setFrom('from@example.com', 'Mailer');
+$mail->addAddress('brjosue73@gmail.com', 'Joe User');     // Add a recipient
+$mail->addAddress('brjosue73@gmail.com');               // Name is optional
+$mail->addReplyTo('brjosue73@gmail.com', 'Information');
+$mail->addCC('cc@example.com');
+$mail->addBCC('bcc@example.com');
 
-        //Usamos AltBody por si el el correo no admite formato html
-        $Altbody  = "Tu email  $email<br><br>";----|\
-        $Altbody  .=  "Tu password <br><br> ";-----|--> El cuerpo del mensaje
-        $Altbody  .= " Bienvenido <br><br> ";-|/
-        $mail->AltBody = $Altbody;
-        //envíamos el email al usuario
-        $mail->Send();
+$mail->isHTML(true);                                  // Set email format to HTML
 
-?>
+$mail->Subject = 'Here is the subject';
+$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+if(!$mail->send()) {
+    echo 'Message could not be sent.';
+    echo 'Mailer Error: ' . $mail->ErrorInfo;
+} else {
+    echo 'Message has been sent';
+}
