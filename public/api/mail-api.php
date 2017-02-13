@@ -10,7 +10,7 @@ require 'class.phpmailer.php';
 $mail=new PHPMailer();
 $mail->CharSet = 'UTF-8';
 
-$body = $message;
+$body = 'Correo: '.$email.' <br> Mensaje:  '.$message;
 
 $mail->IsSMTP();
 $mail->Host       = 'smtp.gmail.com';
@@ -29,10 +29,10 @@ $mail->Subject    = 'Contacto desde sitio web';
 $mail->MsgHTML($body);
 
 
-$mail->AddAddress('brjosue73@gmail.com', 'title1');
-$mail->AddAddress('marvingutierrezjr@gmail.com', 'title2');
-$mail->AddAddress('jenniercruz90@gmail.com', 'title2');
-$mail->AddAddress('contacto@bmarkt.studio', 'title2');
+$mail->AddAddress('brjosue73@gmail.com', 'Brandon');
+$mail->AddAddress('marvingutierrezjr@gmail.com', 'Marvin');
+$mail->AddAddress('jenniercruz90@gmail.com', 'Jennier');
+$mail->AddAddress('contacto@bmarkt.studio', 'Bmarkt');
 
 
 
