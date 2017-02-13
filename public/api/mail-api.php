@@ -28,7 +28,13 @@ $mail->AddReplyTo('bmarkt.studio@gmail.com','no-reply');
 $mail->Subject    = 'Contacto desde sitio web';
 $mail->MsgHTML($body);
 
+
 $mail->AddAddress('brjosue73@gmail.com', 'title1');
+$mail->AddAddress('marvingutierrezjr@gmail.com', 'title2');
+$mail->AddAddress('jenniercruz90@gmail.com', 'title2');
+$mail->AddAddress('contacto@bmarkt.studio', 'title2');
+
+
 
 if(!$mail->send()) {
 		echo 'Message could not be sent.';
