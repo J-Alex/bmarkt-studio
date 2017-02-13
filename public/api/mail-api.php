@@ -6,11 +6,11 @@
 	$phone = @trim(stripslashes($objDatos->phone));
 	$message = @trim(stripslashes($objDatos->msj));
 /************************************************************/
-require 'class.phpmailer.php';
+require $message;
 $mail=new PHPMailer();
 $mail->CharSet = 'UTF-8';
 
-$body = 'This is the message';
+$body = 'Correo: '.$email.'<br>Mensaje: <br> This is the message';
 
 $mail->IsSMTP();
 $mail->Host       = 'smtp.gmail.com';
@@ -29,6 +29,11 @@ $mail->Subject    = 'Contacto desde sitio web';
 $mail->MsgHTML($body);
 
 $mail->AddAddress('brjosue73@gmail.com', 'title1');
+$mail->AddAddress('contacto@bmarkt.studio', 'title2');
+$mail->AddAddress('jenniercruz90@gmail.com', 'title3');
+$mail->AddAddress('marvingutierrezjr@gmail.com', 'title3');
+
+
 
 if(!$mail->send()) {
 		echo 'Message could not be sent.';
