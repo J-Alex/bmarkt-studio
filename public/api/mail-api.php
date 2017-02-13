@@ -15,12 +15,18 @@
 	$mensaje .= "\nTel: ".$phone;
 	$mensaje .= "\nE-mail: <".$email.">";
 	$mensaje .= "\nEnviado desde: bmarkt.studio - contact api";
-
-	if (@mail($email_to,$asunto,$mensaje,$cabeceras)) {
+	try{
+		if (@mail($email_to,$asunto,$mensaje,$cabeceras)) {
+			echo  "Enviado!";			
+		}
+	} catch (Exception $e) {
+  		echo 'Message: ' .$e->getMessage();
+	}
+	/*if (@mail($email_to,$asunto,$mensaje,$cabeceras)) {
 		echo  "Enviado!";		
 	} else {
 		echo "NOT SENT D: !!";
-	}
+	}*/
 	
 
 ?>
