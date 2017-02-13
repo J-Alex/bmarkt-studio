@@ -5,17 +5,38 @@
 	$email = @trim(stripslashes($objDatos->email));
 	$phone = @trim(stripslashes($objDatos->phone));
 	$message = @trim(stripslashes($objDatos->msj));
+/************************************************************/
+require 'class.phpmailer.php';
+$mail = new PHPMailer;
 
-$to = "brjosue73@gmail.com";
- $subject = "Test mail";
- $message = "My message";
- $from = "webp@gmail.com";
- $headers = "From:" . $from;
- if (mail($to,$subject,$message,$headers)) {
-	 echo "si";
- }
- else {
-	 echo "no";
- }
+//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+
+$mail->isSMTP();                                      // Set mailer to use SMTP
+$mail->Host = 'smtp1.example.com;smtp2.example.com';  // Specify main and backup SMTP servers
+$mail->SMTPAuth = true;                               // Enable SMTP authentication
+$mail->Username = 'brjosue73@gmail.com';                 // SMTP username
+$mail->Password = 'secret';                           // SMTP password
+$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+$mail->Port = 587;                                    // TCP port to connect to
+
+$mail->setFrom('from@example.com', 'Mailer');
+$mail->addAddress('brjosue73@gmail.com', 'Joe User');     // Add a recipient
+$mail->addAddress('brjosue73@gmail.com');               // Name is optional
+$mail->addReplyTo('brjosue73@gmail.com', 'Information');
+$mail->addCC('cc@example.com');
+$mail->addBCC('bcc@example.com');
+
+$mail->isHTML(true);                                  // Set email format to HTML
+
+$mail->Subject = 'Here is the subject';
+$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+if(!$mail->send()) {
+		echo 'Message could not be sent.';
+		echo 'Mailer Error: ' . $mail->ErrorInfo;
+} else {
+		echo 'Message has been sent';
+}
 
 ?>
