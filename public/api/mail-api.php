@@ -23,7 +23,7 @@ $mail->SMTPAuth   = true;
 $mail->Username   = 'brjosue73@gmail.com';
 $mail->Password   = 'braKar7393';
 
-$mail->SetFrom('mbrjosue73@gmail.com', 'asdasd');
+$mail->SetFrom('brjosue73@gmail.com', 'asdasd');
 $mail->AddReplyTo('brjosue73@gmail.com','no-reply');
 $mail->Subject    = 'subject';
 $mail->MsgHTML($body);
