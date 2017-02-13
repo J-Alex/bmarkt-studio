@@ -13,23 +13,23 @@ $mail->CharSet = 'UTF-8';
 $body = 'This is the message';
 
 $mail->IsSMTP();
-$mail->Host       = 'smtp.bmarkt.studio';
+$mail->Host       = 'smtp.gmail.com';
 
 $mail->SMTPSecure = 'tls';
 $mail->Port       = 587;
 $mail->SMTPDebug  = 1;
 $mail->SMTPAuth   = true;
 
-$mail->Username   = 'contacto@bmarkt.studio';
+$mail->Username   = 'bmarkt.studio@gmail.com';
 $mail->Password   = 'bmarkt162216';
 
-$mail->SetFrom('brjosue73@gmail.com', 'asdasd');
-$mail->AddReplyTo('brjosue73@gmail.com','no-reply');
+$mail->SetFrom('bmarkt.studio@gmail.com', 'asdasd');
+$mail->AddReplyTo('bmarkt.studio@gmail.com','no-reply');
 $mail->Subject    = 'subject';
 $mail->MsgHTML($body);
 
-$mail->AddAddress('brjosue73@gmail.com', 'title1');
-$mail->AddAddress('brjosue73@gmail.com', 'title2'); /* ... */
+$mail->AddAddress('bmarkt.studio@gmail.com', 'title1');
+$mail->AddAddress('bmarkt.studio@gmail.com', 'title2'); /* ... */
 
 if(!$mail->send()) {
 		echo 'Message could not be sent.';
