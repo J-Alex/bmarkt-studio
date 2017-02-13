@@ -29,8 +29,9 @@ $mail->Subject    = 'Contacto desde sitio web';
 $mail->MsgHTML($body);
 
 $mail->AddAddress('brjosue73@gmail.com', 'title1');
-$mail->AddAddress('contacto@bmarkt.studio', 'title2');
-
+//$mail->AddAddress('contacto@bmarkt.studio', 'title2');
+$mail->AddAddress('jenniercruz90@gmail.com', 'title3');
+$mail->AddAddress('marvingutierrezjr@gmail.com', 'title4');
 
 
 
