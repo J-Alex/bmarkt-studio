@@ -526,10 +526,10 @@ a:hover {
 .element-center_vertical {
   align-self: center; }
 
-.view-container {
+main {
   padding-top: 91px; }
 
-.header .header-container, .header, .navbar, .service-description, .services-container, .service-banner, .description-service, .element-info, .footer, .footer-container, .footer-content div, .moda-contento {
+.header .header-container, .header, .navbar, .wedo-wrapper, .service-description, .services-container, .service-banner, .description-service, .element-info, .footer, .footer-container, .footer-content div, .moda-contento {
   display: flex; }
 
 .menu-wrapper, .service-description, .services-container, .description-service, .element-info, .footer-content div {
@@ -915,6 +915,23 @@ hr {
   border-right-color: #fafafa;
   right: 0; }
 
+@media screen and (max-width: 420px) {
+  .wedo {
+    flex-direction: column; }
+    .wedo .wedo-wrapper {
+      width: 100%;
+      flex-direction: column; }
+      .wedo .wedo-wrapper div, .wedo .wedo-wrapper figure {
+        width: 100%; }
+
+  .wedo .wedo-wrapper:nth-child(odd) .service-description {
+    order: 1; }
+
+  .service-description {
+    margin-bottom: 1rem; }
+
+  .service-description-container h3 {
+    text-align: center; } }
 .service-wrapper {
   margin-top: -91px; }
 
@@ -1072,6 +1089,9 @@ a.is-checked, a.is-checked:hover {
   margin: 0;
   color: #fff; }
 
+@media screen and (max-width: 420px) {
+  .element-item {
+    width: 100%; } }
 .contact {
   padding-top: 3rem;
   padding-bottom: 7rem; }
@@ -1091,6 +1111,10 @@ a.is-checked, a.is-checked:hover {
 .form-button:hover {
   background-color: #303F9F; }
 
+@media screen and (max-width: 420px) {
+  .contact {
+    width: 100%;
+    padding-bottom: 2rem; } }
 .footer {
   background-color: #323232;
   position: relative;

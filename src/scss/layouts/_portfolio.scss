@@ -65,3 +65,9 @@ a.is-checked, a.is-checked:hover{
 	margin: 0;
 	color: $white;
 }
+
+@media screen and (max-width: 420px) {
+	.element-item {
+		width: 100%;
+	}
+}

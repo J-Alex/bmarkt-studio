@@ -12,7 +12,8 @@
 	<script src="https://use.fontawesome.com/28b518dfdc.js"></script>
 </head>
 <body>
-    <header class="header">
+    <bmarkt-studio></bmarkt-studio>
+    <!--<header class="header">
         <div class="header-container">
             <a class="logo-link" href="/">
                 <img class="logo" src="res/img/logoFull.png" alt="logo"></img>
@@ -26,7 +27,6 @@
                 <a class="link" ui-sref="services" ui-sref-active="active">Services</a>
                 <a class="link" ui-sref="portfolio" ui-sref-active="active">Portfolio</a>
                 <a class="link" ui-sref="contact" ui-sref-active="active">Contact</a>
-                <!--<a class="link" ui-sref="componente" ui-sref-active="active">Component</a> -->
                 <i class="fa fa-globe nav-link" aria-hidden="true"></i>
             </nav>
         </div>
@@ -78,7 +78,7 @@
         <div class="trademark text-center">
             Bmarkt Studio | All Right Reserved © 2017
         </div>
-    </footer>
+    </footer>-->
     
 	
     <!--<script src="res/js/jquery.min.js"></script>
@@ -107,6 +107,7 @@
             }
             //console.log(width);
         });
+        
 	    $('.map-toggler_open').click(function(){
 	        $('.footer-container').fadeOut();
 	        $(this).fadeOut();
@@ -119,29 +120,17 @@
 	        $(this).fadeOut();
 	        $('.map-toggler_open').fadeIn();//.css('display', 'block');
 	    });
+        
 
-        /*$('.header-container').click(function(){
-            
-        });*/
-        $('.menu-wrapper').click(function() {  
-            /*event.preventDefault();
-            event.stopImmediatePropagation();
-            event.stopPropagation();*/
-            $('.hamburger').toggleClass("togle");
-            $('.navbar').toggleClass("navbar-mobile");
-            $(this).toggleClass("menu-wrapper_white");
+
+        /*$('.menu-wrapper').click(function() {
             $('.view-container').toggleClass("blur");
             $('footer').toggleClass("blur");
-            $('header').toggleClass("bg-transparent");
         });
         $('.responsiveMenu .link').click(function() {
-            $('.hamburger').toggleClass("togle");
-            $('.navbar').toggleClass("navbar-mobile");
-            $('.menu-wrapper').toggleClass("menu-wrapper_white");
             $('.view-container').toggleClass("blur");
             $('footer').toggleClass("blur");
-            $('header').toggleClass("bg-transparent");
-        });
+        });*/
 
 	</script>
 </body>

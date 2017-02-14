@@ -6,7 +6,9 @@
     width: 80%;
     margin: 0 auto;
 }
-
+.wedo-wrapper {
+    @extend %flex;
+}
 .service-description{    
     width: 50%;
     height: 50vh;
@@ -75,4 +77,29 @@
     border-left-color: transparent;
     border-right-color: $white-gray;
     right: 0;   
+}
+
+@media screen and(max-width: 420px){
+    .wedo {
+        flex-direction: column;
+        .wedo-wrapper {
+            width: 100%;
+            flex-direction: column;
+            div,figure {
+                width: 100%;
+            }
+        }
+    }
+    
+    .wedo .wedo-wrapper:nth-child(odd) .service-description{
+        order: 1;
+    }
+    
+    .service-description {
+        margin-bottom: 1rem;
+    }
+
+    .service-description-container h3 {
+        text-align: center;
+    }
 }
