@@ -39,18 +39,23 @@ h2.service-title{
     padding-left: 6rem;
 }*/
 /***********************************************************************/
-.services .service-container:nth-child(odd) .img-service {
-    position: relative;
-    top: 0;
-    left: -100px;
-    transition: 1s ease all;
-}
+/*.services .service-container:nth-child(even) .description-service {
+    order: 0;
+}*/
 
 .services .service-container:nth-child(even) .img-service {
     position: relative;
     top: 0;
     right: -100px;
     transition: 1s ease all;
+    order: 1;
+}
+.services .service-container:nth-child(odd) .img-service {
+    position: relative;
+    top: 0;
+    left: -100px;
+    transition: 1s ease all;
+    //order: 0;
 }
 
 .services .service-container:nth-child(odd):hover .img-service {

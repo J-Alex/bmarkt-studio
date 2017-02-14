@@ -471,7 +471,7 @@ a, a:visited {
 a:hover {
   color: #333; }
 
-.wedo, .wedo-fig_cap a, .footer-content, .footer-content div, .modal-flex-wrapper {
+.wedo, .wedo-fig_cap a, .footer-content, .modal-flex-wrapper {
   display: flex; }
 
 .header .header-container, .footer-content {
@@ -529,7 +529,7 @@ a:hover {
 .view-container {
   padding-top: 91px; }
 
-.header .header-container, .header, .navbar, .service-description, .services-container, .service-banner, .description-service, .element-info, .moda-contento {
+.header .header-container, .header, .navbar, .service-description, .services-container, .service-banner, .description-service, .element-info, .footer, .footer-container, .footer-content div, .moda-contento {
   display: flex; }
 
 .menu-wrapper, .service-description, .services-container, .description-service, .element-info, .footer-content div {
@@ -545,7 +545,7 @@ a:hover {
 .header .header-container, .footer-content {
   justify-content: space-between; }
 
-.element-info {
+.element-info, .footer {
   flex-flow: column; }
 
 .service-banner {
@@ -617,7 +617,7 @@ a:hover {
   top: 0;
   left: 0;
   z-index: 99;
-  width: 100%;
+  width: 100vw;
   transition: .6s ease all; }
   .header .header-container {
     width: 80%;
@@ -981,16 +981,20 @@ h2.service-title {
     padding-left: 6rem;
 }*/
 /***********************************************************************/
-.services .service-container:nth-child(odd) .img-service {
-  position: relative;
-  top: 0;
-  left: -100px;
-  transition: 1s ease all; }
-
+/*.services .service-container:nth-child(even) .description-service {
+    order: 0;
+}*/
 .services .service-container:nth-child(even) .img-service {
   position: relative;
   top: 0;
   right: -100px;
+  transition: 1s ease all;
+  order: 1; }
+
+.services .service-container:nth-child(odd) .img-service {
+  position: relative;
+  top: 0;
+  left: -100px;
   transition: 1s ease all; }
 
 .services .service-container:nth-child(odd):hover .img-service {
@@ -1091,7 +1095,7 @@ a.is-checked, a.is-checked:hover {
   background-color: #323232;
   position: relative;
   height: calc(70vh + 18px);
-  display: flex; }
+  color: #fff; }
 
 .map-toggler_open, .map-toggler_close {
   position: absolute;
@@ -1113,8 +1117,7 @@ a.is-checked, a.is-checked:hover {
   position: relative;
   height: 70vh;
   width: 100%;
-  background-color: rgba(50, 50, 50, 0.9);
-  color: #fff; }
+  background-color: rgba(50, 50, 50, 0.9); }
 
 .footer-content {
   flex-direction: row;
@@ -1131,28 +1134,29 @@ a.is-checked, a.is-checked:hover {
 
 .contact-info {
   flex-direction: column; }
-
-.contact-info span {
-  width: 90%;
-  text-align: left;
-  margin: 5px 0;
-  font-size: 1.2em; }
+  .contact-info span {
+    width: 90%;
+    text-align: left;
+    margin: 5px 0;
+    font-size: 1.2em; }
 
 .social-icon {
   margin: 0 5px; }
-  .social-icon .fa {
-    color: #fff; }
-
-.trademark {
-  color: #fff; }
 
 @media screen and (max-width: 420px) {
-  .footer-container {
-    height: auto; }
+  .map-container {
+    height: calc(100% - 19px); }
 
-  .footer-content {
-    flex-direction: column;
-    flex-wrap: nowrap; } }
+  .footer {
+    height: auto; }
+    .footer .footer-container {
+      height: auto; }
+    .footer .footer-content {
+      flex-direction: column;
+      flex-wrap: nowrap; }
+      .footer .footer-content div {
+        padding: .75rem 0;
+        width: 100%; } }
 .modal-container {
   position: fixed;
   display: none;
