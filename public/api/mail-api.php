@@ -1,35 +1,46 @@
-<?php 
+<?php
 	$objDatos = json_decode(file_get_contents("php://input"));
-	
+
 	$name = @trim(stripslashes($objDatos->name));
 	$email = @trim(stripslashes($objDatos->email));
 	$phone = @trim(stripslashes($objDatos->phone));
 	$message = @trim(stripslashes($objDatos->msj));
+/************************************************************/
+require 'class.phpmailer.php';
+$mail=new PHPMailer();
+$mail->CharSet = 'UTF-8';
 
-    $email_to = 'jalex.wd@gmail.com';    
-    $asunto = "Desde: bmarkt.studio";
+$body = 'Correo: '.$email.' <br> Mensaje:  '.$message;
 
-    $mensaje  = $message;
-	$mensaje .= "\n\n-------------------------------------------";
-	$mensaje .= "\nDe: ".$name;
-	$mensaje .= "\nTel: ".$phone;
-	$mensaje .= "\nE-mail: <".$email.">";
-	$mensaje .= "\nEnviado desde: bmarkt.studio - contact api";
-	
-	//try {
-		if (@mail($email_to,$asunto,$mensaje,$cabeceras)) {
-			echo  "Enviado!";			
-		} else {
-			echo  "No Sent D:!!";	
-		}
-	//} catch (Exception $e) {
-  	//	echo 'Message: ' .$e->getMessage();
-	//}
-	/*if (@mail($email_to,$asunto,$mensaje,$cabeceras)) {
-		echo  "Enviado!";		
-	} else {
-		echo "NOT SENT D: !!";
-	}*/
-	
+$mail->IsSMTP();
+$mail->Host       = 'smtp.gmail.com';
+
+$mail->SMTPSecure = 'tls';
+$mail->Port       = 587;
+$mail->SMTPDebug  = 1;
+$mail->SMTPAuth   = true;
+
+$mail->Username   = 'bmarkt.studio@gmail.com';
+$mail->Password   = 'bmarkt162216';
+
+$mail->SetFrom($email, $name);
+$mail->AddReplyTo('bmarkt.studio@gmail.com','no-reply');
+$mail->Subject    = 'Contacto desde sitio web';
+$mail->MsgHTML($body);
+
+
+$mail->AddAddress('brjosue73@gmail.com', 'Brandon');
+$mail->AddAddress('marvingutierrezjr@gmail.com', 'Marvin');
+$mail->AddAddress('jenniercruz90@gmail.com', 'Jennier');
+$mail->AddAddress('contacto@bmarkt.studio', 'Bmarkt');
+
+
+
+if(!$mail->send()) {
+		echo 'Message could not be sent.';
+		echo 'Mailer Error: ' . $mail->ErrorInfo;
+} else {
+		echo 'Message has been sent';
+}
 
 ?>
