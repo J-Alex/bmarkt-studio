@@ -20,7 +20,15 @@
         var servicesState = {
             name: 'services',
             url: '/services',
-            templateUrl: 'partials/services.html'
+            templateUrl: 'partials/services.html',
+            onEnter: function(){
+                console.log('entrando');
+                $('img').toggleClass('logo-white');
+            },
+            onExit: function(){
+                console.log('saliendo');
+                $('img').toggleClass('logo-white');
+            }
         };
         var serviceState = {
             name: 'service',

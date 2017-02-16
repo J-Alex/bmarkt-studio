@@ -24,6 +24,9 @@
 .logo {
     width: 170px;
 }
+.logo-white {
+  content: url('../img/iconBR.png');
+}
 .navbar {
    @extend %flex;
    @extend %flex-center_vertical;
