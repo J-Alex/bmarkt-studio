@@ -56,7 +56,7 @@
 }
 .footer-nav {
 	@extend %flex;
-	@extend %flex-center_horizontal;
+	@extend %flex-center_vertical;
 	flex-direction: column;
 	a {
 		color: $white;
@@ -111,7 +111,7 @@
 	text-align: center;
 	.fa { 
 		color: $white;
-		vertical-align: middle;
+		//vertical-align: middle;
 	}	
 	@extend %flex-center;
 }

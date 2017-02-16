@@ -541,10 +541,10 @@ main {
   justify-content: center;
   align-items: center; }
 
-.header, .footer-nav {
+.header {
   justify-content: center; }
 
-.navbar, .footer-container {
+.navbar, .footer-container, .footer-nav {
   align-items: center; }
 
 .header .header-container {
@@ -1204,8 +1204,7 @@ a.is-checked, a.is-checked:hover {
   height: 36px;
   text-align: center; }
   .social-icon .fa {
-    color: #fff;
-    vertical-align: middle; }
+    color: #fff; }
 
 @media screen and (max-width: 420px) {
   .map-container {
