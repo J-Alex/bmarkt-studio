@@ -1,4 +1,4 @@
-.homepage-hero-module {
+/*.homepage-hero-module {
     border-right: none;
     border-left: none;
     position: relative;
@@ -41,7 +41,7 @@
 }
 .video-container video.fillWidth {
     width: 100%;
-}
+}*/
 
 
 
@@ -49,9 +49,10 @@
 .banner {
 	margin-top: -91px;
 	background: {
-		//image: url('../img/mall.png');
-		repeat: repeat;
-
+		image: url('../img/banner.png');
+		repeat: no-repeat;
+		size: 100% 100%;
+		color: rgb(55,55,55);
 	}
 	img {
 		width: 40%;
@@ -85,4 +86,10 @@ hr {
 	font-size: 1.8em;
 	line-height: 1.4;
 	color: $primary-text-color;
+}
+
+@media screen and (max-width: 420px) {
+	.about {
+		width: 95%;
+	}
 }

@@ -35,11 +35,35 @@
 	background-image: url('../img/work.jpg');
 }
 
-.close {
-	position: relative;
+.modal-close {
+	/*position: relative;
 	top: 0;
-	right: 0;
-	width: 50px;
-	height: 50px;
+	right: 0;*/
+	/*width: 50px;
+	height: 50px;*/
 	background-color: $accent-color;
+}
+
+@media screen and (max-width: 420px) {
+	.moda-contento {
+		flex-flow: column;
+		width: 100%;
+		height: 100%;
+	}
+	.work-img, .work-detail {
+		width: 100%;
+	}
+	.work-img {
+		height: 60vh;
+	}
+	.work-detail {
+		width: 90%;
+		margin: 0 auto;
+	}
+	.modal-close {
+		height: 70px;
+		width: 70px;
+		border-radius: 50% 
+		//margin: -50% auto;
+	}
 }

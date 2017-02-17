@@ -7,7 +7,7 @@
     top: 0;
     left: 0;
     z-index: 99;
-    width: 100%;
+    width: 100vw;
     //background-color: #fafafa;
     transition: .6s ease all;
     #{&}-container {
@@ -23,6 +23,9 @@
 
 .logo {
     width: 170px;
+}
+.logo-white {
+  content: url('../img/iconBR.png');
 }
 .navbar {
    @extend %flex;

@@ -10,12 +10,31 @@
     @extend %flex;
     @extend %flex-end;
 }
+
 h2.service-title{
     color: #fafafa;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
+    font-size: 2.2em;
+    padding-bottom: 1rem;
 }
+.services {
+    width: 70%;
+    margin: 5rem auto;
+    @extend %flex;
+    @extend %flex-row;
+    justify-content: space-between;
+}
+
 .service-container {
+    width: 30%;
+    margin-bottom: 2rem;
+}
+
+.service-img {
+    margin-bottom: 1rem;
+}
+/*.service-container {
     overflow: hidden;
     padding: 7rem 0;
 }
@@ -30,7 +49,7 @@ h2.service-title{
     @extend %flex-center;
     //justify-content: center;
     //align-items: center;
-}
+}*/
 /*.services .service-container:nth-child(odd) .description-service {
     padding-left: 4rem;
 }
@@ -39,18 +58,23 @@ h2.service-title{
     padding-left: 6rem;
 }*/
 /***********************************************************************/
+/*.services .service-container:nth-child(even) .description-service {
+    order: 0;
+}*/
+
+/*.services .service-container:nth-child(even) .img-service {
+    position: relative;
+    top: 0;
+    right: -100px;
+    transition: 1s ease all;
+    order: 1;
+}
 .services .service-container:nth-child(odd) .img-service {
     position: relative;
     top: 0;
     left: -100px;
     transition: 1s ease all;
-}
-
-.services .service-container:nth-child(even) .img-service {
-    position: relative;
-    top: 0;
-    right: -100px;
-    transition: 1s ease all;
+    //order: 0;
 }
 
 .services .service-container:nth-child(odd):hover .img-service {
@@ -58,9 +82,9 @@ h2.service-title{
 }
 .services .service-container:nth-child(even):hover .img-service {
     right: -20px;
-}
+}*/
 /**********************************************************************/
-.description-service h3, .description-service p {
+/*.description-service h3, .description-service p {
     //margin: 0 auto;
     width: 80%;
 }
@@ -77,4 +101,10 @@ h2.service-title{
     line-height: 1.8;
     margin-top: 2rem;
     font-size: 1.1em;
+}*/
+
+@media screen and (max-width: 420px) {
+    .service-container {
+        width: 100%;
+    }   
 }

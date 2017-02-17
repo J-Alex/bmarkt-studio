@@ -1,0 +1,75 @@
+<footer class="footer">
+    <!--<span class="map-toggler_open"> <i class="fa fa-map" aria-hidden="true"></i> </span>-->
+    <span class="map-toggler_close" style="display: none"> <i class="fa fa-map" aria-hidden="true"></i> </span>
+    <iframe class="map-container" src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d1296.8042740418107!2d-86.35661010025788!3d13.097823473313829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d13.0980063!2d-86.356329!5e0!3m2!1sen!2s!4v1485989122647" allowfullscreen></iframe> 
+    <div class="footer-container">            
+        <div class="footer-content">
+            <div class="logo-icon">
+                <img src="res/img/logoRB.png" alt="">
+            </div>
+            <div class="footer-nav">                
+                <a ui-sref="/" ui-sref-active="active">Home</a>
+                <a ui-sref="services" ui-sref-active="active">Services</a>
+                <a ui-sref="portfolio" ui-sref-active="active">Portfolio</a>
+                <a ui-sref="contact" ui-sref-active="active">Contact</a>
+            </div>
+            <div class="contact-info">
+                <span><i class="fa fa-globe" aria-hidden="true"></i> bmarkt@studio.com</span>
+                <span><i class="fa fa-globe" aria-hidden="true"></i> (+505) 5808 2679</span>
+                <span><i class="fa fa-globe" aria-hidden="true"></i> <p>Supermercado la colonia 5 1/2 cuadras norte</p></span>
+                <span><i class="fa fa-globe" aria-hidden="true"></i> Estelí - Nicaragua</span>
+                <div class="map-btn map-toggler_open">VER MAPA</div>
+            </div>
+            <div class="social">
+                <a href="/" class="social-icon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="/" class="social-icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="/" class="social-icon"><i class="fa fa-instagram " aria-hidden="true"></i></a>
+                <a href="/" class="social-icon"><i class="fa fa-linkedin " aria-hidden="true"></i></a>
+                <a href="/" class="social-icon"><i class="fa fa-behance " aria-hidden="true"></i></a>
+                <a href="/" class="social-icon"><i class="fa fa-github " aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="trademark text-center">
+        Bmarkt Studio | All Right Reserved © 2017
+    </div>
+</footer>
+<script>
+       /* var width = $(window).width();
+        if (width <= 420) {
+            $('.navbar').addClass('responsiveMenu');
+        }
+        $(window).on('resize', function() {
+            var width = $(window).width();
+            if (width <= 420) {
+                $('.navbar').addClass('responsiveMenu');
+            } else {
+                $('.navbar').removeClass('responsiveMenu');                
+            }
+        });*/
+
+        $('.map-toggler_open').click(function(){
+            $('.footer-container').fadeOut();
+            $(this).fadeOut();
+            $('.map-toggler_close').fadeIn();//.css('display', 'block');
+
+        });
+        
+        $('.map-toggler_close').click(function(){
+            $('.footer-container').fadeIn();
+            $(this).fadeOut();
+            $('.map-toggler_open').fadeIn();//.css('display', 'block');
+        });
+        
+
+
+        /*$('.menu-wrapper').click(function() {
+            $('.view-container').toggleClass("blur");
+            $('footer').toggleClass("blur");
+        });
+        $('.responsiveMenu .link').click(function() {
+            $('.view-container').toggleClass("blur");
+            $('footer').toggleClass("blur");
+        });*/
+
+    </script>

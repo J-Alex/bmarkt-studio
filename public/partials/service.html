@@ -1,39 +1,54 @@
-<!--<div style="height: 30vh;"></div>-->
 
 <div id="parallax-banner" class="service-banner">
-	<h2 class="service-title">{{ $ctrl.service[0].title}}</h2>
+	<h2 class="service-title">Diseño</h2>
 </div>
-<div class="services row row-content_column">
-	<figure id="design" class="service-container row-content">
-		<img class="img-service" src="res/img/Captura.jpg" alt="">
-		<figcaption class="description-service">
-			<h3 class="title-service">Design</h3>
-			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, reprehenderit, officia, enim nesciunt unde debitis ut odit adipisci amet labore maiores sit temporibus aperiam facere soluta. Nulla veritatis suscipit fuga. </p>
+<div class="services">
+	
+	<figure class="service-container"  data-ng-repeat="servicio in $ctrl.service">
+		<img class="service-img" src="{{ servicio.img }}" alt="">
+		<figcaption class="service-caption">
+			<h3 class="service-title text-center">{{ servicio.title }}</h3>
+			<p class="paragraph">{{ servicio.description }}</p>
 		</figcaption>
 	</figure>
-	<figure id="development" class="service-container row-content">
-		<figcaption class="description-service">
-			<h3 class="title-service">Development</h3>
-			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, reprehenderit, officia, enim nesciunt unde debitis ut odit adipisci amet labore maiores sit temporibus aperiam facere soluta. Nulla veritatis suscipit fuga. </p>
-		</figcaption>
-		<img class="img-service" src="res/img/Captura.jpg" alt="">
-	</figure>
-	<figure id="marketing" class="service-container row-content">
-		<img class="img-service" src="res/img/Captura.jpg" alt="">
-		<figcaption class="description-service">
-			<h3 class="title-service">Marketing</h3>
-			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, reprehenderit, officia, enim nesciunt unde debitis ut odit adipisci amet labore maiores sit temporibus aperiam facere soluta. Nulla veritatis suscipit fuga. </p>
-		</figcaption>
-	</figure>
-	<figure id="architecture" class="service-container row-content">
-		<figcaption class="description-service">
-			<h3 class="title-service">Architecture</h3>
-			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, reprehenderit, officia, enim nesciunt unde debitis ut odit adipisci amet labore maiores sit temporibus aperiam facere soluta. Nulla veritatis suscipit fuga. </p>
-		</figcaption>
-		<img class="img-service" src="../res/img/Captura.jpg" alt="">
-	</figure>
-</div>
 
+</div>
+<!--<div class="services row row-content_column" data-ng-repeat="servicio in $ctrl.service">
+	
+	<figure id="design" class="service-container row-content">
+		<img class="img-service" src="{{ servicio.img }}" alt="">
+		<figcaption class="description-service">
+			<h3 class="title-service">{{ servicio.title }}</h3>
+			<p>{{ servicio.description }}</p>
+		</figcaption>
+	</figure>
+
+</div>
+<div class="services row row-content_column" >
+	
+	<figure id="design" class="service-container row-content">
+		<img class="img-service" src="res/img/Captura.jpg" alt="image">
+		<figcaption class="description-service">
+			<h3 class="title-service">ARCHITECTURE</h3>
+			<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit laborum, blanditiis rerum minima doloribus quos, pariatur animi repudiandae repellendus molestias dicta dignissimos labore dolorum error ipsum ut aut. Distinctio, inventore!</p>
+		</figcaption>
+	</figure>
+	<figure id="design" class="service-container row-content">
+		<img class="img-service" src="res/img/Captura.jpg" alt="image">
+		<figcaption class="description-service">
+			<h3 class="title-service">ARCHITECTURE</h3>
+			<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit laborum, blanditiis rerum minima doloribus quos, pariatur animi repudiandae repellendus molestias dicta dignissimos labore dolorum error ipsum ut aut. Distinctio, inventore!</p>
+		</figcaption>
+	</figure>
+	<figure id="design" class="service-container row-content">
+		<img class="img-service" src="res/img/Captura.jpg" alt="image">
+		<figcaption class="description-service">
+			<h3 class="title-service">ARCHITECTURE</h3>
+			<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit laborum, blanditiis rerum minima doloribus quos, pariatur animi repudiandae repellendus molestias dicta dignissimos labore dolorum error ipsum ut aut. Distinctio, inventore!</p>
+		</figcaption>
+	</figure>
+
+</div>-->
 <script>
 	$(window).scroll(function()	{
 		$('#parallax-banner').css({"background-position-y": "-"+$(this).scrollTop()*2+"px"});

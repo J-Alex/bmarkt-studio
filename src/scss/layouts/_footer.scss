@@ -2,9 +2,12 @@
 	background-color: rgb(50,50,50);
 	position: relative;
 	height: calc(70vh + 18px);
-	display: flex;
+	color: $white;
+	font-size: 1.1em;
+	@extend %flex;
+	@extend %flex-column;
 }
-.map-toggler_open, .map-toggler_close {
+/*.map-toggler_open,*/ .map-toggler_close {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -18,64 +21,127 @@
 	left: 0;
 	border: 0;
 	width: 100%;
-	height: 70vh;
+	height: calc( 70vh - 2px );
 }
 .footer-container {
 	position: relative;
     height: 70vh;
     width: 100%;
     background-color: rgba(50,50,50,.9);
-	color: #fff;
+	//color: #fff;
+	@extend %flex;
+	@extend %flex-center_vertical;
 }
 .footer-content {
 	@extend %full-width;
 	@extend %display-flex;
-	@extend %flex-between;
+	//@extend %flex-between;
 	flex-direction: row;
 	flex-wrap: wrap;
-	padding: 5rem 0;
+	//margin-top: 20%;
+	//padding: 5rem 0;
 	div {
-		@extend %display-flex;
-		@extend %flex-center;
+		//@extend %flex;
+		//@extend %flex-center;
 		width: 25%;
 	}
 	
 }
-
-.logo-icon img {
-	width: 130px;
+.logo-icon {	
+	@extend %flex;
+	@extend %flex-center;
 }
+//.logo-icon img {
+	//width: 130px;
+//}
 .footer-nav {
+	@extend %flex;
 	flex-direction: column;
+	@extend %flex-center;
+	a {
+		color: $white;
+		margin: .3rem auto;
+	}
+	a.active {
+		border-bottom: 1px solid $white;
+	}
 }
 .contact-info {
-	flex-direction: column;
+	//flex-direction: column;
+	//align-items: flex-end !important;
+	padding-top: 3rem;
+	span {
+		//width: 90%;
+		//text-align: left;
+		margin: 5px auto;
+		flex-flow: row;
+		@extend %flex;
+		p {
+			-webkit-margin-before: 0;
+    		-webkit-margin-after: 0;
+		}
+
+	}
 }
 
-.contact-info span {
-	width: 90%;
-	text-align: left;
-	margin: 5px 0;
-	font-size: 1.2em;
+.map-btn {
+	vertical-align: bottom;
+	border: 1px solid $accent-color;
+	padding: 1em;
+	color: $accent-color;
+	text-align: center !important;
+	cursor: pointer;
+	width: 80% !important;
+	margin-top: 1rem;
 }
-
+.map-btn:hover {
+	background-color: $accent-color;
+	color: $white;
+}
+.social {
+	@extend %flex;
+	@extend %flex-center;
+}
 .social-icon {
 	margin: 0 5px;
-	.fa { color: #fff;}
+	padding: .5rem;
+	border: 1px solid $white;
+	border-radius: 50%;
+	width: 36px;
+	height: 36px;
+	text-align: center;
+	.fa { 
+		color: $white;
+		//vertical-align: middle;
+	}	
+	@extend %flex-center;
 }
 
 .trademark {
-	color: #fff;
-	//position: relative;
-	//margin-top: 70vh;
 }
 
 @media screen and (max-width: 420px) {
-	.footer-container {
-		height: auto;
+	.map-container {
+		height: 505px;//604px;//calc(100% - 19px);
 	}
-	.footer-content {
-		flex-direction: column;
-		flex-wrap: nowrap;
+	.footer{
+		height: auto;
+		#{&}-container {
+			height: auto;
+		}
+		#{&}-content {
+			flex-direction: column;
+			flex-wrap: nowrap;
+			div {
+				padding: .75rem 0;
+				width: 100%;
+			}
+		}
+	}
+	.contact-info span {
+		width: 63%;
+	}
+	.map-btn {
+		margin: 0.7rem auto;
 	}
 }
