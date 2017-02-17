@@ -73,7 +73,7 @@
 	span {
 		//width: 90%;
 		//text-align: left;
-		margin: 5px auto;
+		margin: 7px auto;
 		flex-flow: row;
 		@extend %flex;
 		p {
@@ -81,6 +81,11 @@
     		-webkit-margin-after: 0;
 		}
 
+	}
+	.fa {
+		margin: 0 15px;
+		width: 24px;
+		text-align: center;
 	}
 }
 

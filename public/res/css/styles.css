@@ -637,6 +637,9 @@ main {
 .logo-white {
   content: url("../img/iconBR.png"); }
 
+.logo-mobile_white {
+  content: url("../img/logoRB.png"); }
+
 a.active {
   color: #333; }
 
@@ -1119,7 +1122,10 @@ a.is-checked, a.is-checked:hover {
 @media screen and (max-width: 420px) {
   .contact {
     width: 100%;
-    padding-bottom: 2rem; } }
+    padding-bottom: 2rem; }
+
+  .contact-form {
+    width: 85%; } }
 .footer {
   background-color: #323232;
   position: relative;
@@ -1167,11 +1173,15 @@ a.is-checked, a.is-checked:hover {
 .contact-info {
   padding-top: 3rem; }
   .contact-info span {
-    margin: 5px auto;
+    margin: 7px auto;
     flex-flow: row; }
     .contact-info span p {
       -webkit-margin-before: 0;
       -webkit-margin-after: 0; }
+  .contact-info .fa {
+    margin: 0 15px;
+    width: 24px;
+    text-align: center; }
 
 .map-btn {
   vertical-align: bottom;

@@ -27,6 +27,10 @@
 .logo-white {
   content: url('../img/iconBR.png');
 }
+.logo-mobile_white {
+  content: url('../img/logoRB.png');
+  //height: 96px;  
+}
 .navbar {
    @extend %flex;
    @extend %flex-center_vertical;

@@ -7,11 +7,14 @@
     headerCtrl.$inject = ['$element', '$document'];
 
     function headerCtrl($element, $document) {
+        var documentWidth = $document.width();
+        var menuLink = $document.find('a.link');
+        ((documentWidth < 420) ? menuLink.toggleClass('link-mobile') : console.log('do nothing'));
     	var mobileBtn = $document.find('.menu-wrapper');
     	var hamburger = $document.find('.hamburger');
     	var mobileNav = $document.find('.navbar');
     	var header = $document.find('.header');
-    	var menuLink = $document.find('.navbar-mobile .link');
+        var menuLinkMobile = $document.find('.link-mobile');
 
     	mobileBtn.click(function(){
             console.log('menu-wrapper');
@@ -21,7 +24,7 @@
             header.toggleClass("bg-transparent");
     	});
 
-    	menuLink.click(function() {
+    	menuLinkMobile.click(function() {
             console.log('link');
 			hamburger.toggleClass('togle');
     		mobileNav.toggleClass('navbar-mobile');
