@@ -7,7 +7,6 @@
     
     uiRouting.$inject = ['$stateProvider', '$locationProvider', '$urlRouterProvider'];
     
-    //componentResolve.$inject = ['ComponentService'];
     serviceResolve.$inject = ['serviceService', '$transition$'];    
     
     function uiRouting($stateProvider, $locationProvider,  $urlRouterProvider) {
@@ -42,21 +41,26 @@
             name: 'portfolio',
             url: '/portfolio',
             templateUrl: 'partials/portfolio.html',
-            controller: 'portfolioCtrl'
+            controller: 'portfolioCtrl'/*,
+            views: {
+                'work': {
+                    name: 'portfolio.work',
+                    url: '/work',
+                    template: '<h1>ANIDADA</h1>'
+                    //component: 'portfolioWork'        
+                }
+            }*/
         };
+        /*var portfolioWorkState = {
+            name: 'portfolio.work',
+            url: '/work',
+            component: 'portfolioWork'
+        };*/
         var contactState = {
             name: 'contact',
             url: '/contact',
             component: 'contactComponent'
         };
-        /*var componente = {
-            name: "componente",
-            url: '/component',
-            component: 'componente',
-            resolve: {
-                componente: componentResolve
-            }
-        };*/
         var state404 = {
           name: 'state404',
           url: '/state-404',
@@ -72,8 +76,8 @@
         $stateProvider.state(servicesState);
         $stateProvider.state(serviceState);
         $stateProvider.state(portfolioState);
+        //$stateProvider.state(portfolioWorkState);
         $stateProvider.state(contactState);
-        //$stateProvider.state(componente);
         
         $stateProvider.state(state404);
         $urlRouterProvider.otherwise('/');
@@ -81,6 +85,5 @@
 
     function serviceResolve(serviceService, $transition$){
         return serviceService.getService($transition$.params().service);
-        
     }
 })();

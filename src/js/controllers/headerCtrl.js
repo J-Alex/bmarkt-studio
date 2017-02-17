@@ -11,9 +11,10 @@
     	var hamburger = $document.find('.hamburger');
     	var mobileNav = $document.find('.navbar');
     	var header = $document.find('.header');
-    	var menuLink = $document.find('.link');
+    	var menuLink = $document.find('.navbar-mobile .link');
 
     	mobileBtn.click(function(){
+            console.log('menu-wrapper');
     		hamburger.toggleClass('togle');
     		mobileNav.toggleClass('navbar-mobile');
             $(this).toggleClass("menu-wrapper_white");
@@ -21,6 +22,7 @@
     	});
 
     	menuLink.click(function() {
+            console.log('link');
 			hamburger.toggleClass('togle');
     		mobileNav.toggleClass('navbar-mobile');
             mobileBtn.toggleClass("menu-wrapper_white");
