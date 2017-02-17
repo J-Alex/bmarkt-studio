@@ -10,7 +10,7 @@ require 'class.phpmailer.php';
 $mail=new PHPMailer();
 $mail->CharSet = 'UTF-8';
 
-$body = 'Correo: '.$email.' <br> Mensaje:  '.$message;
+$body = 'Correo: '.$email.' <br> Celular:  '.$phone' <br> Mensaje:  '.$message;
 
 $mail->IsSMTP();
 $mail->Host       = 'smtp.gmail.com';
