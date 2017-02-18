@@ -24,11 +24,13 @@
                 console.log('entrando');
                 $('.logo').toggleClass('logo-white');
                 $('.logo-mobile').toggleClass('logo-mobile_white');
+                $('.header').toggleClass('bgt');
             },
             onExit: function(){
                 console.log('saliendo');
                 $('.logo').toggleClass('logo-white');
                 $('.logo-mobile').toggleClass('logo-mobile_white');
+                $('.header').toggleClass('bgt');
             }
         };
         var serviceState = {

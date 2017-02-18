@@ -454,7 +454,6 @@ $bg-color-dark:;
 
 body {
   color: #333;
-  background-color: #fafafa;
   font-family: 'arialn'; }
 
 /*ui-view .row {
@@ -626,6 +625,7 @@ main {
   left: 0;
   z-index: 99;
   width: 100vw;
+  background-color: #fff;
   transition: .6s ease all; }
   .header .header-container {
     width: 80%;
@@ -633,6 +633,13 @@ main {
 
 .logo {
   width: 170px; }
+
+.bgt {
+  background-color: transparent; }
+  .bgt a.link {
+    color: #fff; }
+  .bgt a.link:hover {
+    color: rgba(250, 250, 250, 0.8); }
 
 .logo-white {
   content: url("../img/iconBR.png"); }
