@@ -1,0 +1,49 @@
+.work {
+	@extend %flex;
+	flex-wrap: wrap;
+}
+
+.work-carousel, .work-description {
+	width: 50%;
+}
+
+.work-carousel {
+	position: fixed;
+	height: 100vh;
+	background-color: $white;
+	/*@extend %flex;
+	@extend %flex-center_vertical;*/
+	//background-image: url('../img/cuadro2.jpg');
+}
+.work-description {
+	//background-color: #fafafa;
+	position: relative;
+	top: 0;
+	right: -50%;
+	#{&}-container {
+		width: 80%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.work-carousel, .work-description {
+		width: 100%;
+	}
+	.work-carousel {
+		position: relative;
+		height: auto;
+	}
+	.work-description {
+		right: 0;
+	}
+}
+//BEM - SASS
+.block{
+	#{&}-element{
+
+	}
+	#{&}_modifier{
+
+	}
+}

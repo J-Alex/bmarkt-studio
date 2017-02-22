@@ -55,11 +55,11 @@
                 }
             }*/
         };
-        /*var portfolioWorkState = {
-            name: 'portfolio.work',
+        var portfolioWorkState = {
+            name: 'work',
             url: '/work',
             component: 'portfolioWork'
-        };*/
+        };
         var contactState = {
             name: 'contact',
             url: '/contact',
@@ -80,7 +80,7 @@
         $stateProvider.state(servicesState);
         $stateProvider.state(serviceState);
         $stateProvider.state(portfolioState);
-        //$stateProvider.state(portfolioWorkState);
+        $stateProvider.state(portfolioWorkState);
         $stateProvider.state(contactState);
         
         $stateProvider.state(state404);

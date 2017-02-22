@@ -1,5 +1,5 @@
 
-<script>
+<!--<script>
 	$('.element-info').click(function(){
 		$('#modal-container').fadeIn();
 		//console.log($(this).index())
@@ -7,20 +7,17 @@
 	$('.modal-close').click(function(){
 		$('#modal-container').fadeOut();
 	});
-	var elementItem = $('.element-item');
-	var altoAncho = elementItem.width();
-	elementItem.height(altoAncho);
 
-</script>
+</script>-->
 <div class="row">
     <div class="portfolio row-content row-content_medium row-content_column row-content-center_vertical">
-        <h2 class="text-center">PORTFOLIO</h2>
+        <h2 class="text-center">PORTAFOLIO</h2>
 		
 		<div id="filters" class="button-group flex flex--row flex--center__horizontal">  
           <a  herf="" class="isotope is-checked" data-filter="*">Todos</a>
           <a herf="" class="isotope" data-filter=".web">web</a>
-          <a herf="" class="isotope" data-filter=".system">system</a>
-          <a herf="" class="isotope" data-filter=".design">design</a>
+          <a herf="" class="isotope" data-filter=".system">sistemas</a>
+          <a herf="" class="isotope" data-filter=".design">diseño</a>
           <a herf="" class="isotope" data-filter=".mobile">branding</a>
         </div>
         <br>
@@ -28,7 +25,7 @@
 			<figure class="element-item design">
 			  <img class="lin" src="res/img/Captura.jpg" alt="img-porfolio">
 			  <figcaption class="element-info">
-			  	<h4><a data-ui-sref="portfolio.work">Work title</a></h4>
+			  	<h4><a data-ui-sref="work">Work title</a></h4>
 			  	<span>
 			  		Web Design, front-end, UI/UX
 			  	</span>
@@ -94,11 +91,11 @@
     </div>
 </div>
 
-<div id="modal-container" class="modal-container">
+<!--<div id="modal-container" class="modal-container">
     <div class="modal-flex-wrapper flex-center">
-		<div class="moda-contento"> <!--ui-view="work"-->
+		<div class="moda-contento"> <!-- ui-view="work"
 			
-			<!--<portfolio-work></portfolio-work>-->
+			<!--<portfolio-work></portfolio-work>
 			<div class="work-img"></div>
 			
 			<div class="modal-close"> X </div>
@@ -118,16 +115,20 @@
 		
 		</div>
     </div>
-</div>
+</div>-->
 
 
 <script src="res/js/isotope.pkgd.min.js"></script>
 <script src="res/js/isotope.js"></script>	
 
 <script>
+	var elementItem = $('.element-item');
+	var altoAncho = elementItem.width();
+	elementItem.height(altoAncho);
 	$('.grid').isotope({
 	  // options
 	  itemSelector: '.element-item',
 	  layoutMode: 'fitRows'
 	});
+
 </script>

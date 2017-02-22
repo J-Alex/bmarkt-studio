@@ -7,7 +7,7 @@
     componenteCtrl.$inject = ['serviceService'];
 
     function componenteCtrl(serviceService) {
-        console.log("serviceCtrl");
+    	console.log("serviceCtrl");
     }
 
 })();

@@ -533,7 +533,7 @@ a:hover {
 main {
   padding-top: 91px; }
 
-.header .header-container, .header, .navbar, .wedo-wrapper, .service-description, .services-container, .service-banner, .services, .element-info, .footer, .footer-container, .logo-icon, .footer-nav, .contact-info span, .social, .moda-contento {
+.header .header-container, .header, .navbar, .wedo-wrapper, .service-description, .services-container, .service-banner, .services, .element-info, .work, .footer, .footer-container, .logo-icon, .footer-nav, .contact-info span, .social, .moda-contento {
   display: flex; }
 
 .services {
@@ -624,7 +624,7 @@ main {
   top: 0;
   left: 0;
   z-index: 99;
-  width: 100vw;
+  width: 100%;
   background-color: #fff;
   transition: .6s ease all; }
   .header .header-container {
@@ -886,7 +886,7 @@ hr {
   display: block;
   width: 0;
   height: 0;
-  border: 20px solid #fafafa;
+  border: 20px solid #fff;
   z-index: 97;
   border-bottom-color: transparent;
   border-top-color: transparent;
@@ -897,7 +897,7 @@ hr {
 
 .ribon-right:before {
   border-left-color: transparent;
-  border-right-color: #fafafa;
+  border-right-color: #fff;
   right: 0; }
 
 @media screen and (max-width: 420px) {
@@ -1107,6 +1107,37 @@ a.is-checked, a.is-checked:hover {
 @media screen and (max-width: 420px) {
   .element-item {
     width: 100%; } }
+.work {
+  flex-wrap: wrap; }
+
+.work-carousel, .work-description {
+  width: 50%; }
+
+.work-carousel {
+  position: fixed;
+  height: 100vh;
+  background-color: #fff;
+  /*@extend %flex;
+  @extend %flex-center_vertical;*/ }
+
+.work-description {
+  position: relative;
+  top: 0;
+  right: -50%; }
+  .work-description .work-description-container {
+    width: 80%;
+    margin: 0 auto; }
+
+@media screen and (max-width: 420px) {
+  .work-carousel, .work-description {
+    width: 100%; }
+
+  .work-carousel {
+    position: relative;
+    height: auto; }
+
+  .work-description {
+    right: 0; } }
 .contact {
   padding-top: 3rem;
   padding-bottom: 7rem; }

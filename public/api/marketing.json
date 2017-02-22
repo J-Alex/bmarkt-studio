@@ -1,12 +1,27 @@
 [
 	{
-		"title": "MARKETING",
-		"description": "lolas",
-		"img": "lolas"
+		"title": "Posicionamiento Web - SEO",
+		"description": "Lo más importante es que los usuarios nos encuentren en internet, en Bmarkt Studio ofrecemos estrategias integradas para posicionar tu marca y aumentar la notoriedad de la misma en los buscadores como google o yahoo.",
+		"img": "res/img/cuadro.jpg"
 	},	
 	{
-		"title": "lolas",
-		"description": "lolas",
-		"img": "lolas"
+		"title": "E-Commerce",
+		"description": "Hoy en día llevar tu negocio a nuevos territorios y conquistar clientes alrededor del mundo sin abrir un punto de venta físico es posible con la venta de pago en línea.",
+		"img": "res/img/cuadro.jpg"
+	},	
+	{
+		"title": "Analitica Web",
+		"description": "Utilizando analítica web, podemos darte información para entender mejor como están interactuando los visitantes con tu sitio web y como aumentar tus índices de conversión de clientes",
+		"img": "res/img/cuadro.jpg"
+	},	
+	{
+		"title": "Social Media",
+		"description": "Creamos y gestionamos tu presencia en redes sociales (Facebook, Twitter, Pinterest). Nos encargamos de adaptar tu publicidad y promociones a estas plataformas, creamos estrategias y promociones únicas para conseguir más fans y aumentar el engagement de los mismos con tu marca y alcanzar los objetivos que se determinen.",
+		"img": "res/img/cuadro.jpg"
+	},	
+	{
+		"title": "Identidad de Marca (Branding)",
+		"description": "En Baud desarrollamos estrategias que posicionen a las marcas dentro de entornos muy competitivos.",
+		"img": "res/img/cuadro.jpg"
 	}
 ]

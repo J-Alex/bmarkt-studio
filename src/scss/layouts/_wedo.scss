@@ -64,7 +64,7 @@
     display: block;
     width: 0;
     height: 0;
-    border: 20px solid $white-gray;
+    border: 20px solid $white;
     z-index: 97;
     border-bottom-color: transparent;
     border-top-color: transparent;
@@ -75,7 +75,7 @@
 }
 .ribon-right:before {
     border-left-color: transparent;
-    border-right-color: $white-gray;
+    border-right-color: $white;
     right: 0;   
 }
 
