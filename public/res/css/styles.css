@@ -809,7 +809,8 @@ a.active {
   }*/ }
 
 .about {
-  margin: 7rem 0; }
+  margin-top: 3rem;
+  margin-bottom: 10rem; }
 
 .logo-red-ball {
   width: 15px;
@@ -1138,6 +1139,14 @@ a.is-checked, a.is-checked:hover {
 
   .work-description {
     right: 0; } }
+/*.block{
+	-element{
+
+	}
+	_modifier{
+
+	}
+}*/
 .contact {
   padding-top: 3rem;
   padding-bottom: 7rem; }
