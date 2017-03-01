@@ -9,9 +9,10 @@
 	});
 
 </script>-->
+
 <div class="row">
     <div class="portfolio row-content row-content_medium row-content_column row-content-center_vertical">
-        <h2 class="text-center">PORTAFOLIO</h2>
+        <h2 class="text-center"> {{ $ctrl.works  }} </h2>
 		
 		<div id="filters" class="button-group flex flex--row flex--center__horizontal">  
           <a herf="" class="isotope is-checked" data-filter="*">Todos</a>
@@ -22,46 +23,40 @@
         </div>
         <br>
         <div class="grid">
-			<figure class="element-item design">
+			<figure class="element-item" data-ng-repeat="work in $ctrl.works">
 			  <img class="lin" src="res/img/Captura.jpg" alt="img-porfolio">
 			  <figcaption class="element-info">
 			  	<h4><a data-ui-sref="work">Work title</a></h4>
-			    <!--<a class="portfolio-btn flex flex-center" href="">ver</a>-->
 			  </figcaption>
 			</figure>
-			<figure class="element-item web">
+			<!--<figure class="element-item web">
 			  <img class="lin" src="res/img/Captura.jpg" alt="img-porfolio">
 			  <figcaption class="element-info">
 			  	<h4>Holas</h4>
-			  <!--  <a class="portfolio-btn flex flex-center" href="">ver</a>-->
 			  </figcaption>
 			</figure>
 			<figure class="element-item design">
 			  <img class="lin" src="res/img/Captura.jpg" alt="img-porfolio">
 			  <figcaption class="element-info">
 			  	<h4>Holas</h4>
-			  <!--  <a class="portfolio-btn flex flex-center" href="">ver</a>-->
 			  </figcaption>
 			</figure>
 			<figure class="element-item mobile">
 			  <img class="lin" src="res/img/Captura.jpg" alt="img-porfolio">
 			  <figcaption class="element-info">
 			  	<h4>Holas</h4>
-			  <!--  <a class="portfolio-btn flex flex-center" href="">ver</a>-->
 			  </figcaption>
 			</figure>
 			<figure class="element-item system">
 			  <img class="lin" src="res/img/Captura.jpg" alt="img-porfolio">
 			  <figcaption class="element-info">
 			  	<h4>Holas</h4>
-			  <!--  <a class="portfolio-btn flex flex-center" href="">ver</a>-->
 			  </figcaption>
 			</figure>
 			<figure class="element-item photograpy">
 			  <img class="lin" src="res/img/Captura.jpg" alt="img-porfolio">
 			  <figcaption class="element-info">
 			  	<h4>Holas</h4>
-			  <!--  <a class="portfolio-btn flex flex-center" href="">ver</a>-->
 			  </figcaption>
 			</figure>
 			<figure class="element-item design">
@@ -71,7 +66,6 @@
 			  	<span>
 			  		Web Design, front-end, UI/UX
 			  	</span>
-			    <!--<a class="portfolio-btn flex flex-center" href="">ver</a>-->
 			  </figcaption>
 			</figure>
 			<figure class="element-item design">
@@ -81,9 +75,8 @@
 			  	<span>
 			  		Web Design, front-end, UI/UX
 			  	</span>
-			    <!--<a class="portfolio-btn flex flex-center" href="">ver</a>-->
 			  </figcaption>
-			</figure>
+			</figure>-->
 	    </div>
     </div>
 </div>
@@ -127,5 +120,4 @@
 	  itemSelector: '.element-item',
 	  layoutMode: 'fitRows'
 	});
-
 </script>

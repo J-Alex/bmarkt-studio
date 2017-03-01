@@ -4,9 +4,11 @@
         .module('bmarkt')
         .controller('portfolioCtrl', portfolioCtrl);
         
+    portfolioCtrl.$inject = ['portfolioService'];
     
-    function portfolioCtrl() {
-        console.log("llegué!");
+    function portfolioCtrl(portfolioService) {
+    	var trabajos = portfolioService;  
+        console.log(trabajos.$$state.value);
     }
 
 })();

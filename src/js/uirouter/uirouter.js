@@ -7,7 +7,8 @@
     
     uiRouting.$inject = ['$stateProvider', '$locationProvider', '$urlRouterProvider'];
     
-    serviceResolve.$inject = ['serviceService', '$transition$'];    
+    serviceResolve.$inject = ['serviceService', '$transition$'];
+    portfolioResolve.$inject = ['portfolioService', '$transition$'];    
     
     function uiRouting($stateProvider, $locationProvider,  $urlRouterProvider) {
         
@@ -44,8 +45,12 @@
         var portfolioState = {
             name: 'portfolio',
             url: '/portfolio',
-            templateUrl: 'partials/portfolio.html',
-            controller: 'portfolioCtrl'/*,
+            component: 'portfolioComponent',
+            resolve: {
+                works: portfolioResolve
+            }
+            /*templateUrl: 'partials/portfolio.html',
+            controller: 'portfolioCtrl'*//*,
             views: {
                 'work': {
                     name: 'portfolio.work',
@@ -89,5 +94,8 @@
 
     function serviceResolve(serviceService, $transition$){
         return serviceService.getService($transition$.params().service);
+    }
+    function portfolioResolve(portfolioService, $transition$){
+        return portfolioService/*.getWorks($transition$.params().service)*/;
     }
 })();
