@@ -1,41 +1,41 @@
 [
 	{
 		"title": "Editorial",
-		"img": "res/img/Captura.jpg",
+		"img": "res/img/servicios/design/editorial.png",
 		"description": "Ya que sabemos que todo entra por los ojos, Nos encargamos del diseño, maquetación y composición de publicaciones de: Libros, Revistas, boletines, Flyers, dípticos, trípticos, folletos, catálogos y manuales, calendarios."
 	},
 	{
 		"title": "Papeleria:",
 		"description": "El diseño de papelería corporativa contribuye a la identidad visual de cada empresa y asi transmitir personalidad a través de: facturas, recibos, volantes",
-		"img": "res/img/Captura.jpg"
+		"img": "res/img/servicios/design/papeleria.png"
 	},
 	{
 		"title": "Logotipo",
 		"description": "En nuestro estudio diseñamos el logotipo de tu empresa, producto, servicio, organización, evento o el logotipo de tu marca personal.",
-		"img": "res/img/Captura.jpg"
+		"img": "res/img/servicios/design/logotipo.png"
 	},
 	{
 		"title": "Manuales de identidad corporativa",
 		"description": "En Bmarkt Studio nos encargamos de diseñar la forma física que toma tu empresa y tu marca, abarcamos: colores coorporativos, logotivo, tipografía, tarjetas de presentación, toda la papelería empresarial, la web y arquitectura corporativa",
-		"img": "res/img/Captura.jpg"
+		"img": "res/img/servicios/design/editorial.png"
 
 	},
 	{
 		"title": "Carteleria",
 		"description": "En Bmarkt Studio sabemos que un buen diseño de carteles va mucho más allá de una imagen atractiva y original. Les ofrecemos soluciones originasles, creativas y impactantes para el diseño de carteles publicitarios.",
-		"img": "res/img/Captura.jpg"
+		"img": "res/img/servicios/design/carteleria.png"
 
 	},
 	{
 		"title": "Ilustracion Digital",
 		"description": "Una imagen vale más que mil caracteres y nosotros podemos representar las ideas en imágenes, para añadirle valor a tus productos",
-		"img": "res/img/Captura.jpg"
+		"img": "res/img/servicios/design/ilustracion.png"
 
 	},
 	{
 		"title": "Packaging",
 		"description": "Realizamos diseño de packaging, diseño de envases y de etiquetas para mejorar la imagen de una marca o de un producto.",
-		"img": "res/img/Captura.jpg"
+		"img": "res/img/servicios/design/packaging.png"
 
 	}
 ]

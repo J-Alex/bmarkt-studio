@@ -1,7 +1,12 @@
 [
 	{
-		"title": "ARQUITECTURA",
+		"title": "Diseño",
 		"description": "Muy Pronto...",
-		"img": "res/img/Captura.jpg"
+		"img": "res/img/servicios/architecture/diseno.png"
+	},
+	{
+		"title": "Modelado 3D",
+		"description": "Muy Pronto...",
+		"img": "res/img/servicios/architecture/modelado.png"
 	}
 ]
