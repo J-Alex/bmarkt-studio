@@ -701,6 +701,9 @@ a.active {
 .menu-wrapper_white {
   border-color: #fff; }
 
+.wrapper_white {
+  border-color: #fff; }
+
 .hamburger:before, .hamburger:after {
   content: "";
   position: relative;
@@ -712,6 +715,9 @@ a.active {
   height: 0;
   border-top: 1px solid black;
   transition: .4s ease all; }
+
+.hamburger_white, .hamburger_white:before, .hamburger_white:after {
+  border-top: 1px solid #fff; }
 
 .hamburger:before {
   bottom: -8px; }

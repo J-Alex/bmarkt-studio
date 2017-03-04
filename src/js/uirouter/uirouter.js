@@ -26,12 +26,16 @@
                 $('.logo').toggleClass('logo-white');
                 $('.logo-mobile').toggleClass('logo-mobile_white');
                 $('.header').toggleClass('bgt');
+                $('.menu-wrapper').toggleClass('wrapper_white');
+                $('.hamburger').toggleClass('hamburger_white');
             },
             onExit: function(){
                 console.log('saliendo');
                 $('.logo').toggleClass('logo-white');
                 $('.logo-mobile').toggleClass('logo-mobile_white');
                 $('.header').toggleClass('bgt');
+                $('.menu-wrapper').toggleClass('wrapper_white');
+                $('.hamburger').toggleClass('hamburger_white');
             }
         };
         var serviceState = {
