@@ -12,7 +12,7 @@
 
 <div class="row">
     <div class="portfolio row-content row-content_medium row-content_column row-content-center_vertical">
-        <h2 class="text-center"> {{ $ctrl.works  }} </h2>
+        <h2 class="text-center"> PORTAFOLIO DE TRABAJOS </h2>
 		
 		<div id="filters" class="button-group flex flex--row flex--center__horizontal">  
           <a herf="" class="isotope is-checked" data-filter="*">Todos</a>
@@ -112,12 +112,21 @@
 <script src="res/js/isotope.js"></script>	
 
 <script>
+//setTimeout(function(){
+	
 	var elementItem = $('.element-item');
 	var altoAncho = elementItem.width();
 	elementItem.height(altoAncho);
 	$('.grid').isotope({
 	  // options
 	  itemSelector: '.element-item',
-	  layoutMode: 'fitRows'
+	  layoutMode: 'cellsByColumn',
+		cellsByColumn: {
+		  columnWidth: 110,
+		  rowHeight: 110
+		}
 	});
+
+//}, 3000)
+	
 </script>
