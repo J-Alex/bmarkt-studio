@@ -9,6 +9,7 @@
     
     serviceResolve.$inject = ['serviceService', '$transition$'];
     portfolioResolve.$inject = ['portfolioService', '$transition$'];    
+    workResolve.$inject = ['workService', '$transition$'];
     
     function uiRouting($stateProvider, $locationProvider,  $urlRouterProvider) {
         
@@ -66,8 +67,11 @@
         };
         var portfolioWorkState = {
             name: 'work',
-            url: '/work',
-            component: 'portfolioWork'
+            url: '/work/{work}',
+            component: 'portfolioWork',
+            resolve: {
+                work: workResolve
+            }
         };
         var contactState = {
             name: 'contact',
@@ -101,5 +105,8 @@
     }
     function portfolioResolve(portfolioService, $transition$){
         return portfolioService/*.getWorks($transition$.params().service)*/;
+    }
+    function workResolve(workService, $transition$){
+        return workService.getWork($transition$.params().work);
     }
 })();

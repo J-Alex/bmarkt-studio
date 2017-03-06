@@ -1,20 +1,22 @@
 <div class="work">
 	<div class="work-carousel">
 		<ul class="bxslider">
+			<li data-ng-repeat="workImg in $ctrl.work.imgs track by $index"><img src="{{ workImg }}" alt="familias unidas"></li>
+			<!--<li><img src="res/img/Captura.jpg" /></li>
 			<li><img src="res/img/Captura.jpg" /></li>
 			<li><img src="res/img/Captura.jpg" /></li>
-			<li><img src="res/img/Captura.jpg" /></li>
-			<li><img src="res/img/Captura.jpg" /></li>
+			<li><img src="res/img/Captura.jpg" /></li>-->
 		</ul>
 	</div>
 	<div class="work-description">
 		<div class="work-description-container">
-			<h1>WORK TITLE</h1>
+			<h1>{{ $ctrl.work.titulo }}</h1>
 			<ul>
-				<a href="">UI/UX</a>
+				<a href="" data-ng-repeat="workTag in $ctrl.work.tags"> {{ workTag }} </a>
+				<!--<a href="">UI/UX</a>
 				<a href="">Diseño Web</a>
 				<a href="">E-commerce</a>
-				<a href="">Branding</a>
+				<a href="">Branding</a>-->
 			</ul>
 			<p>
 				<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat explicabo, animi soluta veniam aspernatur ut iusto incidunt hic quas sequi dolores neque quis, sit odit minima modi nemo atque quidem.</span>

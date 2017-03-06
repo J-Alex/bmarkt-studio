@@ -23,46 +23,46 @@
         </div>
         <br>
         <div class="grid">
-			<figure class="element-item" data-ng-repeat="work in $ctrl.works">
+			<!--<figure class="element-item" data-ng-repeat="work in $ctrl.works">
 			  <img class="lin" src="res/img/Captura.jpg" alt="img-porfolio">
 			  <figcaption class="element-info">
 			  	<h4><a data-ui-sref="work">Work title</a></h4>
 			  </figcaption>
-			</figure>
-			<!--<figure class="element-item web">
-			  <img class="lin" src="res/img/Captura.jpg" alt="img-porfolio">
+			</figure>-->
+			<figure class="element-item design">
+			  <img class="lin" src="res/img/portfolio/familiasunidas/logo.jpg" alt="img-porfolio">
 			  <figcaption class="element-info">
-			  	<h4>Holas</h4>
+			  	<a data-ui-sref="work({work: 'fu'})">FAMILIAS UNIDAS</a>
 			  </figcaption>
 			</figure>
-			<figure class="element-item design">
+			<!--<figure class="element-item design">
 			  <img class="lin" src="res/img/Captura.jpg" alt="img-porfolio">
 			  <figcaption class="element-info">
-			  	<h4>Holas</h4>
+			  	<a data-ui-sref="work">Holas</a>
 			  </figcaption>
 			</figure>
 			<figure class="element-item mobile">
 			  <img class="lin" src="res/img/Captura.jpg" alt="img-porfolio">
 			  <figcaption class="element-info">
-			  	<h4>Holas</h4>
+			  	<a data-ui-sref="work">Holas</a>
 			  </figcaption>
 			</figure>
 			<figure class="element-item system">
 			  <img class="lin" src="res/img/Captura.jpg" alt="img-porfolio">
 			  <figcaption class="element-info">
-			  	<h4>Holas</h4>
+			  	<a data-ui-sref="work">Holas</a>
 			  </figcaption>
 			</figure>
 			<figure class="element-item photograpy">
 			  <img class="lin" src="res/img/Captura.jpg" alt="img-porfolio">
 			  <figcaption class="element-info">
-			  	<h4>Holas</h4>
+			  	<a data-ui-sref="work">Holas</a>
 			  </figcaption>
 			</figure>
 			<figure class="element-item design">
 			  <img class="lin" src="res/img/Captura.jpg" alt="img-porfolio">
 			  <figcaption class="element-info">
-			  	<h4>Work title</h4>
+			  	<a data-ui-sref="work">Work title</a>
 			  	<span>
 			  		Web Design, front-end, UI/UX
 			  	</span>
@@ -71,7 +71,7 @@
 			<figure class="element-item design">
 			  <img class="lin" src="res/img/Captura.jpg" alt="img-porfolio">
 			  <figcaption class="element-info">
-			  	<h4>Work title</h4>
+			  	<a data-ui-sref="work">Work title</a>
 			  	<span>
 			  		Web Design, front-end, UI/UX
 			  	</span>
@@ -119,12 +119,8 @@
 	elementItem.height(altoAncho);
 	$('.grid').isotope({
 	  // options
-	  itemSelector: '.element-item',
-	  layoutMode: 'cellsByColumn',
-		cellsByColumn: {
-		  columnWidth: 110,
-		  rowHeight: 110
-		}
+	  itemSelector: '.element-item'/*,
+	  layoutMode: '',*/
 	});
 
 //}, 3000)

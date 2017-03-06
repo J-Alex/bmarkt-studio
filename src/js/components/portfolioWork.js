@@ -4,7 +4,7 @@
 	angular
 		.module('bmarkt')
 		.component('portfolioWork', {
-			bindings: { works: '<' },
+			bindings: { work: '<' },
 			controller: 'workCtrl',
 			templateUrl: 'partials/work.html'
 		});
