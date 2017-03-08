@@ -975,12 +975,12 @@ hr {
     color: #fff; }
 
 .service-banner {
-  height: 400px;
+  height: 350px;
   margin-top: -91px;
   background-image: url("../img/banner-design.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: 100% 100%; }
+  background-size: 150%; }
 
 h2.service-title {
   color: #fafafa;

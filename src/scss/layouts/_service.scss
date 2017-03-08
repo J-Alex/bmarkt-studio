@@ -1,11 +1,13 @@
 .service-banner {
-    height: 400px;
+    height: 350px;
     margin-top: -91px;
     background: {
         image: url('../img/banner-design.png');
         attachment: fixed;
         repeat: no-repeat;
-        size: 100% 100%; 
+        size: 150%;
+        //position-y: 0;
+
     }
     @extend %flex;
     @extend %flex-end;
