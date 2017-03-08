@@ -977,7 +977,7 @@ hr {
 .service-banner {
   height: 400px;
   margin-top: -91px;
-  background-image: url("../img/cuadro.jpg");
+  background-image: url("../img/banner-design.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: 100% 100%; }
@@ -1134,10 +1134,13 @@ a.is-checked, a.is-checked:hover {
   .element-info {
     opacity: 1; } }
 .work {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 6rem;
   flex-wrap: wrap; }
 
 .work-carousel, .work-description {
-  width: 50%; }
+  width: 40%; }
 
 .work-carousel {
   position: fixed;
@@ -1149,7 +1152,7 @@ a.is-checked, a.is-checked:hover {
 .work-description {
   position: relative;
   top: 0;
-  right: -50%; }
+  left: 60%; }
   .work-description .work-description-container {
     width: 80%;
     margin: 0 auto; }
@@ -1163,7 +1166,7 @@ a.is-checked, a.is-checked:hover {
     height: auto; }
 
   .work-description {
-    right: 0; } }
+    left: 0; } }
 /*.block{
 	-element{
 

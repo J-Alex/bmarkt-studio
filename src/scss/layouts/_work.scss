@@ -1,10 +1,14 @@
 .work {
-	@extend %flex;
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 6rem;
 	flex-wrap: wrap;
+	//justify-content: space-between;
+	@extend %flex;
 }
 
 .work-carousel, .work-description {
-	width: 50%;
+	width: 40%;
 }
 
 .work-carousel {
@@ -19,7 +23,7 @@
 	//background-color: #fafafa;
 	position: relative;
 	top: 0;
-	right: -50%;
+	left: 60%;
 	#{&}-container {
 		width: 80%;
 		margin: 0 auto;
@@ -35,7 +39,7 @@
 		height: auto;
 	}
 	.work-description {
-		right: 0;
+		left: 0;
 	}
 }
 //BEM - SASS
