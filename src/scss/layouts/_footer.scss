@@ -122,22 +122,22 @@
 	}	
 	@extend %flex-center;
 }
-.social-icon:nth-child(1){
+.social-icon:nth-child(1):hover{
 	background-color: #3B5998;
 }
-.social-icon:nth-child(2){
+.social-icon:nth-child(2):hover{
 	background-color: #1DA1F2;
 }
-.social-icon:nth-child(3){
+.social-icon:nth-child(3):hover{
 	background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);;
 }
-.social-icon:nth-child(4){
+.social-icon:nth-child(4):hover{
 	background-color: #0177B5;
 }
-.social-icon:nth-child(5){
+.social-icon:nth-child(5):hover{
 	background-color: #005CFF;
 }
-.social-icon:nth-child(6){
+.social-icon:nth-child(6):hover{
 	background-color: #24292E;
 }
 .trademark {

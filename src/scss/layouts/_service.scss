@@ -1,27 +1,27 @@
 .service-banner {
     height: 350px;
-    margin-top: -91px;
+    //margin-top: -91px;
     background: {
         image: url('../img/banner-design.png');
         attachment: fixed;
         repeat: no-repeat;
-        size: 150%;
-        //position-y: 0;
-
+        //size: 100%;
     }
     @extend %flex;
-    @extend %flex-end;
+    @extend %flex-center;
 }
 
 h2.service-title{
     color: #fafafa;
     width: 70%;
-    margin: 0 auto;
-    font-size: 2.2em;
-    padding-bottom: 1rem;
+    text-align: center;
+    font-size: 3.3em;
+    font-family: 'montserrat';
+    //padding-bottom: 1rem;
 }
 .services {
     width: 70%;
+    max-width: 1000px;
     margin: 5rem auto;
     @extend %flex;
     @extend %flex-row;

@@ -436,6 +436,9 @@ $bg-color-dark:;
 @font-face {
   font-family: 'arialn';
   src: url("../fonts/Arial Rounded.ttf") format("truetype"); }
+@font-face {
+  font-family: 'montserrat';
+  src: url("../fonts/Montserrat-Regular.ttf") format("truetype"); }
 .text-center {
   text-align: center; }
 
@@ -481,7 +484,7 @@ a:hover {
 .header .header-container {
   justify-content: space-between; }
 
-.menu-wrapper, .service-description, .services-container, .element-info, .footer-container, .logo-icon, .footer-nav, .social, .social-icon {
+.menu-wrapper, .service-description, .services-container, .service-banner, .element-info, .footer-container, .logo-icon, .footer-nav, .social, .social-icon {
   justify-content: center;
   align-items: center; }
 
@@ -506,7 +509,8 @@ a:hover {
 
 .row-content_medium {
   width: 80%;
-  min-width: 320px; }
+  min-width: 320px;
+  max-width: 1200px; }
 
 .row-content_column {
   flex-direction: column; }
@@ -530,13 +534,18 @@ a:hover {
 main {
   padding-top: 91px; }
 
+/*@media and (max-width: 1366px) {
+    .row-content_medium {
+
+    }
+}*/
 .header .header-container, .header, .navbar, .wedo-wrapper, .service-description, .services-container, .service-banner, .services, .element-info, .work, .footer, .footer-container, .logo-icon, .footer-nav, .contact-info span, .social, .moda-contento {
   display: flex; }
 
 .services {
   flex-flow: row wrap; }
 
-.menu-wrapper, .service-description, .services-container, .element-info, .footer-container, .logo-icon, .footer-nav, .social, .social-icon {
+.menu-wrapper, .service-description, .services-container, .service-banner, .element-info, .footer-container, .logo-icon, .footer-nav, .social, .social-icon {
   justify-content: center;
   align-items: center; }
 
@@ -551,9 +560,6 @@ main {
 
 .element-info, .footer {
   flex-flow: column; }
-
-.service-banner {
-  align-items: flex-end; }
 
 .flex {
   display: flex; }
@@ -842,6 +848,7 @@ hr {
   flex-direction: row;
   flex-wrap: wrap;
   width: 80%;
+  max-width: 1200px;
   margin: 0 auto; }
 
 .service-description {
@@ -973,21 +980,20 @@ hr {
 
 .service-banner {
   height: 350px;
-  margin-top: -91px;
   background-image: url("../img/banner-design.png");
   background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: 150%; }
+  background-repeat: no-repeat; }
 
 h2.service-title {
   color: #fafafa;
   width: 70%;
-  margin: 0 auto;
-  font-size: 2.2em;
-  padding-bottom: 1rem; }
+  text-align: center;
+  font-size: 3.3em;
+  font-family: 'montserrat'; }
 
 .services {
   width: 70%;
+  max-width: 1000px;
   margin: 5rem auto;
   justify-content: space-between; }
 
@@ -1281,22 +1287,22 @@ a.is-checked, a.is-checked:hover {
   .social-icon .fa {
     color: #fff; }
 
-.social-icon:nth-child(1) {
+.social-icon:nth-child(1):hover {
   background-color: #3B5998; }
 
-.social-icon:nth-child(2) {
+.social-icon:nth-child(2):hover {
   background-color: #1DA1F2; }
 
-.social-icon:nth-child(3) {
+.social-icon:nth-child(3):hover {
   background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%); }
 
-.social-icon:nth-child(4) {
+.social-icon:nth-child(4):hover {
   background-color: #0177B5; }
 
-.social-icon:nth-child(5) {
+.social-icon:nth-child(5):hover {
   background-color: #005CFF; }
 
-.social-icon:nth-child(6) {
+.social-icon:nth-child(6):hover {
   background-color: #24292E; }
 
 @media screen and (max-width: 420px) {

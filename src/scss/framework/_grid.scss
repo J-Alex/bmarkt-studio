@@ -32,6 +32,7 @@
 .row-content_medium {
     width: 80%;
     min-width: 320px;
+    max-width: 1200px;
 }
 
 .row-content_column {
@@ -64,3 +65,9 @@
 main {
     padding-top: 91px;
 }
+
+/*@media and (max-width: 1366px) {
+    .row-content_medium {
+
+    }
+}*/

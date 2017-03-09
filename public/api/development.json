@@ -2,11 +2,11 @@
 	{
 		"title": "Páginas Web",
 		"description": "Sino esta en internet, no existe – En nuestro estudio diseñamos sitios web accesible desde cualquier dispositivo, y adaptable a cualquier plataforma que pueda potenciar la identidad de tu marca.",
-		"img": "res/img/Captura.jpg"
+		"img": "res/img/servicios/development/si.png"
 	},	
 	{
 		"title": "Sistemas Informáticos",
 		"description": "En Bmarkt Studio desarrollamos sistemas web que se adaptan a las necesidades de tu empresa con el objetivo de automatizar procesos, automatizamos desde la contabilidad hasta el control de clientes y trabajadores.",
-		"img": "res/img/Captura.jpg"
+		"img": "res/img/servicios/development/ws.png"
 	}
 ]
