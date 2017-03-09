@@ -980,7 +980,6 @@ hr {
 
 .service-banner {
   height: 350px;
-  background-image: url("../img/banner-design.png");
   background-attachment: fixed;
   background-repeat: no-repeat; }
 
@@ -1077,6 +1076,9 @@ h2.service-title {
 .portfolio {
   padding-top: 3rem;
   padding-bottom: 7rem; }
+  .portfolio h2 {
+    font-size: 2em;
+    margin: 1.8rem 0; }
 
 a.isotope {
   font-family: 'arialn';
@@ -1093,7 +1095,8 @@ a.is-checked, a.is-checked:hover {
   border-radius: 15px; }
 
 .grid {
-  width: 100%; }
+  width: 100%;
+  margin-top: 1.3rem; }
 
 .element-item {
   width: 24%;
