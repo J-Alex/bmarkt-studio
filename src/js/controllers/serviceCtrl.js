@@ -4,9 +4,9 @@
         .module('bmarkt')
         .controller('serviceCtrl', componenteCtrl);
 
-    componenteCtrl.$inject = ['serviceService', '$location', '$rootScope', '$scope'];
+    componenteCtrl.$inject = ['serviceService', '$location', '$scope'];
 
-    function componenteCtrl(serviceService, $location, $rootScope, $scope) {
+    function componenteCtrl(serviceService, $location, $scope) {
     	var ruta = $location.path();
     	switch(ruta) {
     		case '/service/design': 
