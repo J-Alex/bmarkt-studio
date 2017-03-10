@@ -8,7 +8,7 @@
 	background: {
 		repeat: no-repeat;
 		attachment: fixed;
-		size: 100% 100%;
+		size: 100%;
 	}
 
 	h3 {
@@ -41,5 +41,15 @@
 	h3 {
 		//position: fixed;
 		color: $white;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.service {
+		height: 50vh;
+
+		background: {
+			size: 100% 100%;
+		}
 	}
 }

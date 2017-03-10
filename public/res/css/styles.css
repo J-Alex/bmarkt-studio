@@ -952,7 +952,7 @@ hr {
   font-size: 2em;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100% 100%; }
+  background-size: 100%; }
   .service h3 {
     border: 2px solid white;
     border-left: 0;
@@ -978,6 +978,10 @@ hr {
   .services-container h3 {
     color: #fff; }
 
+@media screen and (max-width: 420px) {
+  .service {
+    height: 50vh;
+    background-size: 100% 100%; } }
 .service-banner {
   height: 350px;
   background-attachment: fixed;
