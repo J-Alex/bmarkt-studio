@@ -2,7 +2,8 @@
 	{
 		"title": "Páginas Web",
 		"description": "Sino esta en internet, no existe – En nuestro estudio diseñamos sitios web accesible desde cualquier dispositivo, y adaptable a cualquier plataforma que pueda potenciar la identidad de tu marca.",
-		"img": "res/img/servicios/development/si.png"
+		"img": "res/img/servicios/development/si.png",
+		"bgi":"res/img/banner-development.png"
 	},	
 	{
 		"title": "Sistemas Informáticos",

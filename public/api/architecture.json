@@ -2,7 +2,8 @@
 	{
 		"title": "Diseño",
 		"description": "Muy Pronto...",
-		"img": "res/img/servicios/architecture/diseno.png"
+		"img": "res/img/servicios/architecture/diseno.png",
+		"bgi": "res/img/banner-architecture.png"
 	},
 	{
 		"title": "Modelado 3D",
