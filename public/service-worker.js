@@ -1,6 +1,6 @@
 
-var cache_name = "cacheando";
-var cache_urls = ["index.html", "partials/*.html", "partials/**/*.html", "api/*json", "res/css/styles.min.css", "res/css/*.min.css", "res/css/*.css", "res/img/**/*.jpg", "res/img/**/*.png", "res/js/*.js"];
+/*var cache_name = "cacheando";
+var cache_urls = ["index.html","res/css/styles.min.css","res/js/angular.min.js","res/js/jquery.min.js","res/js/scripts.min.js","res/js/angular-ui-router.js", "res/img/banner.png", "res/img/Banner1.png", "res/img/banner.png"];
 
 self.addEventListener('install', function(ev){
 	console.log("cache instalada");
@@ -10,3 +10,19 @@ self.addEventListener('install', function(ev){
 			return cache.addAll(cache_urls)
 		});
 });
+
+self.addEventListener("fetch", function(e) {
+	//console.log(e.request);
+	e.respondWith(
+		caches.match(e.request)
+			.then(function(res) {
+				if(res) {
+					//console.log("estoy en el caché");
+					return res;
+				}
+
+				//console.log("NO estoy en el caché");
+				return fetch(e.request);
+			})
+	)
+});*/

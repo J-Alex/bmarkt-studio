@@ -1,5 +1,5 @@
 <div class="banner">
-    <img src="res/img/banner.png" alt="banner">
+    <img class="lazy" data-original="res/img/banner.png" alt="banner">
     <!--<div class="row-content row-content_medium row-elements_between flex-center">
         
         <h1>MAKE...<br> <span class="typing"></span></h1>
@@ -9,7 +9,7 @@
 <div class="row">
     <div class="about row-content row-content_medium row-content_column row-content-center_vertical">
 
-        <img src="res/img/Banner1.png" alt="LE BANNER">
+        <img class="lazy" data-original="res/img/Banner1.png" alt="banner">
     <!--    <div class="logo-red-ball"></div>
         <hr>
         <p class="info-text text-center">
@@ -72,7 +72,7 @@
     </div>
     <div class="wedo-wrapper">
         <figure class="wedo-fig ribon-right">
-            <img class="wedo-fig_img" src="res/img/services-home/arquitect2.png" alt="Architecture">
+            <img class="lazy wedo-fig_img" data-original="res/img/services-home/arquitect2.png" alt="Architecture">
             <figcaption class="wedo-fig_cap">
                 <a href="" ui-sref="service({service: 'architecture'})"></a>
             </figcaption>s
@@ -87,3 +87,8 @@
         </div>
     </div>
 </div>
+<script src="res/js/lazyload.js"></script>
+
+    <script>
+        $("img.lazy").lazyload();
+    </script>

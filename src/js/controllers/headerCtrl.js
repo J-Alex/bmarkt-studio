@@ -7,9 +7,10 @@
     headerCtrl.$inject = ['$element', '$document'];
 
     function headerCtrl($element, $document) {
+        var tonta;
         var documentWidth = $document.width();
         var menuLink = $document.find('a.link');
-        ((documentWidth < 420) ? menuLink.toggleClass('link-mobile') : console.log('do nothing'));
+        ((documentWidth < 420) ? menuLink.toggleClass('link-mobile'): tonta = 1);
     	var mobileBtn = $document.find('.menu-wrapper');
     	var hamburger = $document.find('.hamburger');
     	var mobileNav = $document.find('.navbar');
