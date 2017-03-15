@@ -7,6 +7,11 @@
     workCtrl.$inject = ['$element', '$document', 'workService'];
 
     function workCtrl($element, $document, workService) {
+        /*var carousel = $element.find('.bxslider');
+        angular.element(carousel).bxSlider();*/
+
+        //angular.element($document.find('.bxslider')).bxSlider();
+        //((angular.element(document).bxSlider()) ? console.log("si") : console.log("no"))
         /*var work=[];
         work = workService;*/
         //console.log(workService);

@@ -7,6 +7,13 @@
     componenteCtrl.$inject = ['serviceService', '$location', '$scope'];
 
     function componenteCtrl(serviceService, $location, $scope) {
+
+    /*if (angular.element().lazyload()) {
+        console.log("si");
+    } else {
+        console.log("no");
+    }*/
+
     	var ruta = $location.path();
     	switch(ruta) {
     		case '/service/design': 

@@ -1137,6 +1137,9 @@ a.is-checked, a.is-checked:hover {
   margin: 0;
   color: #fff; }
 
+img.portImg, div.bx-wrapper {
+  width: 100%; }
+
 @media screen and (max-width: 420px) {
   .element-item {
     width: 100%; }

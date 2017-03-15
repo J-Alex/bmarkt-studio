@@ -1,14 +1,9 @@
-
-<!--<script>
-	$('.element-info').click(function(){
-		$('#modal-container').fadeIn();
-		//console.log($(this).index())
+<script>
+	
+	$(document).ready(function(){
+	  $('.bxslider').bxSlider();
 	});
-	$('.modal-close').click(function(){
-		$('#modal-container').fadeOut();
-	});
-
-</script>-->
+</script>
 
 <div class="row">
     <div class="portfolio row-content row-content_medium row-content_column row-content-center_vertical">
@@ -30,7 +25,19 @@
 			  </figcaption>
 			</figure>-->
 			<figure class="element-item design">
-			  <img class="lin" src="res/img/portfolio/familiasunidas/logo.jpg" alt="img-porfolio">
+			  <img class="lin" src="res/img/portfolio/diseno/logos/familiasunidas/logo.jpg" alt="img-porfolio">
+			  <figcaption class="element-info">
+			  	<a data-ui-sref="work({work: 'fu'})">FAMILIAS UNIDAS</a>
+			  </figcaption>
+			</figure>
+			<figure class="element-item mobile">
+			  <img class="lin" src="res/img/portfolio/diseno/logos/familiasunidas/logo.jpg" alt="img-porfolio">
+			  <figcaption class="element-info">
+			  	<a data-ui-sref="work({work: 'fu'})">FAMILIAS UNIDAS</a>
+			  </figcaption>
+			</figure>
+			<figure class="element-item web">
+			  <img class="lin" src="res/img/portfolio/diseno/logos/familiasunidas/logo.jpg" alt="img-porfolio">
 			  <figcaption class="element-info">
 			  	<a data-ui-sref="work({work: 'fu'})">FAMILIAS UNIDAS</a>
 			  </figcaption>
@@ -38,12 +45,19 @@
 	    </div>
     </div>
 </div>
+	
+<div id="modal-container" class="modal-container">
 
-<!--<div id="modal-container" class="modal-container">
+
     <div class="modal-flex-wrapper flex-center">
-		<div class="moda-contento"> <!-- ui-view="work"
 			
-			<!--<portfolio-work></portfolio-work>
+		<div class="moda-contento"> 
+			<ul class="bxslider">
+				<li data-ng-repeat="portImg in $ctrl.portImgs"><img class="portImg" src="{{ portImg }}" alt="familias unidas"></li>
+			</ul>
+		<!-- ui-view="work"
+			
+			<portfolio-work></portfolio-work>
 			<div class="work-img"></div>
 			
 			<div class="modal-close"> X </div>
@@ -59,28 +73,34 @@
 					</div>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo quaerat distinctio ipsam, itaque laboriosam iure voluptate minus neque ea, quia officia nobis harum, voluptas ut qui quisquam, vitae esse sequi.</p>
 				</div>
-			</div>
-		
+			</div> -->
+
 		</div>
     </div>
-</div>-->
+</div>
 
-
-<script src="res/js/isotope.pkgd.min.js"></script>
 <script src="res/js/isotope.js"></script>	
 
 <script>
 //setTimeout(function(){
-	
 	var elementItem = $('.element-item');
 	var altoAncho = elementItem.width();
 	elementItem.height(altoAncho);
+
 	$('.grid').isotope({
 	  // options
 	  itemSelector: '.element-item'/*,
 	  layoutMode: '',*/
+	});	
+//}, 3000)
+
+
+	$('.element-info').click(function(){
+		$('#modal-container').fadeIn();
+		//console.log($(this).index())
+	});
+	$('.modal-close').click(function(){
+		$('#modal-container').fadeOut();
 	});
 
-//}, 3000)
-	
 </script>
