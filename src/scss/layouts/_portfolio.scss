@@ -58,18 +58,18 @@ a.is-checked, a.is-checked:hover{
 	background-color: rgba(0,0,0,.5);
 	opacity: 0;
 	transition: 1s ease all;
-	a { color: white; }
+	p { color: white; }
 	@extend %flex;
 	@extend %flex-center;
-	@extend %flex-column;
+	//@extend %flex-column;
 }
 .element-item:hover .element-info {
 	opacity: 1;
 }
-.element-info h4 {
+/*.element-info h4 {
 	margin: 0;
 	color: $white;
-}
+}*/
 
 img.portImg, div.bx-wrapper {
 	width: 100%;

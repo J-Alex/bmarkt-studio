@@ -6,7 +6,7 @@
 		"description": "Ya que sabemos que todo entra por los ojos, Nos encargamos del diseño, maquetación y composición de publicaciones de: Libros, Revistas, boletines, Flyers, dípticos, trípticos, folletos, catálogos y manuales, calendarios."
 	},
 	{
-		"title": "Papeleria:",
+		"title": "Papeleria",
 		"description": "El diseño de papelería corporativa contribuye a la identidad visual de cada empresa y asi transmitir personalidad a través de: facturas, recibos, volantes",
 		"img": "res/img/servicios/design/papeleria.png"
 	},
@@ -22,13 +22,13 @@
 
 	},
 	{
-		"title": "Carteleria",
+		"title": "Cartelería",
 		"description": "En Bmarkt Studio sabemos que un buen diseño de carteles va mucho más allá de una imagen atractiva y original. Les ofrecemos soluciones originasles, creativas y impactantes para el diseño de carteles publicitarios.",
 		"img": "res/img/servicios/design/carteleria.png"
 
 	},
 	{
-		"title": "Ilustracion Digital",
+		"title": "Ilustración Digital",
 		"description": "Una imagen vale más que mil caracteres y nosotros podemos representar las ideas en imágenes, para añadirle valor a tus productos",
 		"img": "res/img/servicios/design/ilustracion.png"
 

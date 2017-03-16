@@ -11,33 +11,33 @@
 		
 		<div id="filters" class="button-group flex flex--row flex--center__horizontal">  
           <a herf="" class="isotope is-checked" data-filter="*">Todos</a>
-          <a herf="" class="isotope" data-filter=".web">web</a>
-          <a herf="" class="isotope" data-filter=".system">sistemas</a>
-          <a herf="" class="isotope" data-filter=".design">diseño</a>
-          <a herf="" class="isotope" data-filter=".mobile">branding</a>
+          <a herf="" class="isotope" data-filter=".web">Web</a>
+          <a herf="" class="isotope" data-filter=".system">Sistemas</a>
+          <a herf="" class="isotope" data-filter=".design">Diseño</a>
+          <a herf="" class="isotope" data-filter=".mobile">Branding</a>
         </div>
         <br>
         <div class="grid">
 			<!--<figure class="element-item" data-ng-repeat="work in $ctrl.works">
-			  <img class="lin" src="res/img/Captura.jpg" alt="img-porfolio">
+			  <img src="res/img/Captura.jpg" alt="img-porfolio">
 			  <figcaption class="element-info">
 			  	<h4><a data-ui-sref="work">Work title</a></h4>
 			  </figcaption>
 			</figure>-->
 			<figure class="element-item design">
-			  <img class="lin" src="res/img/portfolio/diseno/logos/familiasunidas/logo.jpg" alt="img-porfolio">
-			  <figcaption class="element-info">
-			  	<a data-ui-sref="work({work: 'fu'})">FAMILIAS UNIDAS</a>
-			  </figcaption>
+			  <img src="res/img/portfolio/diseno/logos/familiasunidas/logo.jpg" alt="img-porfolio">
+			  <a data-ui-sref="work({work: 'fu'})" class="element-info">
+			  	<p>FAMILIAS UNIDAS</p>
+			  </a>
 			</figure>
-			<figure class="element-item mobile">
-			  <img class="lin" src="res/img/portfolio/diseno/logos/familiasunidas/logo.jpg" alt="img-porfolio">
+			<figure class="modal-project element-item mobile">
+			  <img src="res/img/portfolio/diseno/logos/familiasunidas/logo.jpg" alt="img-porfolio">
 			  <figcaption class="element-info">
 			  	<a data-ui-sref="work({work: 'fu'})">FAMILIAS UNIDAS</a>
 			  </figcaption>
 			</figure>
 			<figure class="element-item web">
-			  <img class="lin" src="res/img/portfolio/diseno/logos/familiasunidas/logo.jpg" alt="img-porfolio">
+			  <img src="res/img/portfolio/diseno/logos/familiasunidas/logo.jpg" alt="img-porfolio">
 			  <figcaption class="element-info">
 			  	<a data-ui-sref="work({work: 'fu'})">FAMILIAS UNIDAS</a>
 			  </figcaption>
@@ -48,9 +48,9 @@
 	
 <div id="modal-container" class="modal-container">
 
-
     <div class="modal-flex-wrapper flex-center">
-			
+		
+        <i class="fa fa-close fa-2 modal-close" aria-hidden="true"></i>
 		<div class="moda-contento"> 
 			<ul class="bxslider">
 				<li data-ng-repeat="portImg in $ctrl.portImgs"><img class="portImg" src="{{ portImg }}" alt="familias unidas"></li>
@@ -95,7 +95,7 @@
 //}, 3000)
 
 
-	$('.element-info').click(function(){
+	$('.modal-project').click(function(){
 		$('#modal-container').fadeIn();
 		//console.log($(this).index())
 	});

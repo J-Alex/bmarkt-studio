@@ -11,7 +11,7 @@
 		"img": "res/img/servicios/marketing/ecomerce.png"
 	},	
 	{
-		"title": "Analitica Web",
+		"title": "Analítica Web",
 		"description": "Utilizando analítica web, podemos darte información para entender mejor como están interactuando los visitantes con tu sitio web y como aumentar tus índices de conversión de clientes",
 		"img": "res/img/servicios/marketing/analitica-web.png"
 	},	
@@ -22,7 +22,7 @@
 	},	
 	{
 		"title": "Identidad de Marca (Branding)",
-		"description": "En Baud desarrollamos estrategias que posicionen a las marcas dentro de entornos muy competitivos.",
+		"description": "En Bmarkt desarrollamos estrategias que posicionen a las marcas dentro de entornos muy competitivos.",
 		"img": "res/img/servicios/marketing/branding.png"
 	}
 ]
