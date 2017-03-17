@@ -10,6 +10,7 @@
     serviceResolve.$inject = ['serviceService', '$transition$'];
     portfolioResolve.$inject = ['portfolioService', '$transition$'];    
     workResolve.$inject = ['workService', '$transition$'];
+    modalworkResolve.$inject = ['modalworkService', '$transition$', '$stateParams'];
     
     function uiRouting($stateProvider, $locationProvider,  $urlRouterProvider) {
         
@@ -73,6 +74,14 @@
                 work: workResolve
             }
         };
+        var modalWorkState = {
+            name: 'portfolio.modalwork',
+            url: '/{modalwork}',
+            component: 'modalWork',
+            resolve: {
+                modalwork: modalworkResolve
+            }
+        };
         var contactState = {
             name: 'contact',
             url: '/contact',
@@ -94,6 +103,7 @@
         $stateProvider.state(serviceState);
         $stateProvider.state(portfolioState);
         $stateProvider.state(portfolioWorkState);
+        $stateProvider.state(modalWorkState);
         $stateProvider.state(contactState);
         
         $stateProvider.state(state404);
@@ -102,6 +112,9 @@
 
     function serviceResolve(serviceService, $transition$){
         return serviceService.getService($transition$.params().service);
+    }
+    function modalworkResolve(modalworkService, $transition$, $stateParams){
+        return modalworkService.getService($stateParams.modalwork);
     }
     function portfolioResolve(portfolioService, $transition$){
         return portfolioService/*.getWorks($transition$.params().service)*/;

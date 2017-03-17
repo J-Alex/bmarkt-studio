@@ -1104,6 +1104,7 @@ a.is-checked, a.is-checked:hover {
 
 .element-item {
   width: 24%;
+  cursor: pointer;
   margin: 1px;
   padding: 0; }
 
