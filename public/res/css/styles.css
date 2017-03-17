@@ -817,6 +817,9 @@ a.active {
   	width: 50%;
   }*/ }
 
+.banner-team {
+  width: 100%; }
+
 .about {
   margin-top: 3rem;
   margin-bottom: 10rem; }
@@ -1354,8 +1357,8 @@ img.portImg, div.bx-wrapper {
   height: 100%; }
 
 .moda-contento {
-  width: 75%;
-  height: 90%;
+  width: 60%;
+  height: 80%;
   overflow: hidden;
   background-color: #fff;
   border-radius: 7px;
@@ -1370,9 +1373,9 @@ img.portImg, div.bx-wrapper {
 
 .modal-close {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 2em; }
+  top: 20px;
+  right: 25px;
+  cursor: pointer; }
 
 @media screen and (max-width: 420px) {
   .moda-contento {
@@ -1390,9 +1393,11 @@ img.portImg, div.bx-wrapper {
     width: 90%;
     margin: 0 auto; }
 
-  .modal-close {
-    height: 70px;
-    width: 70px;
-    border-radius: 50%; } }
+  /*.modal-close {
+  	height: 70px;
+  	width: 70px;
+  	border-radius: 50% 
+  	//margin: -50% auto;
+  }*/ }
 
 /*# sourceMappingURL=styles.css.map */
