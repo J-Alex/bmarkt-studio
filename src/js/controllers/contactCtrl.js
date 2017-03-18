@@ -18,9 +18,14 @@
 				console.log(data);
 				formulario.reset();
 			},function(err,status,headers,config){
-				console.log(error);
+				console.log(err);
 			});
-	    }
+	    };
+	    
+	    $http({method: 'GET', url: 'http://bmarkt-jlex.c9users.io:8081/'})
+			.then(function(response){ 
+				console.log(response.data);
+			});
     }
 
 })();
