@@ -41,7 +41,7 @@ self.addEventListener("fetch", function(e) {
 				//console.log("NO estoy en el caché");
 				return fetch(e.request);
 			}).catch(function(err){
-				if(ev.request.mode == "navigate") {
+				if(e.request.mode == "navigate") {
 					return caches.match("index.html");
 				}
 			})
