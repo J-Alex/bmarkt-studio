@@ -124,6 +124,18 @@
 	}	
 	@extend %flex-center;
 }
+.footer-content > div:nth-child(1){
+	width: 20%;
+}
+.footer-content > div:nth-child(2){
+	width: 20%;
+}
+.footer-content > div:nth-child(3){
+	width: 30%;
+}
+.footer-content > div:nth-child(4){
+	width: 30%;
+}
 .social-icon:nth-child(1):hover{
 	background-color: #3B5998;
 }
