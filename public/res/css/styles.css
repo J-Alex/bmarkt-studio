@@ -1255,6 +1255,9 @@ img.portImg, div.bx-wrapper {
   .footer-content div {
     width: 25%; }
 
+.logo-icon img {
+  width: 60px; }
+
 .footer-nav {
   flex-direction: column; }
   .footer-nav a {

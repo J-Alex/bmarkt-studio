@@ -48,7 +48,11 @@
 	}
 	
 }
-.logo-icon {	
+.logo-icon {
+
+	img {
+		width: 60px;
+	}
 	@extend %flex;
 	@extend %flex-center;
 }
