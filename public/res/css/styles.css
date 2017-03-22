@@ -549,7 +549,7 @@ main {
   justify-content: center;
   align-items: center; }
 
-.header {
+.header, .work {
   justify-content: center; }
 
 .navbar {
@@ -1151,39 +1151,49 @@ img.portImg, div.bx-wrapper {
   .element-info {
     opacity: 1; } }
 .work {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
-  margin-top: 6rem;
+  margin-top: 4rem;
   flex-wrap: wrap; }
 
-.work-carousel, .work-description {
-  width: 40%; }
+.work-title, .work-tags, .work-carousel, .description {
+  width: 80%; }
+
+.description {
+  font-size: 1.25em;
+  margin-bottom: 5rem; }
+
+/*.work-carousel, .work-description {
+	width: 40%;
+}
 
 .work-carousel {
-  position: fixed;
-  height: 100vh;
-  background-color: #fff;
-  /*@extend %flex;
-  @extend %flex-center_vertical;*/ }
-
+	position: fixed;
+	height: 100vh;
+	background-color: $white;
+	//background-image: url('../img/cuadro2.jpg');
+}
 .work-description {
-  position: relative;
-  top: 0;
-  left: 60%; }
-  .work-description .work-description-container {
-    width: 80%;
-    margin: 0 auto; }
-
+	//background-color: #fafafa;
+	position: relative;
+	top: 0;
+	left: 60%;
+	-container {
+		width: 80%;
+		margin: 0 auto;
+	}
+}*/
 @media screen and (max-width: 420px) {
-  .work-carousel, .work-description {
-    width: 100%; }
-
+  /*.work-carousel, .work-description {
+  	width: 100%;
+  }
   .work-carousel {
-    position: relative;
-    height: auto; }
-
+  	position: relative;
+  	height: auto;
+  }
   .work-description {
-    left: 0; } }
+  	left: 0;
+  }*/ }
 /*.block{
 	-element{
 
@@ -1280,6 +1290,8 @@ img.portImg, div.bx-wrapper {
     margin: 0 15px;
     width: 24px;
     text-align: center; }
+  .contact-info .acomodate {
+    margin: 0 17px; }
 
 .map-btn {
   vertical-align: bottom;
@@ -1372,8 +1384,8 @@ img.portImg, div.bx-wrapper {
   height: 100%; }
 
 .moda-contento {
-  width: 60%;
-  height: 80%;
+  width: 850px;
+  height: 650px;
   overflow: hidden;
   background-color: #fff;
   border-radius: 7px;

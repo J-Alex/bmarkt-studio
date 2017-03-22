@@ -1,13 +1,23 @@
 .work {
-	width: 80%;
+	width: 70%;
 	margin: 0 auto;
-	margin-top: 6rem;
+	margin-top: 4rem;
 	flex-wrap: wrap;
-	//justify-content: space-between;
 	@extend %flex;
+	@extend %flex-center_horizontal;
+	//justify-content: space-between;
+	//@extend %flex;
 }
 
-.work-carousel, .work-description {
+.work-title, .work-tags, .work-carousel, .description {
+	width: 80%
+}
+
+.description {
+	font-size: 1.25em;
+	margin-bottom: 5rem; 
+}
+/*.work-carousel, .work-description {
 	width: 40%;
 }
 
@@ -15,8 +25,6 @@
 	position: fixed;
 	height: 100vh;
 	background-color: $white;
-	/*@extend %flex;
-	@extend %flex-center_vertical;*/
 	//background-image: url('../img/cuadro2.jpg');
 }
 .work-description {
@@ -28,11 +36,11 @@
 		width: 80%;
 		margin: 0 auto;
 	}
-}
+}*/
 
 
 @media screen and (max-width: 420px) {
-	.work-carousel, .work-description {
+	/*.work-carousel, .work-description {
 		width: 100%;
 	}
 	.work-carousel {
@@ -41,7 +49,7 @@
 	}
 	.work-description {
 		left: 0;
-	}
+	}*/
 }
 //BEM - SASS
 /*.block{
