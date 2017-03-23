@@ -8,7 +8,7 @@
     
     function portfolioCtrl($location, portfolioService, modalworkService) {
         this.back = function() {
-            $location.path('/portfolio');
+            $location.path('/portafolio');
         }
     	//console.log(modalworkService.getService('gasmarket').$$state.value);
         //this.sam = ["res/img/portfolio/diseno/logos/gasmarket.png","res/img/portfolio/diseno/logos/gasmarket0.jpg","res/img/portfolio/diseno/logos/gasmarket1.jpg"]

@@ -20,8 +20,8 @@
             templateUrl: 'partials/home.html'
         };
         var servicesState = {
-            name: 'services',
-            url: '/services',
+            name: 'servicios',
+            url: '/servicios',
             templateUrl: 'partials/services.html',
             onEnter: function(){
                 console.log('entrando');
@@ -41,41 +41,31 @@
             }
         };
         var serviceState = {
-            name: 'service',
-            url: '/service/{service}',
+            name: 'servicio',
+            url: '/servicios/{service}',
             component: 'serviceComponent',
             resolve: {
                 service: serviceResolve
             }
         };
         var portfolioState = {
-            name: 'portfolio',
-            url: '/portfolio',
+            name: 'portafolio',
+            url: '/portafolio',
             component: 'portfolioComponent',
             resolve: {
                 works: portfolioResolve
             }
-            /*templateUrl: 'partials/portfolio.html',
-            controller: 'portfolioCtrl'*//*,
-            views: {
-                'work': {
-                    name: 'portfolio.work',
-                    url: '/work',
-                    template: '<h1>ANIDADA</h1>'
-                    //component: 'portfolioWork'        
-                }
-            }*/
         };
         var portfolioWorkState = {
-            name: 'work',
-            url: '/work/{work}',
+            name: 'trabajo',
+            url: '/portafolio/{work}',
             component: 'portfolioWork',
             resolve: {
                 work: workResolve
             }
         };
         var modalWorkState = {
-            name: 'portfolio.modalwork',
+            name: 'portafolio.modalwork',
             url: '/{modalwork}',
             component: 'modalWork',
             resolve: {
@@ -83,8 +73,8 @@
             }
         };
         var contactState = {
-            name: 'contact',
-            url: '/contact',
+            name: 'contacto',
+            url: '/contacto',
             component: 'contactComponent'
         };
         var state404 = {
