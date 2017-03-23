@@ -58,7 +58,7 @@
         };
         var portfolioWorkState = {
             name: 'trabajo',
-            url: '/portafolio/{work}',
+            url: '/portafolio/proyecto/{work}',
             component: 'portfolioWork',
             resolve: {
                 work: workResolve
