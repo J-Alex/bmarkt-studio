@@ -3,6 +3,7 @@
 	margin: 0 auto;
 	margin-top: 4rem;
 	flex-wrap: wrap;
+	margin-bottom: 5rem;
 	@extend %flex;
 	@extend %flex-center_horizontal;
 	//justify-content: space-between;
@@ -15,7 +16,8 @@
 
 .description {
 	font-size: 1.25em;
-	margin-bottom: 5rem; 
+	line-height: 1.5;
+	//margin-bottom: 5rem; 
 }
 /*.work-carousel, .work-description {
 	width: 40%;

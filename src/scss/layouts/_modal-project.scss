@@ -40,6 +40,9 @@
 	cursor: pointer;
 	//font-size: 2em;
 }
+a.bx-prev, a.bx-next {
+ z-index: 50 !important;
+}
 
 @media screen and (max-width: 420px) {
 	.moda-contento {

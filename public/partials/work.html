@@ -10,7 +10,7 @@
 			<li data-ng-repeat="workImg in $ctrl.work.imgs track by $index"><img src="{{ workImg }}" alt="familias unidas"></li>
 		</ul>
 	</div>
-	<p class="description">	{{ $ctrl.work.descripcion }} </p>
+	<p data-ng-repeat="description in $ctrl.work.descripcion" class="description">	{{ description }} </p>
 	<!-- <div class="work-description">
 		<div class="work-description-container">
 			<h1>{{ $ctrl.work.titulo }}</h1>

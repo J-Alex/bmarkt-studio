@@ -626,7 +626,7 @@ main {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 99;
+  z-index: 999;
   width: 100%;
   background-color: #fff;
   transition: .6s ease all; }
@@ -1154,14 +1154,15 @@ img.portImg, div.bx-wrapper {
   width: 70%;
   margin: 0 auto;
   margin-top: 4rem;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin-bottom: 5rem; }
 
 .work-title, .work-tags, .work-carousel, .description {
   width: 80%; }
 
 .description {
   font-size: 1.25em;
-  margin-bottom: 5rem; }
+  line-height: 1.5; }
 
 /*.work-carousel, .work-description {
 	width: 40%;
@@ -1403,6 +1404,9 @@ img.portImg, div.bx-wrapper {
   top: 20px;
   right: 25px;
   cursor: pointer; }
+
+a.bx-prev, a.bx-next {
+  z-index: 50 !important; }
 
 @media screen and (max-width: 420px) {
   .moda-contento {
