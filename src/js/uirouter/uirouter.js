@@ -82,6 +82,12 @@
           url: '/state-404',
           templateUrl: 'partials/404.html'
         };
+
+        var adminLoginState = {
+            name: 'administracion',
+            url: '/administracion/login',
+            component: 'adminLoginComponent'
+        }
         
         $locationProvider.hashPrefix('');
         //$locationProvider.html5Mode(true).hashPrefix('');
@@ -95,6 +101,9 @@
         $stateProvider.state(portfolioWorkState);
         $stateProvider.state(modalWorkState);
         $stateProvider.state(contactState);
+
+
+        $stateProvider.state(adminLoginState);
         
         $stateProvider.state(state404);
         $urlRouterProvider.otherwise('/');
