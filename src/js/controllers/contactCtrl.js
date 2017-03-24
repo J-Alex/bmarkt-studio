@@ -4,9 +4,9 @@
         .module('bmarkt')
         .controller('contactCtrl', contactCtrl);
         
-    contactCtrl.$inject = ['$http', '$element', '$document'];
+    contactCtrl.$inject = ['$http', '$element', '$document', 'API'];
 
-    function contactCtrl($http, $element, $document) {
+    function contactCtrl($http, $element, $document, API) {
     	var formulario = $document.find('.contact-form')[0];
 	    this.mailObj = {};
 
@@ -22,7 +22,7 @@
 			});
 	    };
 	    
-	    $http({method: 'GET', url: 'http://bmarkt-jlex.c9users.io:8081/'})
+	    $http({method: 'GET', url: API})
 			.then(function(response){ 
 				console.log(response.data);
 			});
