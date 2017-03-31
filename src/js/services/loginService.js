@@ -7,11 +7,12 @@
 	loginService.$inject = ['$http', 'API'];
 
 	function loginService($http, API) {
-		this.getLogin = function() {
+		//this.getLogin = function() {
 			return $http({method: 'GET', url: API})
-			.then(function(response){ 
+			.then(function(response){
+				var valor; 
 				return valor = response.data;
 			});
-		}
+		//}
 	}
 })();

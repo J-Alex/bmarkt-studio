@@ -11,7 +11,9 @@
     portfolioResolve.$inject = ['portfolioService', '$transition$'];    
     workResolve.$inject = ['workService', '$transition$'];
     modalworkResolve.$inject = ['modalworkService', '$transition$', '$stateParams'];
-    
+    adminLoginResolve.$inject = ['loginService', '$transition$']
+
+
     function uiRouting($stateProvider, $locationProvider,  $urlRouterProvider) {
         
         var homeState = {
@@ -86,7 +88,10 @@
         var adminLoginState = {
             name: 'administracion',
             url: '/administracion/login',
-            component: 'adminLoginComponent'
+            component: 'adminLoginComponent'/*,
+            resolve: {
+                adminLogin: adminLoginResolve
+            }*/
         }
         
         $locationProvider.hashPrefix('');
@@ -120,5 +125,8 @@
     }
     function workResolve(workService, $transition$){
         return workService.getWork($transition$.params().work);
+    }
+    function adminLoginResolve(loginService, $transition$) {
+        return loginService;
     }
 })();
