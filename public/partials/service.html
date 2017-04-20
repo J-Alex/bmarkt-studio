@@ -4,7 +4,7 @@
 <div class="services">
 	
 	<figure class="service-container"  data-ng-repeat="servicio in $ctrl.service">
-		<img class="service-img" src="{{ servicio.img }}" alt="">
+		<img class="service-img" src="{{ servicio.img }}" alt="{{ servicio.alt }}">
 		<figcaption class="service-caption">
 			<h3 class="service-title text-center">{{ servicio.title }}</h3>
 			<p class="paragraph">{{ servicio.description }}</p>
