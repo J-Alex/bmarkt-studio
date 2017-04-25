@@ -1209,7 +1209,11 @@ img.portImg, div.bx-wrapper {
 
 .contact-form {
   width: 65%;
-  padding: 1rem 2rem; }
+  padding: 1rem 2rem;
+ /*
+.form-input:active {
+    box-shadow: 0 0 2px 2px blue;
+}*/ }
   .contact-form .form-input {
     border: 1px solid #ccc;
     border-radius: 6px; }
