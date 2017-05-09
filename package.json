@@ -25,10 +25,10 @@
   },
   "homepage": "https://github.com/J-Alex/marco#readme",
   "devDependencies": {
-    "grunt-browser-sync": "*",
-    "grunt-contrib-imagemin": "*",
-    "grunt-contrib-cssmin": "*",
     "grunt": "*",
+    "grunt-browser-sync": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-imagemin": "*",
     "grunt-contrib-sass": "*",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
