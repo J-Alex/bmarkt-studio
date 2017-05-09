@@ -39,32 +39,34 @@ module.exports = function(grunt) {
 				dest: 'public/res/js/scripts.min.js'
 			}
 		},
-		/*php: {
+		php: {
 			dev: {
 				options: {
-					hostname: '0.0.0.0',
+					hostname: '127.0.0.1',
 					port: 5000,
 					base: './public'
 				}
 			}
-		},*/
+		},
 		browserSync: {
 			dev: {
 				bsFiles: {
 		            src: [
 							'public/res/css/styles.min.css',
 							'public/res/js/scripts.min.js',
+							'public/res/css/styles.css',
+							'public/res/js/scripts.js',
 							'public/**/*.html',
 							'public/*.html'
 						]				
 		        },
 		        options: {
-		        	//proxy: '0.0.0.0:8080',
-		        	server: './public',
-		        	address: '0.0.0.0',
-		        	port: 8080,
+		        	proxy:'<%= php.dev.options.hostname %>:<%= php.dev.options.port %>',
+		        	/*server: './public',
+		        	address: '0.0.0.0',*/
+		        	port: 9000,
 		            watchTask: true,
-		            open: false
+		            open: true
 				}
 			} 
 		},
@@ -85,8 +87,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
-	// grunt.loadNpmTasks('grunt-php');
+	grunt.loadNpmTasks('grunt-php');
 
-	grunt.registerTask('default',[/*'php',*/'browserSync','watch']);
-	grunt.registerTask('imagenes',[ 'imagemin']);
+	grunt.registerTask('default',['php','browserSync','watch']);
+	grunt.registerTask('build',[ 'imagemin']);
 }
