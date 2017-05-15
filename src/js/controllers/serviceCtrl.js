@@ -25,7 +25,7 @@
     		case '/servicios/marketing':
     			$scope.$parent.serviceTitle = 'MARKETING DIGITAL';
     			break;
-    		case '/servicios/arquiitectura':
+    		case '/servicios/arquitectura':
     			$scope.$parent.serviceTitle = 'ARQUITECTURA';
     			break;
     	}
