@@ -16,16 +16,16 @@
 
     	var ruta = $location.path();
     	switch(ruta) {
-    		case '/servicios/design': 
-    			$scope.$parent.serviceTitle = 'DISEÑO';
+    		case '/servicios/diseno-grafico': 
+    			$scope.$parent.serviceTitle = 'DISEÑO GRAFICO';
     			break;
-    		case '/servicios/development':
-    			$scope.$parent.serviceTitle = 'DESARROLLO';
+    		case '/servicios/desarrollo-web':
+    			$scope.$parent.serviceTitle = 'DESARROLLO WEB';
     			break;
     		case '/servicios/marketing':
-    			$scope.$parent.serviceTitle = 'MARKETING';
+    			$scope.$parent.serviceTitle = 'MARKETING DIGITAL';
     			break;
-    		case '/servicios/architecture':
+    		case '/servicios/arquiitectura':
     			$scope.$parent.serviceTitle = 'ARQUITECTURA';
     			break;
     	}
