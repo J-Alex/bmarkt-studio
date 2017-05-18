@@ -11,18 +11,19 @@
     portfolioResolve.$inject = ['portfolioService', '$transition$'];    
     workResolve.$inject = ['workService', '$transition$'];
     modalworkResolve.$inject = ['modalworkService', '$transition$', '$stateParams'];
-    adminLoginResolve.$inject = ['loginService', '$transition$']
-
+    adminLoginResolve.$inject = ['loginService', '$transition$'];
+    //seoTitleServiceR.$inject = ['seoTitleService'];
 
     function uiRouting($stateProvider, $locationProvider,  $urlRouterProvider) {
         
         var homeState = {
             name: '/',
             url: '/',
+            //resolve: seoTitleServiceR,
             templateUrl: 'partials/home.html'
         };
         var servicesState = {
-            name: 'servicios',
+            name: '#/servicios',
             url: '/servicios',
             templateUrl: 'partials/services.html',
             onEnter: function(){
@@ -51,7 +52,7 @@
             }
         };
         var portfolioState = {
-            name: 'portafolio',
+            name: '#/portafolio',
             url: '/portafolio',
             component: 'portfolioComponent',
             resolve: {
@@ -67,7 +68,7 @@
             }
         };
         var modalWorkState = {
-            name: 'portafolio.modalwork',
+            name: '#/portafolio.modalwork',
             url: '/{modalwork}',
             component: 'modalWork',
             resolve: {
@@ -75,7 +76,7 @@
             }
         };
         var contactState = {
-            name: 'contacto',
+            name: '#/contacto',
             url: '/contacto',
             component: 'contactComponent'
         };
@@ -129,4 +130,7 @@
     function adminLoginResolve(loginService, $transition$) {
         return loginService;
     }
+    /*function seoTitleServiceR(seoTitleService) {
+        return seoTitleService.title();
+    }*/
 })();

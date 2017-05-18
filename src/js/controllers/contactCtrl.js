@@ -4,12 +4,13 @@
         .module('bmarkt')
         .controller('contactCtrl', contactCtrl);
         
-    contactCtrl.$inject = ['$http', '$element', '$document', 'API'];
+    contactCtrl.$inject = ['$http', '$element', '$document', 'API', 'seoTitleService', '$scope'];
 
-    function contactCtrl($http, $element, $document, API) {
+    function contactCtrl($http, $element, $document, API, seoTitleService, $scope) {
     	var formulario = $document.find('.contact-form')[0];
 	    this.mailObj = {};
 
+	    
 	    this.sendMail = function(){
 	    	console.log(this.mailObj);
 			
