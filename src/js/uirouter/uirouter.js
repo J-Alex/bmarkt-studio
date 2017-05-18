@@ -23,7 +23,7 @@
             templateUrl: 'partials/home.html'
         };
         var servicesState = {
-            name: '#/servicios',
+            name: 'servicios',
             url: '/servicios',
             templateUrl: 'partials/services.html',
             onEnter: function(){
@@ -52,7 +52,7 @@
             }
         };
         var portfolioState = {
-            name: '#/portafolio',
+            name: 'portafolio',
             url: '/portafolio',
             component: 'portfolioComponent',
             resolve: {
@@ -68,7 +68,7 @@
             }
         };
         var modalWorkState = {
-            name: '#/portafolio.modalwork',
+            name: 'portafolio.modalwork',
             url: '/{modalwork}',
             component: 'modalWork',
             resolve: {
@@ -76,7 +76,7 @@
             }
         };
         var contactState = {
-            name: '#/contacto',
+            name: 'contacto',
             url: '/contacto',
             component: 'contactComponent'
         };
