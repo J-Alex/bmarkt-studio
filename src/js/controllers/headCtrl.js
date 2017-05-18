@@ -9,7 +9,7 @@
 	
 	function headCtrl(seoTitleService, $scope){
 
-	    var titulo = "Bmarkt Studio - Diseño Gráfico, Desarrollo Web, Marketing Digital, Arquitectura"
+	    var titulo = "BmarktStudio - Diseño Gráfico, Desarrollo Web, Marketing, Arquitectura"
 	    seoTitleService.setTitle(titulo);
 	    console.log(seoTitleService.title());
 
