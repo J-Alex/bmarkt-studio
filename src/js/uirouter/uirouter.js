@@ -95,8 +95,8 @@
             }*/
         }
         
-        $locationProvider.hashPrefix('');
         $locationProvider.html5Mode(true);
+        $locationProvider.hashPrefix('!');
         
         
         //$stateProvider.state('/');
