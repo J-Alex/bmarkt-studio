@@ -112,7 +112,7 @@
         $stateProvider.state(adminLoginState);
         
         $stateProvider.state(state404);
-        //$urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('404');
     }
 
     function serviceResolve(serviceService, $transition$){
