@@ -3361,6 +3361,7 @@ img.portImg, div.bx-wrapper {
 .contact-form {
   width: 100%;
   padding: 1rem 2rem;
+  margin-bottom: 3rem;
   /*
   .form-input:active {
       box-shadow: 0 0 2px 2px blue;
@@ -3449,7 +3450,8 @@ img.portImg, div.bx-wrapper {
   display: block;
   border: 0;
   width: 100%;
-  height: 400px; }
+  height: 400px;
+  margin-top: 1.5rem; }
 
 .footer-container {
   position: relative;
