@@ -1,11 +1,11 @@
 <div class="row">
     <div class="portfolio row-content row-content_medium row-content_column row-content-center_vertical">
-        <h2 class="text-center"> PORTAFOLIO DE TRABAJOS </h2>
+        <h2 class="text-center mont"> PORTAFOLIO DE TRABAJOS </h2>
 		
 		<div id="filters" class="button-group flex flex--row flex--center__horizontal">  
           <a herf="" class="isotope is-checked" data-filter="*">Todos</a>
           <a herf="" class="isotope" data-filter=".web">Web</a>
-          <a herf="" class="isotope" data-filter=".system">Sistemas</a>
+          <a herf="" class="isotope" data-filter=".sistema">Sistemas</a>
           <a herf="" class="isotope" data-filter=".design">Diseño</a>
           <a herf="" class="isotope" data-filter=".branding">Branding</a>
         </div>
@@ -24,9 +24,9 @@
 			  </a>
 			</figure>
 			<figure class="modal-project element-item design">
-			  <img src="res/img/portfolio/diseno/logos/gasmarket/gasmarket-logo.jpg" alt="img-porfolio">
+			  <img src="res/img/portfolio/diseno/logos/mundo/Portada.png" alt="img-porfolio">
 			  <figcaption href="" class="element-info" data-ui-sref="portafolio.modalwork({modalwork: 'gasmarket'})">
-			  	<p>Gasmarket</p>
+			  	<p>Mundo Ret a Car</p>
 			  </figcaption>
 			</figure>
 			<figure class="modal-project element-item design">
@@ -65,11 +65,36 @@
 			  	<p>Your ALS Guide</p>
 			  </figcaption>
 			</figure>
+
+			<figure class="modal-project element-item web">
+				<img src="res/img/portfolio/web/farem.jpg" alt="img-portfolio">
+				<figcaption class="element-info" data-ui-sref="portafolio.modalwork({modalwork: 'farem'})">
+					<p>FAREM - Estelí</p>
+				</figcaption>
+			</figure>
+			<figure class="modal-project element-item sistema">
+				<img src="res/img/portfolio/sistema/isnaya/isnaya.jpg" alt="img-portfolio">
+				<figcaption class="element-info" data-ui-sref="portafolio.modalwork({modalwork: 'isnaya'})">
+					<p>Isnaya Print</p>
+				</figcaption>
+			</figure>
+			<figure class="modal-project element-item sistema">
+				<img src="res/img/portfolio/sistema/tafenic/Tafenic-Cover.jpg" alt="img-portfolio">
+				<figcaption class="element-info" data-ui-sref="portafolio.modalwork({modalwork: 'tafenic'})">
+					<p>TAFENIC.SA</p>
+				</figcaption>
+			</figure>
+			<figure class="modal-project element-item branding">
+				<img src="res/img/portfolio/diseno/branding/jaliskos/portada.jpg" alt="img-portfolio">
+				<figcaption class="element-info" data-ui-sref="portafolio.modalwork({modalwork: 'tafenic'})">
+					<p>Jalisko's</p>
+				</figcaption>
+			</figure>
 	    </div>
     </div>
 </div>
 	
-<div id="modal-container" class="modal-container">
+<div id="modal-container" class="modal-container modal-close-s" aria-hidden="true">
 	<i class="fa fa-2x fa-close modal-close" aria-hidden="true" data-ng-click="$ctrl.back()"></i><!--onclick="history.back();"-->
 	<ui-view></ui-view>    
 </div>
@@ -97,5 +122,11 @@
 	$('.modal-close').click(function(){
 		$('#modal-container').fadeOut();
 	});
+
+	/*$('.modal-close-s').click(function(event){
+		//event.preventDefault();
+		event.stopPropagation();
+		$('#modal-container').fadeOut();
+	});*/
 
 </script>

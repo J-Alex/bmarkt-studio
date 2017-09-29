@@ -15,6 +15,27 @@
 	font-family: 'montserrat';
 	src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
 }
+
+@font-face {
+	font-family: 'montserrat-bold';
+	src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
+}
 .text-center {
     text-align: center;
+}
+.title-mb {
+	font-family: 'montserrat-bold';
+	font-size: 4em;
+	margin-top: 2rem;
+}
+.montserrat {
+	font-family: 'montserrat';
+	font-size: 1.1em;
+	color: #aaa;
+	letter-spacing: 1px;
+	margin-bottom: 3rem;
+}
+
+.mont {
+	font-family: 'montserrat';
 }
