@@ -1,9 +1,17 @@
 .paragraph {
 	font-size: 16px;
 	line-height: 1.5;
-	text-align: justify;
+	//text-align: justify;
 }
 
 .text-right{
 	text-align: right;
+}
+
+.red {
+	color: #D14039;//#E7302A;
+}
+
+.debug {
+	background-color: #ccc;
 }

@@ -2592,11 +2592,16 @@ $bg-color-dark:;
 
 .paragraph {
   font-size: 16px;
-  line-height: 1.5;
-  text-align: justify; }
+  line-height: 1.5; }
 
 .text-right {
   text-align: right; }
+
+.red {
+  color: #D14039; }
+
+.debug {
+  background-color: #ccc; }
 
 *, *::after, *::before, *:after, *:before {
   -webkit-box-sizing: border-box;
@@ -2782,11 +2787,15 @@ main {
     width: 80%;
     padding-top: 15px; }
 
+.shadow {
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3); }
+
 .logo {
   width: 170px; }
 
 .bgt {
-  background-color: transparent; }
+  background-color: transparent;
+  box-shadow: none; }
   .bgt a.link {
     color: #fff; }
   .bgt a.link:hover {
@@ -2954,16 +2963,19 @@ a.active {
 
   .navbar-mobile {
     left: 0; } }
+main {
+  margin-bottom: 371px;
+  background-color: #fff;
+  box-shadow: 0 0 5px 8px rgba(0, 0, 0, 0.3); }
+
 .banner {
-  margin-top: -91px;
-  background-size: 100% 100%;
-  /*img {
-  	width: 40%;
-  	height: auto;
-  }
-  h1 {
-  	width: 50%;
-  }*/ }
+  height: 100vh;
+  padding-top: 21vh; }
+  .banner h1 {
+    font-size: 5em;
+    margin-left: 6rem;
+    width: 70%;
+    line-height: 1.2; }
 
 .banner-team {
   width: 100%; }
@@ -3023,7 +3035,7 @@ hr {
 
 .wedo-fig_img {
   position: absolute;
-  transition: 6s ease all; }
+  transition: 1s ease all; }
 
 .wedo-fig_cap {
   position: relative;
@@ -3152,8 +3164,11 @@ h2.service-title {
   justify-content: space-between; }
 
 .service-container {
-  width: 30%;
-  margin-bottom: 2rem; }
+  width: 31%;
+  margin-bottom: 2rem;
+  box-shadow: 1px 0 1px 1px rgba(0, 0, 0, 0.5); }
+  .service-container figcaption {
+    padding: 15px; }
 
 .service-img {
   margin-bottom: 1rem; }
@@ -3432,8 +3447,12 @@ img.portImg, div.bx-wrapper {
     width: 85%; } }
 .footer {
   background-color: #323232;
-  position: relative;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: -9999;
   height: calc(50vh + 18px);
+  width: 100%;
   color: #fff;
   font-size: 1.1em; }
 

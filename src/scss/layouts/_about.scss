@@ -1,18 +1,19 @@
+main {
+	margin-bottom: 371px;
+	background-color: #fff;
+	box-shadow: 0 0 5px 8px rgba(0, 0, 0, .3);
+}
+
 .banner {
-	margin-top: -91px;
-	background: {
-		//image: url('../img/banner.png');
-		//repeat: no-repeat;
-		size: 100% 100%;
-		//color: rgb(55,55,55);
-	}
-	/*img {
-		width: 40%;
-		height: auto;
-	}
+	height: 100vh;
+	padding-top: 21vh;
+
 	h1 {
-		width: 50%;
-	}*/
+		font-size: 5em;
+		margin-left: 6rem;
+		width: 70%;
+		line-height: 1.2;
+	}
 }
 
 .banner-team {

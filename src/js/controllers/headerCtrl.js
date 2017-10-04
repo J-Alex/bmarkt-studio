@@ -4,9 +4,9 @@
         .module('bmarkt')
         .controller('headerCtrl', headerCtrl);
         
-    headerCtrl.$inject = ['$element', '$document'];
+    headerCtrl.$inject = ['$element', '$document', '$window'];
 
-    function headerCtrl($element, $document) {
+    function headerCtrl($element, $document, $window) {
         var tonta;
         var documentWidth = $document.width();
         var menuLink = $document.find('a.link');
@@ -16,8 +16,20 @@
     	var mobileNav = $document.find('.navbar');
     	var header = $document.find('.header');
         var menuLinkMobile = $document.find('.link-mobile');
+        //var bannerH = document.querySelectorAll('.banner')[0];
+        
 
-    	mobileBtn.click(function(){
+        $document.scroll(function(e){
+            //console.log($(this).scrollTop());
+
+            if($(this).scrollTop() > $(window).height() ) {
+                header.addClass('shadow');
+            } else {
+                header.removeClass('shadow');
+            }
+        });
+    	
+        mobileBtn.click(function(){
             console.log('menu-wrapper');
     		hamburger.toggleClass('togle');
     		mobileNav.toggleClass('navbar-mobile');
