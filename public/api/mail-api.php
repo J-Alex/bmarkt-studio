@@ -5,12 +5,13 @@
 	$email = @trim(stripslashes($objDatos->email));
 	$phone = @trim(stripslashes($objDatos->phone));
 	$message = @trim(stripslashes($objDatos->msj));
-/************************************************************/
+
+
 require 'class.phpmailer.php';
 $mail=new PHPMailer();
 $mail->CharSet = 'UTF-8';
 
-$body = 'Correo: '.$email.' <br> Celular:  '.$phone' <br> Mensaje:  '.$message;
+$body = 'Correo: '.$email.'\n Celular:  '.$phone.'\n Mensaje:  '.$message;
 
 $mail->IsSMTP();
 $mail->Host       = 'smtp.gmail.com';

@@ -14,7 +14,7 @@
 	    this.sendMail = function(){
 	    	console.log(this.mailObj);
 			
-			$http.post("api/mail-api.php",this.mailObj)
+			$http.post("api/mail-api.php", {"name": "jennier"})
 			.then(function(data,status,headers,config){
 				console.log(data);
 				formulario.reset();
