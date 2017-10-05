@@ -11,7 +11,15 @@ require 'class.phpmailer.php';
 $mail=new PHPMailer();
 $mail->CharSet = 'UTF-8';
 
-$body = 'Correo: '.$email.'\n Celular:  '.$phone.'\n Mensaje:  '.$message;
+//$body = 'Correo: '.$email.' Empresa:  '.$phone.' Mensaje:  '.$message;
+
+$body = <<<EOT
+Correo: $email
+Empresa: $phone
+-------------------------------------------
+
+$message
+EOT;
 
 $mail->IsSMTP();
 $mail->Host       = 'smtp.gmail.com';
@@ -34,7 +42,8 @@ $mail->AddAddress('brjosue73@gmail.com', 'Brandon');
 $mail->AddAddress('marvingutierrezjr@gmail.com', 'Marvin');
 $mail->AddAddress('jenniercruz90@gmail.com', 'Jennier');
 $mail->AddAddress('contacto@bmarkt.studio', 'Bmarkt');
-
+$mail->AddAddress('duviedh22@gmail.com', 'Jerson');
+$mail->AddAddress('bahrdiseno@gmail.com', 'Byron');
 
 
 if(!$mail->send()) {
