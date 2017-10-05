@@ -14,10 +14,10 @@ $mail->CharSet = 'UTF-8';
 //$body = 'Correo: '.$email.' Empresa:  '.$phone.' Mensaje:  '.$message;
 
 $body = <<<EOT
-Correo: $email
-Empresa: $phone
--------------------------------------------
-
+Correo: $email \n
+Empresa: $phone\n
+-------------------------------------------\n
+\n
 $message
 EOT;
 
