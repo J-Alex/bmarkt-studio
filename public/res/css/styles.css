@@ -3006,11 +3006,17 @@ hr {
     width: 95%; }
 
   .banner {
-    margin-top: 0; } }
+    padding-top: 80px;
+    height: 85vh; }
+    .banner h1 {
+      font-size: 3.6em;
+      margin-left: 10px;
+      width: 95%;
+      line-height: 1.1; } }
 .wedo {
   flex-direction: row;
   flex-wrap: wrap;
-  width: 80%;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto; }
 
@@ -3087,7 +3093,8 @@ hr {
     order: 1; }
 
   .service-description {
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    padding: 0 10px; }
 
   .service-description-container h3 {
     text-align: center; }

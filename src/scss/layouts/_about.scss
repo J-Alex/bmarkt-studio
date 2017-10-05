@@ -50,6 +50,13 @@ hr {
 		width: 95%;
 	}
 	.banner {
-		margin-top: 0;
+		padding-top: 80px;
+		height: 85vh;
+		h1 {
+			font-size: 3.6em;
+			margin-left: 10px;
+			width: 95%;
+			line-height: 1.1;
+		}
 	}
 }
