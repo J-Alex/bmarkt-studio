@@ -5,12 +5,13 @@ main {
 }
 
 .banner {
-	height: 100vh;
-	padding-top: 21vh;
+	height: calc(100vh - 91px);
+	//padding-top: 21vh;
 
 	h1 {
 		font-size: 5em;
 		margin-left: 6rem;
+		margin-top: -2rem;
 		width: 70%;
 		line-height: 1.2;
 	}
@@ -50,7 +51,7 @@ hr {
 		width: 95%;
 	}
 	.banner {
-		padding-top: 80px;
+		//padding-top: 80px;
 		height: 85vh;
 		h1 {
 			font-size: 3.6em;

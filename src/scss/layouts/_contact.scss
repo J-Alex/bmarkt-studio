@@ -45,10 +45,10 @@
 	//box-shadow: 0 0 5px rgba(0,0,0,.65);
 }
 
-.form-button:hover {
+/*.form-button:hover {
 	background-color: $primary-color-dark;
 	//box-shadow: 0 0 10px rgba(0,0,0,.65);
-}
+}*/
 .call {
     height: 200px;
     width: 100%;
@@ -91,11 +91,50 @@
 }
 
 @media screen and (max-width: 420px) {
+    .title-mb {
+        font-size: 2em;
+    }
     .contact {
         width: 100%;
         padding-bottom: 2rem;
     }
+
     .contact-form {
-        width: 85%;
+        padding: 1rem;
+        
+        div.form-group {
+            float: none !important;
+            width: 100% !important;
+        }
+    }
+    .contact-info {
+        flex-wrap: wrap;
+
+        .contact-badge {
+            width: 100%;
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    .call {
+        text-align: center;
+        height: auto;
+        h4, form {
+            float: none;
+            width: 100%;
+        }
+        h4 {
+            margin-top: 1.5em;
+            margin-bottom: .5em;
+        }
+        form {
+            flex-wrap: wrap;
+            .form-input{
+                margin: 0;
+            }
+            .btn {
+                margin: 1em auto;
+            }
+        }
     }
 }

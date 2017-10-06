@@ -19,7 +19,23 @@
     line-height: 1.3333333;
     // border-radius: 6px;
 }
+.line-active::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: -1px;
+    width: 100%;
+    height: 0;
+    border-bottom: 1px solid red;
+}
 
+/*.form-input:focus > .form-group-line-active::after{
+    background-color: cyan;
+    #{&}-line-active::after{
+        border-bottom: 9px solid yellow;    
+    }
+    
+}*/
 .btn {
     background-color: transparent;
     border: 1px solid #ccc;

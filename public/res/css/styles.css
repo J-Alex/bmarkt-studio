@@ -2759,6 +2759,22 @@ main {
   font-size: 18px;
   line-height: 1.3333333; }
 
+.line-active::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -1px;
+  width: 100%;
+  height: 0;
+  border-bottom: 1px solid red; }
+
+/*.form-input:focus > .form-group-line-active::after{
+    background-color: cyan;
+    -line-active::after{
+        border-bottom: 9px solid yellow;    
+    }
+    
+}*/
 .btn {
   background-color: transparent;
   border: 1px solid #ccc;
@@ -2969,11 +2985,11 @@ main {
   box-shadow: 0 0 5px 8px rgba(0, 0, 0, 0.3); }
 
 .banner {
-  height: 100vh;
-  padding-top: 21vh; }
+  height: calc(100vh - 91px); }
   .banner h1 {
     font-size: 5em;
     margin-left: 6rem;
+    margin-top: -2rem;
     width: 70%;
     line-height: 1.2; }
 
@@ -3006,7 +3022,6 @@ hr {
     width: 95%; }
 
   .banner {
-    padding-top: 80px;
     height: 85vh; }
     .banner h1 {
       font-size: 3.6em;
@@ -3410,9 +3425,10 @@ img.portImg, div.bx-wrapper {
   color: #FFFFFF;
   border: 1px solid #f13e36; }
 
-.form-button:hover {
-  background-color: #303F9F; }
-
+/*.form-button:hover {
+	background-color: $primary-color-dark;
+	//box-shadow: 0 0 10px rgba(0,0,0,.65);
+}*/
 .call {
   height: 200px;
   width: 100%;
@@ -3446,12 +3462,40 @@ img.portImg, div.bx-wrapper {
   font-family: 'montserrat'; }
 
 @media screen and (max-width: 420px) {
+  .title-mb {
+    font-size: 2em; }
+
   .contact {
     width: 100%;
     padding-bottom: 2rem; }
 
   .contact-form {
-    width: 85%; } }
+    padding: 1rem; }
+    .contact-form div.form-group {
+      float: none !important;
+      width: 100% !important; }
+
+  .contact-info {
+    flex-wrap: wrap; }
+    .contact-info .contact-badge {
+      width: 100%;
+      margin-bottom: 1.2rem; }
+
+  .call {
+    text-align: center;
+    height: auto; }
+    .call h4, .call form {
+      float: none;
+      width: 100%; }
+    .call h4 {
+      margin-top: 1.5em;
+      margin-bottom: .5em; }
+    .call form {
+      flex-wrap: wrap; }
+      .call form .form-input {
+        margin: 0; }
+      .call form .btn {
+        margin: 1em auto; } }
 .footer {
   background-color: #323232;
   position: fixed;
@@ -3486,7 +3530,7 @@ img.portImg, div.bx-wrapper {
   background-color: rgba(50, 50, 50, 0.9); }
 
 .footer-content {
-  width: 80%;
+  width: 95%;
   flex-direction: row;
   flex-wrap: wrap; }
   .footer-content div {
@@ -3504,7 +3548,7 @@ img.portImg, div.bx-wrapper {
     border-bottom: 1px solid #fff; }
 
 .contact-info {
-  padding-top: 3rem; }
+  padding-top: 1rem; }
   .contact-info span {
     margin: 7px auto;
     flex-flow: row; }

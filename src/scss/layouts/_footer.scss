@@ -40,7 +40,7 @@
 	@extend %flex-center;
 }
 .footer-content {
-	width: 80%;
+	width: 95%;
 	//@extend %full-width;
 	@extend %display-flex;
 	//@extend %flex-between;
@@ -81,7 +81,7 @@
 .contact-info {
 	//flex-direction: column;
 	//align-items: flex-end !important;
-	padding-top: 3rem;
+	padding-top: 1rem;
 	span {
 		//width: 90%;
 		//text-align: left;
